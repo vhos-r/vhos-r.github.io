@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>JavaScript Note</title>
-    <url>/2022/04/04/JavaScript-Note/</url>
+    <url>/posts/fbbf86b6/</url>
     <content><![CDATA[<h2 id="词法结构"><a href="#词法结构" class="headerlink" title="词法结构"></a><strong>词法结构</strong></h2><hr>
 <p>标识符必须以字母&#x2F;下划线&#x2F;美元符号开头</p>
 <span id="more"></span>
@@ -114,7 +114,7 @@
   </entry>
   <entry>
     <title>Hello World</title>
-    <url>/2022/04/03/hello-world/</url>
+    <url>/posts/4a17b156/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <span id="more"></span>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
