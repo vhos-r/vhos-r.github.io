@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hello World</title>
+    <url>/posts/4a17b156/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<span id="more"></span>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <tags>
+        <tag>hexo tutorial</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JavaScript Note</title>
     <url>/posts/fbbf86b6/</url>
     <content><![CDATA[<h2 id="词法结构"><a href="#词法结构" class="headerlink" title="词法结构"></a><strong>词法结构</strong></h2><hr>
@@ -12,9 +34,7 @@
 <li>原始类型：数值&#x2F;文本字符串&#x2F;布尔真值&#x2F;符号&#x2F;null&#x2F;undefined</li>
 <li>对象类型</li>
 </ul>
-<p>javascript可以自由地转换不同类型的值</p>
-<p>javascript预定义了全局常量Infinity和NaN以应对正无穷和非数值</p>
-<p>var声明的一个最不同寻常的特性是作用域提升</p>
+<p>javascript可以自由地转换不同类型的值<br>javascript预定义了全局常量Infinity和NaN以应对正无穷和非数值<br>var声明的一个最不同寻常的特性是作用域提升</p>
 <h2 id="表达式与操作符"><a href="#表达式与操作符" class="headerlink" title="表达式与操作符"></a><strong>表达式与操作符</strong></h2><hr>
 <p>[] &#x2F;&#x2F; 空数组</p>
 <p>条件式属性访问</p>
@@ -22,11 +42,7 @@
 <li>expression ?. identifier</li>
 <li>expression ?.[ expression ]</li>
 </ul>
-<p>如果expression非真，问号后面的表达式不会执行，即短路操作</p>
-<p>+偏向字符串，即只要有一个操作数是字符串，它就会执行拼接操作；比较操作符偏向数值，只有两个操作数均为字符串时才按字符串处理，如果有一个操作数是NaN，则4个比较操作符都返回false</p>
-<p>in操作数期待左侧操作数是字符串&#x2F;符号&#x2F;可以转换为字符串的值，期待右侧操作数是对象。</p>
-<p>instanceof的右侧操作数应该是一个函数</p>
-<p>??先定义：第一个操作数求值为null或undefined时才会求值第二个操作数</p>
+<p>如果expression非真，问号后面的表达式不会执行，即短路操作<br>+偏向字符串，即只要有一个操作数是字符串，它就会执行拼接操作；比较操作符偏向数值，只有两个操作数均为字符串时才按字符串处理，如果有一个操作数是NaN，则4个比较操作符都返回false<br>in操作数期待左侧操作数是字符串&#x2F;符号&#x2F;可以转换为字符串的值，期待右侧操作数是对象。<br>instanceof的右侧操作数应该是一个函数<br>??先定义：第一个操作数求值为null或undefined时才会求值第二个操作数</p>
 <h2 id="语句"><a href="#语句" class="headerlink" title="语句"></a><strong>语句</strong></h2><hr>
 <p>for&#x2F;of循环专门用于可迭代对象，包括数组&#x2F;字符串&#x2F;集合&#x2F;映射。</p>
 <p>for&#x2F;in循环in后面可以是任意对象</p>
@@ -56,10 +72,7 @@
 <h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a><strong>数组</strong></h2><hr>
 <p>扩展操作符(…)在一个数组字面量中包含另一个数组的元素</p>
 <p><strong>实际上并不是操作符，因为只能在数组字面量和本书后面介绍的函数调用中使用它们</strong></p>
-<p>Array()构造函数传入一个数组参数，指定长度：</p>
-<p>let a &#x3D; new Array(10);  &#x2F;&#x2F; 创建长度为10的空数组</p>
-<p>Array.of()可以创建只包含一个元素的数组：</p>
-<p>Array.of(10)    &#x2F;&#x2F; &#x3D;&gt; [10];可以创建只有一个数值元素的数组</p>
+<p>Array()构造函数传入一个数组参数，指定长度：<br>let a &#x3D; new Array(10);  &#x2F;&#x2F; 创建长度为10的空数组<br>Array.of()可以创建只包含一个元素的数组：<br>Array.of(10)    &#x2F;&#x2F; &#x3D;&gt; [10];可以创建只有一个数值元素的数组</p>
 <h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a><strong>函数</strong></h2><hr>
 <p>函数声明语句会被“提升”到包含脚本&#x2F;函数&#x2F;代码块的顶部，因此调用以这种方式定义的函数时，调用代码可以出现在函数定义代码之前</p>
 <p>箭头函数</p>
@@ -88,8 +101,7 @@
 <li>通过JavaScript 语言特性隐形调用</li>
 </ol>
 <p><strong>JavaScript函数定义不指定函数形参类型，函数调用不对传入实参进行类型&#x2F;个数检查</strong></p>
-<p>函数可以有属性</p>
-<p>闭包：能捕获自身定义所在函数的局部变量（及参数）绑定</p>
+<p>函数可以有属性<br>闭包：能捕获自身定义所在函数的局部变量（及参数）绑定</p>
 <h2 id="类"><a href="#类" class="headerlink" title="类"></a><strong>类</strong></h2><hr>
 <p><strong>只有函数对象才有prototype属性</strong>，这意味着使用同一个构造函数创建的所有对象都继承同一个对象，因而是同一个类的成员</p>
 <ul>
@@ -97,41 +109,30 @@
 <li>普通函数和方法的名字则以小写字母开头</li>
 </ul>
 <p><strong>新对象是在调用构造函数之前自动创建的</strong></p>
-<p>与函数声明不同，类声明不会“提升”</p>
-<p>原型对象是类标识的基本：当且仅当两个对象继承同一个原型对象时，他们才是同一个类的实例</p>
-<p>每个普通 JavaScript 函数自动拥有一个 prototype 属性，这个属性的值是一个对象，有一个不可枚举的constructor 属性，而这个属性的值就是该函数的对象</p>
+<p>与函数声明不同，类声明不会“提升”<br>原型对象是类标识的基本：当且仅当两个对象继承同一个原型对象时，他们才是同一个类的实例<br>每个普通 JavaScript 函数自动拥有一个 prototype 属性，这个属性的值是一个对象，有一个不可枚举的constructor 属性，而这个属性的值就是该函数的对象</p>
 <p>eg:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> F = <span class="keyword">function</span>(<span class="params"></span>) &#123;&#125;;  <span class="comment">// 这是一个函数对象</span></span><br><span class="line"><span class="keyword">let</span> p = F.<span class="property"><span class="keyword">prototype</span></span>;    <span class="comment">// 这是一个与F关联的原型对象</span></span><br><span class="line"><span class="keyword">let</span> c = p.<span class="property">constructor</span>;  <span class="comment">// 这是与原型关联的函数</span></span><br><span class="line">c === F                 <span class="comment">// =&gt; true: 对任何F，F.prototype.constructor === F</span></span><br></pre></td></tr></table></figure>
 
 <p><img src="/images/%E7%B1%BB%E4%B8%8E%E5%AE%9E%E4%BE%8B%E5%AF%B9%E8%B1%A1%E5%85%B3%E7%B3%BB%E5%9B%BE.png"></p>
+<p>ES6新增了class 关键字，让定义类更方便。但在底层，仍然是构造函数和原型机制在起作用<br>子类在类声明中通过extends关键字定义<br>子类可以通过super 关键字调用父类构造函数或父类中被覆盖的方法</p>
+<h2 id="模块"><a href="#模块" class="headerlink" title="模块"></a><strong>模块</strong></h2><hr>
+<p>模块化的目标是让程序员隐藏自己代码的实现细节，从而让不同来源的代码块可以组装成一个大型程序，又不必担心某个代码块会重写其他代码块的函数或变量。本章解释了三种不同的JavaScript模块系统：</p>
+<ul>
+<li><p>在JavaScript早期，模块化只能通过巧妙地使用立即调用的函数表达式来实现</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">BitSet</span> = (<span class="keyword">function</span>(<span class="params"></span>) &#123;  <span class="comment">// 将 BitSet 设置为这个函数的返回值</span></span><br><span class="line">  ... <span class="comment">// 省略实现</span></span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">class</span> <span class="title class_">BitSet</span> <span class="keyword">extends</span> <span class="title class_ inherited__">AbstractWritableSet</span> &#123;</span><br><span class="line">    ... <span class="comment">// 省略实现</span></span><br><span class="line">  &#125;;</span><br><span class="line">&#125;());</span><br><span class="line"></span><br><span class="line"><span class="comment">// 示例2：</span></span><br><span class="line"><span class="keyword">const</span> stats = (<span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">  ...</span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">mean</span>(<span class="params">data</span>) &#123; ... &#125;;</span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">stddev</span>(<span class="params">data</span>) &#123; ... &#125;;</span><br><span class="line">  <span class="comment">// 将公有函数作为一个对象的属性导出出来</span></span><br><span class="line">  <span class="keyword">return</span> &#123; mean, stddev &#125;;</span><br><span class="line">&#125;());</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Node 在 JavaScript 语言之上加入了自己的模块系统。Node 模块通过require() 导入，并通过设置 Exports 对象的属性或直接设置 module.exports 属性来定义导出</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Node 导出</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">mean</span> = data =&gt; &#123; ... &#125;;</span><br><span class="line"><span class="keyword">const</span> <span class="title function_">stddev</span> = data =&gt; &#123; ... &#125;;</span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123; mean, stddev &#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Node 导入</span></span><br><span class="line"><span class="comment">// 内置模块</span></span><br><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">&quot;fs&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 自定义</span></span><br><span class="line"><span class="keyword">const</span> stats = <span class="built_in">require</span>(<span class="string">&#x27;./stats.js&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 解构赋值导入特定属性</span></span><br><span class="line"><span class="keyword">const</span> &#123; stddev &#125; = <span class="built_in">require</span>(<span class="string">&#x27;./stats.js&#x27;</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在ES6 中，Javascript 终于有了自己依托import 和 export关键字的模块系统，ES2020 又通过 import() 增加了对动态导入的支持</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// ES6 导出</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> <span class="variable constant_">PI</span> = <span class="title class_">Math</span>.<span class="property">PI</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// ES6 导入</span></span><br><span class="line"><span class="keyword">import</span> &#123; mean, stddev &#125; <span class="keyword">from</span> <span class="string">&#x27;./stats.js&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> stats <span class="keyword">from</span> <span class="string">&#x27;./stats.js&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// import() 动态导入</span></span><br><span class="line"><span class="title function_">import</span>(<span class="string">&quot;./stats.js&quot;</span>).<span class="title function_">then</span>(<span class="function"><span class="params">stats</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> average = stats.<span class="title function_">mean</span>(data);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></li>
+</ul>
 ]]></content>
       <categories>
         <category>computer language</category>
       </categories>
       <tags>
         <tag>javascript</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/posts/4a17b156/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<span id="more"></span>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <tags>
-        <tag>hexo tutorial</tag>
       </tags>
   </entry>
 </search>
