@@ -149,15 +149,15 @@
 </li>
 <li><p>欲进入 Vim 编辑器(从命令行提示符)，请输入：vim 文件名 &lt;回车&gt;</p>
 </li>
-<li><p>欲退出 Vim 编辑器，请输入 <ESC>   :q!   &lt;回车&gt; 放弃所有改动。<br>             或者输入 <ESC>   :wq   &lt;回车&gt; 保存改动。</p>
+<li><p>欲退出 Vim 编辑器，请输入 <code>&lt;ESC&gt;</code>   :q!   &lt;回车&gt; 放弃所有改动。<br>             或者输入 <code>&lt;ESC&gt;</code>   :wq   &lt;回车&gt; 保存改动。</p>
 </li>
 <li><p>在正常模式下删除光标所在位置的字符，请按： x</p>
 </li>
 <li><p>欲插入或添加文本，请输入：</p>
-<p>i   输入欲插入文本   <ESC>        在光标前插入文本<br>A   输入欲添加文本   <ESC>             在一行后添加文本</p>
+<p>i   输入欲插入文本   <code>&lt;ESC&gt;</code>        在光标前插入文本<br>A   输入欲添加文本   <code>&lt;ESC&gt;</code>             在一行后添加文本</p>
 </li>
 </ol>
-<p>特别提示：按下 <ESC> 键会带您回到正常模式或者撤消一个不想输入或部分完整<br>的命令。</p>
+<p>特别提示：按下 <code>&lt;ESC&gt;</code> 键会带您回到正常模式或者撤消一个不想输入或部分完整<br>的命令。</p>
 <h2 id="第二讲小结"><a href="#第二讲小结" class="headerlink" title="第二讲小结"></a><strong>第二讲小结</strong></h2><hr>
 <ol>
 <li><p>欲从当前光标删除至下一个单词，请输入：dw</p>
@@ -222,7 +222,7 @@
 </li>
 <li><p>操作符 y 复制文本，p 粘贴先前复制的文本。</p>
 </li>
-<li><p>输入大写的 R 将进入替换模式，直至按 <ESC> 键回到正常模式。</p>
+<li><p>输入大写的 R 将进入替换模式，直至按 <code>&lt;ESC&gt;</code> 键回到正常模式。</p>
 </li>
 <li><p>输入 :set xxx 可以设置 xxx 选项。一些有用的选项如下：<br> ‘ic’ ‘ignorecase’    查找时忽略字母大小写<br>‘is’ ‘incsearch’    查找短语时显示部分匹配<br>‘hls’ ‘hlsearch’    高亮显示所有的匹配短语<br>选项名可以用完整版本，也可以用缩略版本。</p>
 </li>
