@@ -90,14 +90,14 @@
   </url>
   
   <url>
-    <loc>https://vhos-r.github.io/tags/vim/</loc>
+    <loc>https://vhos-r.github.io/tags/hexo-tutorial/</loc>
     <lastmod>2022-04-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://vhos-r.github.io/tags/hexo-tutorial/</loc>
+    <loc>https://vhos-r.github.io/tags/vim/</loc>
     <lastmod>2022-04-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
