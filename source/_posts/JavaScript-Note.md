@@ -181,5 +181,81 @@ import("./stats.js").then(stats => {
   let average = stats.mean(data);
 })
 ```
-## **JavaScript 标准库**
 
+
+## **JavaScript 标准库**
+---
+主要包括以下内容：
+1. 重要的数据结构，如Set/Map和定型数组
+2. 用于操作日期和URL的Date与URL类
+3. JavaScript的正则表达式语法及处理文本模式匹配的RegExp类
+4. JavaScript的国际化库，可以格式化日期/时间/数值/以及排序字符串
+5. 序列化和反序列化简单数据结构的JSON对象，以及用于打印消息的console对象
+
+
+## **迭代器与生成器**
+---
+**可迭代对象**：任何具有专用迭代器方法，且该方法返回迭代器对象的对象
+**迭代器对象**：任何具有next()方法，且该方法返回迭代结果对象的对象
+**迭代结果对象**：具有value和done的对象
+
+{% note danger %}
+***内置可迭代数据类型的迭代器对象本身也是可迭代的***（即，有一个名为Symbol.iterator的方法，返回他们自己）
+{% endnote %}
+
+```js
+// words函数是一个可迭代对象，返回一个迭代器对象
+function words(s) {
+    var r = /\s+|$/g;
+    r.lastIndex = s.match(/[^ ]/).index;
+    return {
+        [Symbol.iterator]() {
+            return this
+        },
+        next() {
+            let start = r.lastIndex;
+            if (start < s.length) {
+                let match = r.exec(s);
+                if (match) {
+                    return {value: s.substring(start, match.index)};
+                }
+            }
+            return {done: true};
+        }
+    }
+}
+
+console.log([...words(" abc def ghi! ")]); // => [ 'abc', 'def', 'ghi!' ]
+```
+
+生成器函数：使用function*
+```js
+function* fib() {
+    let x = 0, y = 1;
+    for(;;) {
+        yield y;
+        [x, y] = [y, x + y] // 解构赋值
+    }
+}
+```
+
+yield*: 与yield类似，但它不是只回送一个值，而是迭代可迭代对象并返回送得的每个值
+```js
+// use yield
+function* sequence(...iterables) {
+    for(let iterable of iterables) {
+        for(let item of iterable) {
+            yield item;
+        }
+    }
+}
+console.log([...sequence("abc", "efg")]); // => [ 'a', 'b', 'c', 'e', 'f', 'g' ]
+
+// use yield*
+function* sequence(...iterables) {
+    for(let iterable of iterables) {
+        yield* iterable;
+    }
+}
+console.log([...sequence("abc", "efg")]); // => [ 'a', 'b', 'c', 'e', 'f', 'g' ]
+```
