@@ -105,6 +105,27 @@
 <li><p>在ES6 中，Javascript 终于有了自己依托import 和 export关键字的模块系统，ES2020 又通过 import() 增加了对动态导入的支持</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// ES6 导出</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> <span class="variable constant_">PI</span> = <span class="title class_">Math</span>.<span class="property">PI</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// ES6 导入</span></span><br><span class="line"><span class="keyword">import</span> &#123; mean, stddev &#125; <span class="keyword">from</span> <span class="string">&#x27;./stats.js&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> stats <span class="keyword">from</span> <span class="string">&#x27;./stats.js&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// import() 动态导入</span></span><br><span class="line"><span class="title function_">import</span>(<span class="string">&quot;./stats.js&quot;</span>).<span class="title function_">then</span>(<span class="function"><span class="params">stats</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> average = stats.<span class="title function_">mean</span>(data);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></li>
 </ul>
+<h2 id="JavaScript-标准库"><a href="#JavaScript-标准库" class="headerlink" title="JavaScript 标准库"></a><strong>JavaScript 标准库</strong></h2><hr>
+<p>主要包括以下内容：</p>
+<ol>
+<li>重要的数据结构，如Set&#x2F;Map和定型数组</li>
+<li>用于操作日期和URL的Date与URL类</li>
+<li>JavaScript的正则表达式语法及处理文本模式匹配的RegExp类</li>
+<li>JavaScript的国际化库，可以格式化日期&#x2F;时间&#x2F;数值&#x2F;以及排序字符串</li>
+<li>序列化和反序列化简单数据结构的JSON对象，以及用于打印消息的console对象</li>
+</ol>
+<h2 id="迭代器与生成器"><a href="#迭代器与生成器" class="headerlink" title="迭代器与生成器"></a><strong>迭代器与生成器</strong></h2><hr>
+<p><strong>可迭代对象</strong>：任何具有专用迭代器方法，且该方法返回迭代器对象的对象<br><strong>迭代器对象</strong>：任何具有next()方法，且该方法返回迭代结果对象的对象<br><strong>迭代结果对象</strong>：具有value和done的对象</p>
+<div class="note danger"><p><em><strong>内置可迭代数据类型的迭代器对象本身也是可迭代的</strong></em>（即，有一个名为Symbol.iterator的方法，返回他们自己）</p>
+</div>
+
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// words函数是一个可迭代对象，返回一个迭代器对象</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">words</span>(<span class="params">s</span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> r = <span class="regexp">/\s+|$/g</span>;</span><br><span class="line">    r.<span class="property">lastIndex</span> = s.<span class="title function_">match</span>(<span class="regexp">/[^ ]/</span>).<span class="property">index</span>;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        [<span class="title class_">Symbol</span>.<span class="property">iterator</span>]() &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="variable language_">this</span></span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="title function_">next</span>(<span class="params"></span>) &#123;</span><br><span class="line">            <span class="keyword">let</span> start = r.<span class="property">lastIndex</span>;</span><br><span class="line">            <span class="keyword">if</span> (start &lt; s.<span class="property">length</span>) &#123;</span><br><span class="line">                <span class="keyword">let</span> match = r.<span class="title function_">exec</span>(s);</span><br><span class="line">                <span class="keyword">if</span> (match) &#123;</span><br><span class="line">                    <span class="keyword">return</span> &#123;<span class="attr">value</span>: s.<span class="title function_">substring</span>(start, match.<span class="property">index</span>)&#125;;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> &#123;<span class="attr">done</span>: <span class="literal">true</span>&#125;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>([...<span class="title function_">words</span>(<span class="string">&quot; abc def ghi! &quot;</span>)]); <span class="comment">// =&gt; [ &#x27;abc&#x27;, &#x27;def&#x27;, &#x27;ghi!&#x27; ]</span></span><br></pre></td></tr></table></figure>
+
+<p>生成器函数：使用function*</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span>* <span class="title function_">fib</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> x = <span class="number">0</span>, y = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(;;) &#123;</span><br><span class="line">        <span class="keyword">yield</span> y;</span><br><span class="line">        [x, y] = [y, x + y] <span class="comment">// 解构赋值</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>yield*: 与yield类似，但它不是只回送一个值，而是迭代可迭代对象并返回送得的每个值</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// use yield</span></span><br><span class="line"><span class="keyword">function</span>* <span class="title function_">sequence</span>(<span class="params">...iterables</span>) &#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> iterable <span class="keyword">of</span> iterables) &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> item <span class="keyword">of</span> iterable) &#123;</span><br><span class="line">            <span class="keyword">yield</span> item;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>([...<span class="title function_">sequence</span>(<span class="string">&quot;abc&quot;</span>, <span class="string">&quot;efg&quot;</span>)]); <span class="comment">// =&gt; [ &#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;, &#x27;e&#x27;, &#x27;f&#x27;, &#x27;g&#x27; ]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// use yield*</span></span><br><span class="line"><span class="keyword">function</span>* <span class="title function_">sequence</span>(<span class="params">...iterables</span>) &#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> iterable <span class="keyword">of</span> iterables) &#123;</span><br><span class="line">        <span class="keyword">yield</span>* iterable;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>([...<span class="title function_">sequence</span>(<span class="string">&quot;abc&quot;</span>, <span class="string">&quot;efg&quot;</span>)]); <span class="comment">// =&gt; [ &#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;, &#x27;e&#x27;, &#x27;f&#x27;, &#x27;g&#x27; ]</span></span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>computer language</category>
@@ -130,6 +151,15 @@
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <tags>
+        <tag>hexo tutorial</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>多终端同步博客</title>
+    <url>/posts/a7e41fa1/</url>
+    <content><![CDATA[<p>参考资料：<br><a href="https://segmentfault.com/a/1190000019459014">Hexo博客多端同步问题</a></p>
 ]]></content>
       <tags>
         <tag>hexo tutorial</tag>
