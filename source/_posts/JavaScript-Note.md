@@ -259,3 +259,130 @@ function* sequence(...iterables) {
 }
 console.log([...sequence("abc", "efg")]); // => [ 'a', 'b', 'c', 'e', 'f', 'g' ]
 ```
+
+## **异步JavaScript**
+---
+传统异步操作采用事件和回调函数的方式执行
+
+{% label primary@回调 %} vs {% label success@期约(promise) %} 
+
+回调| 期约(promise)
+---------|----------
+ 回调常会引发多层嵌套代码，照成缩进过多以致难以阅读和维护 | 期约可以以一种更线性的期约链形式表现，更易读和推断
+ 回调难以处理错误，异常没有办法传播到异常操作的发起者 | 期约标准化了异步错误处理，使用期约链提供了一种让错误正确传播的途径
+
+**期约链**
+```js
+fetch(documentURL)                      // 发送 http 请求
+    .then(response => response.json())  // 获取 JSON 格式的响应体
+    .then(document => {                 // 在取得解析后的JSON时把文档显示给用户
+        return render(document);
+    }) 
+    .then(rendered => {                 // 在取得渲染的文档后缓存在本地数据库中
+        cacheInDatebase(rendered);
+    })
+    .catch(error => handle(error));     // 处理发生的错误
+```
+
+```js
+// 并行期约
+const urls = [ /* 零或多个URL */ ];
+promises = urls.map(url => fetch(url).then(r => r.text()));
+Promise.all(promises)
+    .then(bodies => { /* 处理得到的字符串数组 */ })
+    .catch(e => console.error(e))
+
+// 串行期约
+function promiseSequence(inputs, promiseMaker) {
+    inputs = [...inputs];
+    function handleNextInput(outputs) {
+        if (inputs.length === 0) {
+            return outputs;
+        } else {
+            let nextInput = inputs.shift();
+            return promiseMaker()
+                    .then(output => outputs.concat(output))
+                    .then(handleNextInput);
+        }
+        return Promise.resolve([]).then(handleNextInput);
+    }
+}
+function fetchBody(url) { return fetch(url).then(r => r.text()); }
+promiseSequence(urls, fetchBody)
+    .then(bodies => { /* 处理字符串数组 */ })
+    .catch(console.error);
+```
+
+**async & await**
+
+> [await](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/await)
+await  操作符用于等待一个Promise 对象
+[返回值] = await 表达式;
+* 表达式
+一个 Promise 对象或者任何要等待的值。
+
+**返回值**
+返回 Promise 对象的处理结果。如果等待的不是 Promise 对象，则返回该值本身。
+
+> [async](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function)
+> async函数是使用async关键字声明的函数。 async函数是AsyncFunction构造函数的实例， 并且其中允许使用await关键字。
+async function name([param[, param[, ... param]]]) {
+    statements 
+}
+- name
+函数名称。
+- param
+要传递给函数的参数的名称。
+- statements
+
+包含函数主体的表达式。可以使用await机制。
+**返回值**
+一个Promise，这个promise要么会通过一个由async函数返回的值被解决，要么会通过一个从async函数中抛出的（或其中没有被捕获到的）异常被拒绝。
+
+```js
+function resolveAfter2Seconds(x) {
+        return new Promise(resolve => {
+                setTimeout(() => {
+                        resolve(x);
+                }, 2000);
+        });
+}
+
+async function f1() {
+        var x = await resolveAfter2Seconds(10);
+        console.log(x); // 10
+}
+f1();
+console.log("hello");
+```
+```
+output：
+hello
+10
+```
+
+**for/await 循环**
+异步迭代器会产生一个期约，for/await 循环会等待该期约兑现，将兑现值赋给循环变量，然后再运行循环体
+
+异步迭代器(Symbol.asyncIterator)
+
+异步生成器(async function *)
+设置[Symbol.asyncIterator]属性来自定义异步可迭代对象。
+```js
+const myAsyncIterable = new Object();
+myAsyncIterable[Symbol.asyncIterator] = async function*() {
+    yield "hello";
+    yield "async";
+    yield "iteration!";
+};
+
+(async () => {
+    for await (const x of myAsyncIterable) {
+        console.log(x);
+        // expected output:
+        //    "hello"
+        //    "async"
+        //    "iteration!"
+    }
+})();
+```
