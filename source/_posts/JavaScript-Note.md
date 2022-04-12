@@ -386,3 +386,16 @@ myAsyncIterable[Symbol.asyncIterator] = async function*() {
     }
 })();
 ```
+
+## **元编程**
+---
+**属性特性**
+- 可写：修改属性的值
+- 可枚举：for/in循环和 Object.keys() 方法枚举属性
+- 可配置：可以删除属性/修改属性
+
+模板标签：位于反引号之间的字符串被称为“模板字面量”
+
+[反射API & 代理对象](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Meta_programming)
+> 允许你拦截并定义基本语言操作的自定义行为（例如，属性查找，赋值，枚举，函数调用等）
+
