@@ -1,37 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>多终端同步博客</title>
-    <url>/posts/a7e41fa1/</url>
-    <content><![CDATA[<p>参考资料：<br><a href="https://segmentfault.com/a/1190000019459014">Hexo博客多端同步问题</a></p>
-]]></content>
-      <tags>
-        <tag>hexo tutorial</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/posts/4a17b156/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<span id="more"></span>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <tags>
-        <tag>hexo tutorial</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>JavaScript Note</title>
     <url>/posts/fbbf86b6/</url>
     <content><![CDATA[<h2 id="词法结构"><a href="#词法结构" class="headerlink" title="词法结构"></a><strong>词法结构</strong></h2><hr>
@@ -206,12 +175,48 @@
 <p><strong>for&#x2F;await 循环</strong><br>异步迭代器会产生一个期约，for&#x2F;await 循环会等待该期约兑现，将兑现值赋给循环变量，然后再运行循环体</p>
 <p>异步迭代器(Symbol.asyncIterator)</p>
 <p>异步生成器(async function *)<br>设置[Symbol.asyncIterator]属性来自定义异步可迭代对象。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> myAsyncIterable = <span class="keyword">new</span> <span class="title class_">Object</span>();</span><br><span class="line">myAsyncIterable[<span class="title class_">Symbol</span>.<span class="property">asyncIterator</span>] = <span class="keyword">async</span> <span class="keyword">function</span>*() &#123;</span><br><span class="line">    <span class="keyword">yield</span> <span class="string">&quot;hello&quot;</span>;</span><br><span class="line">    <span class="keyword">yield</span> <span class="string">&quot;async&quot;</span>;</span><br><span class="line">    <span class="keyword">yield</span> <span class="string">&quot;iteration!&quot;</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">(<span class="keyword">async</span> () =&gt; &#123;</span><br><span class="line">    <span class="keyword">for</span> <span class="keyword">await</span> (<span class="keyword">const</span> x <span class="keyword">of</span> myAsyncIterable) &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(x);</span><br><span class="line">        <span class="comment">// expected output:</span></span><br><span class="line">        <span class="comment">//    &quot;hello&quot;</span></span><br><span class="line">        <span class="comment">//    &quot;async&quot;</span></span><br><span class="line">        <span class="comment">//    &quot;iteration!&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>]]></content>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> myAsyncIterable = <span class="keyword">new</span> <span class="title class_">Object</span>();</span><br><span class="line">myAsyncIterable[<span class="title class_">Symbol</span>.<span class="property">asyncIterator</span>] = <span class="keyword">async</span> <span class="keyword">function</span>*() &#123;</span><br><span class="line">    <span class="keyword">yield</span> <span class="string">&quot;hello&quot;</span>;</span><br><span class="line">    <span class="keyword">yield</span> <span class="string">&quot;async&quot;</span>;</span><br><span class="line">    <span class="keyword">yield</span> <span class="string">&quot;iteration!&quot;</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">(<span class="keyword">async</span> () =&gt; &#123;</span><br><span class="line">    <span class="keyword">for</span> <span class="keyword">await</span> (<span class="keyword">const</span> x <span class="keyword">of</span> myAsyncIterable) &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(x);</span><br><span class="line">        <span class="comment">// expected output:</span></span><br><span class="line">        <span class="comment">//    &quot;hello&quot;</span></span><br><span class="line">        <span class="comment">//    &quot;async&quot;</span></span><br><span class="line">        <span class="comment">//    &quot;iteration!&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+
+<h2 id="元编程"><a href="#元编程" class="headerlink" title="元编程"></a><strong>元编程</strong></h2><hr>
+<p><strong>属性特性</strong></p>
+<ul>
+<li>可写：修改属性的值</li>
+<li>可枚举：for&#x2F;in循环和 Object.keys() 方法枚举属性</li>
+<li>可配置：可以删除属性&#x2F;修改属性</li>
+</ul>
+<p>模板标签：位于反引号之间的字符串被称为“模板字面量”</p>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Meta_programming">反射API &amp; 代理对象</a></p>
+<blockquote>
+<p>允许你拦截并定义基本语言操作的自定义行为（例如，属性查找，赋值，枚举，函数调用等）</p>
+</blockquote>
+]]></content>
       <categories>
         <category>computer language</category>
       </categories>
       <tags>
         <tag>javascript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/posts/4a17b156/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<span id="more"></span>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <tags>
+        <tag>hexo tutorial</tag>
       </tags>
   </entry>
   <entry>
@@ -339,6 +344,15 @@
       </categories>
       <tags>
         <tag>vim</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>多终端同步博客</title>
+    <url>/posts/a7e41fa1/</url>
+    <content><![CDATA[<p>参考资料：<br><a href="https://segmentfault.com/a/1190000019459014">Hexo博客多端同步问题</a></p>
+]]></content>
+      <tags>
+        <tag>hexo tutorial</tag>
       </tags>
   </entry>
 </search>
