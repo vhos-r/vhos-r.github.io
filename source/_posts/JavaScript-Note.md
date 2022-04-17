@@ -399,3 +399,17 @@ myAsyncIterable[Symbol.asyncIterator] = async function*() {
 [反射API & 代理对象](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Meta_programming)
 > 允许你拦截并定义基本语言操作的自定义行为（例如，属性查找，赋值，枚举，函数调用等）
 
+## **浏览器中的JavaScript**
+---
+- JavaScript异步/事件驱动的编程模型
+- DOM API是所有客户端JavaScript编程的核心
+- CSS样式
+- svg & `<canvas>` 生成动态图像
+- audio & video
+- location & history
+- http & websocket 协议与web服务器交换数据
+- local cache
+  - web storage
+  - cookie
+  - indexedDB
+- worker thread
