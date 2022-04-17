@@ -189,6 +189,23 @@
 <blockquote>
 <p>允许你拦截并定义基本语言操作的自定义行为（例如，属性查找，赋值，枚举，函数调用等）</p>
 </blockquote>
+<h2 id="浏览器中的JavaScript"><a href="#浏览器中的JavaScript" class="headerlink" title="浏览器中的JavaScript"></a><strong>浏览器中的JavaScript</strong></h2><hr>
+<ul>
+<li>JavaScript异步&#x2F;事件驱动的编程模型</li>
+<li>DOM API是所有客户端JavaScript编程的核心</li>
+<li>CSS样式</li>
+<li>svg &amp; <code>&lt;canvas&gt;</code> 生成动态图像</li>
+<li>audio &amp; video</li>
+<li>location &amp; history</li>
+<li>http &amp; websocket 协议与web服务器交换数据</li>
+<li>local cache<ul>
+<li>web storage</li>
+<li>cookie</li>
+<li>indexedDB</li>
+</ul>
+</li>
+<li>worker thread</li>
+</ul>
 ]]></content>
       <categories>
         <category>computer language</category>
@@ -214,6 +231,15 @@
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <tags>
+        <tag>hexo tutorial</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>多终端同步博客</title>
+    <url>/posts/a7e41fa1/</url>
+    <content><![CDATA[<p>参考资料：<br><a href="https://segmentfault.com/a/1190000019459014">Hexo博客多端同步问题</a></p>
 ]]></content>
       <tags>
         <tag>hexo tutorial</tag>
@@ -344,15 +370,6 @@
       </categories>
       <tags>
         <tag>vim</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>多终端同步博客</title>
-    <url>/posts/a7e41fa1/</url>
-    <content><![CDATA[<p>参考资料：<br><a href="https://segmentfault.com/a/1190000019459014">Hexo博客多端同步问题</a></p>
-]]></content>
-      <tags>
-        <tag>hexo tutorial</tag>
       </tags>
   </entry>
 </search>
