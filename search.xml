@@ -206,6 +206,19 @@
 </li>
 <li>worker thread</li>
 </ul>
+<h2 id="Node服务器端JavaScript"><a href="#Node服务器端JavaScript" class="headerlink" title="Node服务器端JavaScript"></a><strong><a href="https://nodejs.org/en/">Node</a>服务器端JavaScript</strong></h2><hr>
+<h2 id="JavaScript工具和扩展"><a href="#JavaScript工具和扩展" class="headerlink" title="JavaScript工具和扩展"></a><strong>JavaScript工具和扩展</strong></h2><hr>
+<p>工具和语言扩展：</p>
+<ul>
+<li><a href="http://eslint.cn/">ESLint</a>(辅助发现代码中潜藏的缺陷和风格问题)</li>
+<li><a href="https://www.prettier.cn/">Prettier</a>(格式化js代码)</li>
+<li>Jest(js单元测试的一站式解决方案)</li>
+<li>npm</li>
+<li>webpack &amp; Rollup &amp; Parcel</li>
+<li>Babel(转义工具)</li>
+<li>JSX(语言扩展，使用类似HTML标记的js表达式描述用户界面)</li>
+<li>Flow(添加类型注解，通过类型检查保证类型安全)</li>
+</ul>
 ]]></content>
       <categories>
         <category>computer language</category>
@@ -231,15 +244,6 @@
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <tags>
-        <tag>hexo tutorial</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>多终端同步博客</title>
-    <url>/posts/a7e41fa1/</url>
-    <content><![CDATA[<p>参考资料：<br><a href="https://segmentfault.com/a/1190000019459014">Hexo博客多端同步问题</a></p>
 ]]></content>
       <tags>
         <tag>hexo tutorial</tag>
@@ -370,6 +374,15 @@
       </categories>
       <tags>
         <tag>vim</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>多终端同步博客</title>
+    <url>/posts/a7e41fa1/</url>
+    <content><![CDATA[<p>参考资料：<br><a href="https://segmentfault.com/a/1190000019459014">Hexo博客多端同步问题</a></p>
+]]></content>
+      <tags>
+        <tag>hexo tutorial</tag>
       </tags>
   </entry>
 </search>
