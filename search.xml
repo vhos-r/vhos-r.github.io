@@ -250,6 +250,15 @@
       </tags>
   </entry>
   <entry>
+    <title>多终端同步博客</title>
+    <url>/posts/a7e41fa1/</url>
+    <content><![CDATA[<p>参考资料：<br><a href="https://segmentfault.com/a/1190000019459014">Hexo博客多端同步问题</a></p>
+]]></content>
+      <tags>
+        <tag>hexo tutorial</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>vim tutorial</title>
     <url>/posts/9e9a6725/</url>
     <content><![CDATA[<div class="note info"><h2 id="Note"><a href="#Note" class="headerlink" title="Note:"></a>Note:</h2><p>本文内容摘自vimtutor教程，做个汇总方便查阅(●’◡’●)</p>
@@ -374,15 +383,6 @@
       </categories>
       <tags>
         <tag>vim</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>多终端同步博客</title>
-    <url>/posts/a7e41fa1/</url>
-    <content><![CDATA[<p>参考资料：<br><a href="https://segmentfault.com/a/1190000019459014">Hexo博客多端同步问题</a></p>
-]]></content>
-      <tags>
-        <tag>hexo tutorial</tag>
       </tags>
   </entry>
 </search>
