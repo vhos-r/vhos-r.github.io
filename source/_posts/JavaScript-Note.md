@@ -413,3 +413,19 @@ myAsyncIterable[Symbol.asyncIterator] = async function*() {
   - cookie
   - indexedDB
 - worker thread
+
+## **[Node](https://nodejs.org/en/)服务器端JavaScript**
+---
+
+
+## **JavaScript工具和扩展**
+---
+工具和语言扩展：
+- [ESLint](http://eslint.cn/)(辅助发现代码中潜藏的缺陷和风格问题)
+- [Prettier](https://www.prettier.cn/)(格式化js代码)
+- Jest(js单元测试的一站式解决方案)
+- npm
+- webpack & Rollup & Parcel
+- Babel(转义工具)
+- JSX(语言扩展，使用类似HTML标记的js表达式描述用户界面)
+- Flow(添加类型注解，通过类型检查保证类型安全)
