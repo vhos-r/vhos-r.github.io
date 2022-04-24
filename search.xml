@@ -250,15 +250,6 @@
       </tags>
   </entry>
   <entry>
-    <title>多终端同步博客</title>
-    <url>/posts/a7e41fa1/</url>
-    <content><![CDATA[<p>参考资料：<br><a href="https://segmentfault.com/a/1190000019459014">Hexo博客多端同步问题</a></p>
-]]></content>
-      <tags>
-        <tag>hexo tutorial</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>vim tutorial</title>
     <url>/posts/9e9a6725/</url>
     <content><![CDATA[<div class="note info"><h2 id="Note"><a href="#Note" class="headerlink" title="Note:"></a>Note:</h2><p>本文内容摘自vimtutor教程，做个汇总方便查阅(●’◡’●)</p>
@@ -383,6 +374,95 @@
       </categories>
       <tags>
         <tag>vim</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>会议纪要</title>
+    <url>/posts/2c109fcd/</url>
+    <content><![CDATA[<p>工作中难免会需要书写会议纪要等内容，一个好的格式能够体现作为一个职业人的专业素养，下面笔者便摘记工作中使用过的模板。</p>
+<span id="more"></span>
+<p><strong>会议纪要大纲：</strong></p>
+<ul>
+<li>会议主题</li>
+<li>会议时间</li>
+<li>参会部门</li>
+<li>参会人员</li>
+<li>记录人员</li>
+<li>会议内容</li>
+<li>结论</li>
+<li>附件<code>[可选]</code></li>
+</ul>
+]]></content>
+      <categories>
+        <category>working</category>
+      </categories>
+      <tags>
+        <tag>meeting</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>操作系统笔记</title>
+    <url>/posts/8ce3e425/</url>
+    <content><![CDATA[<mark class="label primary">声明：</mark>
+<p>以下笔记内容摘自现代操作系统原理与实现.陈海波、夏虞斌 等著</p>
+<span id="more"></span>
+
+<h2 id="操作系统概述"><a href="#操作系统概述" class="headerlink" title="操作系统概述"></a><strong>操作系统概述</strong></h2><hr>
+<p>操作系统有两个职责：对<strong>硬件</strong>进行管理和抽象，为<strong>应用</strong>提供服务并进行管理</p>
+<p><img src="/images/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%AE%80%E8%A6%81%E7%BB%93%E6%9E%84.svg" alt="操作系统简要结构"></p>
+<p>操作系统简史</p>
+<ul>
+<li>GM-NAA I&#x2F;O: 第一个(批处理)操作系统</li>
+<li>OS&#x2F;360: 从专用走向通用</li>
+<li>Multics&#x2F;UNIX&#x2F;Linux: 分时与多任务</li>
+<li>macOS&#x2F;Windows: 以人为本的人机交互</li>
+</ul>
+<p>操作系统接口<br>从应用角度，操作系统提供了不同层次的接口，主要包括：</p>
+<ul>
+<li>系统调用接口</li>
+<li>POSIX接口</li>
+<li>领域应用接口</li>
+</ul>
+<p><img src="/images/%E4%B8%8D%E5%90%8C%E5%B1%82%E6%AC%A1%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%8E%A5%E5%8F%A3.svg" alt="不同层次的操作系统接口"></p>
+<p>ChCore用于本书教学而开发的实验操作系统，基本结构如下所示：</p>
+<p><img src="/images/ChCore%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E7%A4%BA%E6%84%8F%E5%9B%BE.svg" alt="ChCore系统架构示意图"></p>
+<h2 id="硬件结构"><a href="#硬件结构" class="headerlink" title="硬件结构"></a><strong>硬件结构</strong></h2><hr>
+<p>冯·诺伊曼结构包括三个主要部分：</p>
+<ul>
+<li>中央处理单元</li>
+<li>存储器</li>
+<li>输入输出</li>
+</ul>
+<p><img src="/images/%E5%86%AF%E8%AF%BA%E4%BE%9D%E6%9B%BC%E7%BB%93%E6%9E%84%E7%A4%BA%E6%84%8F%E5%9B%BE.svg" alt="冯诺依曼结构示意图"></p>
+<p>ISA- Instruction Set Architecture - 指令集架构</p>
+<ul>
+<li>RISC(Reduced Instruction Set Computer)- 精简指令集计算机</li>
+<li>CISC(Complex Instruction Set Computer)- 复杂指令集计算机</li>
+</ul>
+<p>RISC - AArch64<br>每条指令的长度固定4字节，指令类型包括：</p>
+<ul>
+<li>数据搬移指令(mov)</li>
+<li>寄存器计算指令(add&#x2F;sub)</li>
+<li>内存读写指令(ldr&#x2F;str)</li>
+<li>跳转指令(b)</li>
+<li>过程调用指令(bl&#x2F;ret)</li>
+<li>特权指令(mrs&#x2F;msr)</li>
+</ul>
+]]></content>
+      <categories>
+        <category>four fundamental computer technology</category>
+      </categories>
+      <tags>
+        <tag>operator system</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>多终端同步博客</title>
+    <url>/posts/a7e41fa1/</url>
+    <content><![CDATA[<p>参考资料：<br><a href="https://segmentfault.com/a/1190000019459014">Hexo博客多端同步问题</a></p>
+]]></content>
+      <tags>
+        <tag>hexo tutorial</tag>
       </tags>
   </entry>
 </search>

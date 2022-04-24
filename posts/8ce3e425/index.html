@@ -22,25 +22,33 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"vhos-r.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.11.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2}},"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="不积跬步无以至千里">
-<meta property="og:type" content="website">
-<meta property="og:title" content="夕阳下的余晖">
-<meta property="og:url" content="https://vhos-r.github.io/tags/hexo-tutorial/index.html">
+    <meta name="description" content="声明： 以下笔记内容摘自现代操作系统原理与实现.陈海波、夏虞斌 等著">
+<meta property="og:type" content="article">
+<meta property="og:title" content="操作系统笔记">
+<meta property="og:url" content="https://vhos-r.github.io/posts/8ce3e425/index.html">
 <meta property="og:site_name" content="夕阳下的余晖">
-<meta property="og:description" content="不积跬步无以至千里">
+<meta property="og:description" content="声明： 以下笔记内容摘自现代操作系统原理与实现.陈海波、夏虞斌 等著">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://vhos-r.github.io/images/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%AE%80%E8%A6%81%E7%BB%93%E6%9E%84.svg">
+<meta property="og:image" content="https://vhos-r.github.io/images/%E4%B8%8D%E5%90%8C%E5%B1%82%E6%AC%A1%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%8E%A5%E5%8F%A3.svg">
+<meta property="og:image" content="https://vhos-r.github.io/images/ChCore%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E7%A4%BA%E6%84%8F%E5%9B%BE.svg">
+<meta property="og:image" content="https://vhos-r.github.io/images/%E5%86%AF%E8%AF%BA%E4%BE%9D%E6%9B%BC%E7%BB%93%E6%9E%84%E7%A4%BA%E6%84%8F%E5%9B%BE.svg">
+<meta property="article:published_time" content="2022-04-23T03:42:57.000Z">
+<meta property="article:modified_time" content="2022-04-24T12:51:19.627Z">
 <meta property="article:author" content="sunshine">
+<meta property="article:tag" content="operator system">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://vhos-r.github.io/images/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%AE%80%E8%A6%81%E7%BB%93%E6%9E%84.svg">
 
 
-<link rel="canonical" href="https://vhos-r.github.io/tags/hexo-tutorial/">
+<link rel="canonical" href="https://vhos-r.github.io/posts/8ce3e425/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"tags/hexo-tutorial/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://vhos-r.github.io/posts/8ce3e425/","path":"posts/8ce3e425/","title":"操作系统笔记"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>标签: hexo tutorial | 夕阳下的余晖</title>
+<title>操作系统笔记 | 夕阳下的余晖</title>
   
 
 
@@ -137,7 +145,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -150,6 +158,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text">操作系统概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A1%AC%E4%BB%B6%E7%BB%93%E6%9E%84"><span class="nav-number">2.</span> <span class="nav-text">硬件结构</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -209,71 +218,160 @@
 </noscript>
 
 
-    <div class="main-inner tag posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
+
+
+<div class="post-block">
   
   
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <h1 class="collection-header">hexo tutorial
-          <small>标签</small>
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://vhos-r.github.io/posts/8ce3e425/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="sunshine">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="夕阳下的余晖">
+      <meta itemprop="description" content="不积跬步无以至千里">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="操作系统笔记 | 夕阳下的余晖">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          操作系统笔记
         </h1>
-      </div>
 
-      
-    <div class="collection-year">
-      <span class="collection-header">2022</span>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-04-23 11:42:57" itemprop="dateCreated datePublished" datetime="2022-04-23T11:42:57+08:00">2022-04-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-04-24 20:51:19" itemprop="dateModified" datetime="2022-04-24T20:51:19+08:00">2022-04-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/four-fundamental-computer-technology/" itemprop="url" rel="index"><span itemprop="name">four fundamental computer technology</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <mark class="label primary">声明：</mark>
+<p>以下笔记内容摘自现代操作系统原理与实现.陈海波、夏虞斌 等著</p>
+<span id="more"></span>
+
+<h2 id="操作系统概述"><a href="#操作系统概述" class="headerlink" title="操作系统概述"></a><strong>操作系统概述</strong></h2><hr>
+<p>操作系统有两个职责：对<strong>硬件</strong>进行管理和抽象，为<strong>应用</strong>提供服务并进行管理</p>
+<p><img src="/images/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%AE%80%E8%A6%81%E7%BB%93%E6%9E%84.svg" alt="操作系统简要结构"></p>
+<p>操作系统简史</p>
+<ul>
+<li>GM-NAA I&#x2F;O: 第一个(批处理)操作系统</li>
+<li>OS&#x2F;360: 从专用走向通用</li>
+<li>Multics&#x2F;UNIX&#x2F;Linux: 分时与多任务</li>
+<li>macOS&#x2F;Windows: 以人为本的人机交互</li>
+</ul>
+<p>操作系统接口<br>从应用角度，操作系统提供了不同层次的接口，主要包括：</p>
+<ul>
+<li>系统调用接口</li>
+<li>POSIX接口</li>
+<li>领域应用接口</li>
+</ul>
+<p><img src="/images/%E4%B8%8D%E5%90%8C%E5%B1%82%E6%AC%A1%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%8E%A5%E5%8F%A3.svg" alt="不同层次的操作系统接口"></p>
+<p>ChCore用于本书教学而开发的实验操作系统，基本结构如下所示：</p>
+<p><img src="/images/ChCore%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E7%A4%BA%E6%84%8F%E5%9B%BE.svg" alt="ChCore系统架构示意图"></p>
+<h2 id="硬件结构"><a href="#硬件结构" class="headerlink" title="硬件结构"></a><strong>硬件结构</strong></h2><hr>
+<p>冯·诺伊曼结构包括三个主要部分：</p>
+<ul>
+<li>中央处理单元</li>
+<li>存储器</li>
+<li>输入输出</li>
+</ul>
+<p><img src="/images/%E5%86%AF%E8%AF%BA%E4%BE%9D%E6%9B%BC%E7%BB%93%E6%9E%84%E7%A4%BA%E6%84%8F%E5%9B%BE.svg" alt="冯诺依曼结构示意图"></p>
+<p>ISA- Instruction Set Architecture - 指令集架构</p>
+<ul>
+<li>RISC(Reduced Instruction Set Computer)- 精简指令集计算机</li>
+<li>CISC(Complex Instruction Set Computer)- 复杂指令集计算机</li>
+</ul>
+<p>RISC - AArch64<br>每条指令的长度固定4字节，指令类型包括：</p>
+<ul>
+<li>数据搬移指令(mov)</li>
+<li>寄存器计算指令(add&#x2F;sub)</li>
+<li>内存读写指令(ldr&#x2F;str)</li>
+<li>跳转指令(b)</li>
+<li>过程调用指令(bl&#x2F;ret)</li>
+<li>特权指令(mrs&#x2F;msr)</li>
+</ul>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-04-08T22:33:31+08:00"
-              content="2022-04-08">
-          04-08
-        </time>
-      </div>
+    
+    
+    
 
-      <div class="post-title">
-          <a class="post-title-link" href="/posts/a7e41fa1/" itemprop="url">
-            <span itemprop="name">多终端同步博客</span>
-          </a>
-      </div>
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/operator-system/" rel="tag"><i class="fa fa-tag"></i> operator system</a>
+          </div>
 
-      
-    </header>
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/2c109fcd/" rel="prev" title="会议纪要">
+                  <i class="fa fa-chevron-left"></i> 会议纪要
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
   </article>
+</div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-04-03T17:33:24+08:00"
-              content="2022-04-03">
-          04-03
-        </time>
-      </div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/posts/4a17b156/" itemprop="url">
-            <span itemprop="name">Hello World</span>
-          </a>
-      </div>
 
-      
-    </header>
-  </article>
 
-    </div>
-  </div>
-  
-  
-  
 
+
+    <div class="comments gitalk-container"></div>
 </div>
   </main>
 
@@ -333,7 +431,7 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
 
-<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"vhos-r","repo":"vhos-r.github.io","client_id":"edba0cf2263e7a8225ff","client_secret":"d54c8571d47c69e62a12725255c458a1a21884f7","admin_user":"vhos-r","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"6eac23ace0372433b1df1b5f3fa4ce55"}</script>
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"vhos-r","repo":"vhos-r.github.io","client_id":"edba0cf2263e7a8225ff","client_secret":"d54c8571d47c69e62a12725255c458a1a21884f7","admin_user":"vhos-r","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"8c633266dcaa5f75294ee37afee90387"}</script>
 <script src="/js/third-party/comments/gitalk.js"></script>
 
 </body>
