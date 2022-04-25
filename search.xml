@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hello World</title>
+    <url>/posts/4a17b156/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<span id="more"></span>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <tags>
+        <tag>hexo tutorial</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JavaScript Note</title>
     <url>/posts/fbbf86b6/</url>
     <content><![CDATA[<h2 id="词法结构"><a href="#词法结构" class="headerlink" title="词法结构"></a><strong>词法结构</strong></h2><hr>
@@ -228,25 +250,160 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/posts/4a17b156/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<span id="more"></span>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+    <title>多终端同步博客</title>
+    <url>/posts/a7e41fa1/</url>
+    <content><![CDATA[<p>参考资料：<br><a href="https://segmentfault.com/a/1190000019459014">Hexo博客多端同步问题</a></p>
 ]]></content>
       <tags>
         <tag>hexo tutorial</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>会议纪要</title>
+    <url>/posts/2c109fcd/</url>
+    <content><![CDATA[<p>工作中难免会需要书写会议纪要等内容，一个好的格式能够体现作为一个职业人的专业素养，下面笔者便摘记工作中使用过的模板。</p>
+<span id="more"></span>
+<p><strong>会议纪要大纲：</strong></p>
+<ul>
+<li>会议主题</li>
+<li>会议时间</li>
+<li>参会部门</li>
+<li>参会人员</li>
+<li>记录人员</li>
+<li>会议内容</li>
+<li>结论</li>
+<li>附件<code>[可选]</code></li>
+</ul>
+]]></content>
+      <categories>
+        <category>working</category>
+      </categories>
+      <tags>
+        <tag>meeting</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>操作系统笔记</title>
+    <url>/posts/8ce3e425/</url>
+    <content><![CDATA[<mark class="label primary">声明：</mark>
+<p>以下笔记内容摘自现代操作系统原理与实现.陈海波、夏虞斌 等著</p>
+<span id="more"></span>
+
+<h2 id="操作系统概述"><a href="#操作系统概述" class="headerlink" title="操作系统概述"></a><strong>操作系统概述</strong></h2><hr>
+<p>操作系统有两个职责：对<strong>硬件</strong>进行管理和抽象，为<strong>应用</strong>提供服务并进行管理</p>
+<p><img src="/images/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%AE%80%E8%A6%81%E7%BB%93%E6%9E%84.svg" alt="操作系统简要结构"></p>
+<p>操作系统简史</p>
+<ul>
+<li>GM-NAA I&#x2F;O: 第一个(批处理)操作系统</li>
+<li>OS&#x2F;360: 从专用走向通用</li>
+<li>Multics&#x2F;UNIX&#x2F;Linux: 分时与多任务</li>
+<li>macOS&#x2F;Windows: 以人为本的人机交互</li>
+</ul>
+<p>操作系统接口<br>从应用角度，操作系统提供了不同层次的接口，主要包括：</p>
+<ul>
+<li>系统调用接口</li>
+<li>POSIX接口</li>
+<li>领域应用接口</li>
+</ul>
+<p><img src="/images/%E4%B8%8D%E5%90%8C%E5%B1%82%E6%AC%A1%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%8E%A5%E5%8F%A3.svg" alt="不同层次的操作系统接口"></p>
+<p>ChCore用于本书教学而开发的实验操作系统，基本结构如下所示：</p>
+<p><img src="/images/ChCore%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E7%A4%BA%E6%84%8F%E5%9B%BE.svg" alt="ChCore系统架构示意图"></p>
+<h2 id="硬件结构"><a href="#硬件结构" class="headerlink" title="硬件结构"></a><strong>硬件结构</strong></h2><hr>
+<p>冯·诺伊曼结构包括三个主要部分：</p>
+<ul>
+<li>中央处理单元</li>
+<li>存储器</li>
+<li>输入输出</li>
+</ul>
+<p><img src="/images/%E5%86%AF%E8%AF%BA%E4%BE%9D%E6%9B%BC%E7%BB%93%E6%9E%84%E7%A4%BA%E6%84%8F%E5%9B%BE.svg" alt="冯诺依曼结构示意图"></p>
+<p>ISA- Instruction Set Architecture - 指令集架构</p>
+<ul>
+<li>RISC(Reduced Instruction Set Computer)- 精简指令集计算机</li>
+<li>CISC(Complex Instruction Set Computer)- 复杂指令集计算机</li>
+</ul>
+<p>RISC - AArch64<br>每条指令的长度固定4字节，指令类型包括：</p>
+<ul>
+<li>数据搬移指令(mov)</li>
+<li>寄存器计算指令(add&#x2F;sub)</li>
+<li>内存读写指令(ldr&#x2F;str)</li>
+<li>跳转指令(b)</li>
+<li>过程调用指令(bl&#x2F;ret)</li>
+<li>特权指令(mrs&#x2F;msr)</li>
+</ul>
+<h2 id="操作系统结构"><a href="#操作系统结构" class="headerlink" title="操作系统结构"></a><strong>操作系统结构</strong></h2><hr>
+<p>在构建复杂系统时，必须合理考虑其内部结构，在不同的需求之间进行<strong>权衡</strong>。</p>
+<p>操作系统乃至计算机系统中控制复杂度的一个重要设计原则是：将<strong>策略</strong>与<strong>机制</strong>相分离。<br>策略表示“做什么”，机制表示“如何做”</p>
+<center><font color=#F78A52>典型的操作系统机制与策略</font></center>
+
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">策略</th>
+<th align="center">机制</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">登录</td>
+<td align="center">什么用户、以什么权限登录等</td>
+<td align="center">输入处理、策略文件管理、桌面启动加载等</td>
+</tr>
+<tr>
+<td align="center">调度</td>
+<td align="center">先到先得、时间片轮转等</td>
+<td align="center">调度队列的设计、调度实体的表示、调度的中断处理等</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<p>管理复杂系统的重要方法是M.A.L.H方法，即</p>
+<ul>
+<li>模块化(modularity)</li>
+<li>抽象(abstraction)</li>
+<li>分层(layering)<ul>
+<li>不同类模块之间的层级</li>
+</ul>
+</li>
+<li>层级(hierarchy)<ul>
+<li>同类模块之间的分层</li>
+</ul>
+</li>
+</ul>
+<p>操作系统内核架构：</p>
+<ul>
+<li>简要结构</li>
+<li>宏内核</li>
+<li>微内核</li>
+<li>外核</li>
+<li>多核 &amp; 混合内核</li>
+</ul>
+<p><strong>简要结构</strong><br>一些功能较为简单的操作系统，会选择将应用程序与操作系统放置在同一个地址空间中，无需底层硬件提供复杂的内存管理、特权级隔离等功能。</p>
+<p>典型示例：MS-DOS(MicrSoft Disk Operating System)<br>优点：应用程序对操作系统服务的调用无需切换地址空间和权限层级，因此更加高效。<br>缺点：任何一个应用或操作系统模块出现了问题，均有可能使整个系统崩溃。</p>
+<p><strong>宏内核架构</strong><br>又称<strong>单内核</strong>，其特征是操作系统内核的所有模块(包括进程调度、内存管理、文件系统、设备驱动等)均运行在内核态，具备直接操作硬件的能力，这类操作系统包裹UNIX&#x2F;Linux、FreeBSD等。</p>
+<p><strong>微内核</strong><br>将单个功能或模块(如文件系统、设备驱动等)从内核中拆分出来，作为一个独立的服务部署到独立的运行环境中；内核仅保留极少的功能，为这些服务提供通信等基础能力，使其能够互相协作以完成操作系统所必需的功能。</p>
+<p><strong>外核架构</strong><br>外核架构可以为不同应用提供定制化的高效资源管理：按照不同应用领域的要求，将对硬件资源的抽象模块化为一系列的库(即<strong>LibOS</strong>).</p>
+<p>操作系统框架结构：</p>
+<ul>
+<li>Android 系统框架</li>
+<li>ROS 系统框架</li>
+</ul>
+<p><strong>Android 系统框架</strong><br>在Linux内核之上运行的Android系统框架包括如下几个主要组件：</p>
+<ol>
+<li>硬件抽象层</li>
+<li>Android库</li>
+<li>Android运行环境</li>
+<li>Android应用框架</li>
+<li>服务化架构与BinderIPC</li>
+</ol>
+]]></content>
+      <categories>
+        <category>four fundamental computer technology</category>
+      </categories>
+      <tags>
+        <tag>operator system</tag>
       </tags>
   </entry>
   <entry>
@@ -374,95 +531,6 @@
       </categories>
       <tags>
         <tag>vim</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>会议纪要</title>
-    <url>/posts/2c109fcd/</url>
-    <content><![CDATA[<p>工作中难免会需要书写会议纪要等内容，一个好的格式能够体现作为一个职业人的专业素养，下面笔者便摘记工作中使用过的模板。</p>
-<span id="more"></span>
-<p><strong>会议纪要大纲：</strong></p>
-<ul>
-<li>会议主题</li>
-<li>会议时间</li>
-<li>参会部门</li>
-<li>参会人员</li>
-<li>记录人员</li>
-<li>会议内容</li>
-<li>结论</li>
-<li>附件<code>[可选]</code></li>
-</ul>
-]]></content>
-      <categories>
-        <category>working</category>
-      </categories>
-      <tags>
-        <tag>meeting</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>操作系统笔记</title>
-    <url>/posts/8ce3e425/</url>
-    <content><![CDATA[<mark class="label primary">声明：</mark>
-<p>以下笔记内容摘自现代操作系统原理与实现.陈海波、夏虞斌 等著</p>
-<span id="more"></span>
-
-<h2 id="操作系统概述"><a href="#操作系统概述" class="headerlink" title="操作系统概述"></a><strong>操作系统概述</strong></h2><hr>
-<p>操作系统有两个职责：对<strong>硬件</strong>进行管理和抽象，为<strong>应用</strong>提供服务并进行管理</p>
-<p><img src="/images/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%AE%80%E8%A6%81%E7%BB%93%E6%9E%84.svg" alt="操作系统简要结构"></p>
-<p>操作系统简史</p>
-<ul>
-<li>GM-NAA I&#x2F;O: 第一个(批处理)操作系统</li>
-<li>OS&#x2F;360: 从专用走向通用</li>
-<li>Multics&#x2F;UNIX&#x2F;Linux: 分时与多任务</li>
-<li>macOS&#x2F;Windows: 以人为本的人机交互</li>
-</ul>
-<p>操作系统接口<br>从应用角度，操作系统提供了不同层次的接口，主要包括：</p>
-<ul>
-<li>系统调用接口</li>
-<li>POSIX接口</li>
-<li>领域应用接口</li>
-</ul>
-<p><img src="/images/%E4%B8%8D%E5%90%8C%E5%B1%82%E6%AC%A1%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%8E%A5%E5%8F%A3.svg" alt="不同层次的操作系统接口"></p>
-<p>ChCore用于本书教学而开发的实验操作系统，基本结构如下所示：</p>
-<p><img src="/images/ChCore%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E7%A4%BA%E6%84%8F%E5%9B%BE.svg" alt="ChCore系统架构示意图"></p>
-<h2 id="硬件结构"><a href="#硬件结构" class="headerlink" title="硬件结构"></a><strong>硬件结构</strong></h2><hr>
-<p>冯·诺伊曼结构包括三个主要部分：</p>
-<ul>
-<li>中央处理单元</li>
-<li>存储器</li>
-<li>输入输出</li>
-</ul>
-<p><img src="/images/%E5%86%AF%E8%AF%BA%E4%BE%9D%E6%9B%BC%E7%BB%93%E6%9E%84%E7%A4%BA%E6%84%8F%E5%9B%BE.svg" alt="冯诺依曼结构示意图"></p>
-<p>ISA- Instruction Set Architecture - 指令集架构</p>
-<ul>
-<li>RISC(Reduced Instruction Set Computer)- 精简指令集计算机</li>
-<li>CISC(Complex Instruction Set Computer)- 复杂指令集计算机</li>
-</ul>
-<p>RISC - AArch64<br>每条指令的长度固定4字节，指令类型包括：</p>
-<ul>
-<li>数据搬移指令(mov)</li>
-<li>寄存器计算指令(add&#x2F;sub)</li>
-<li>内存读写指令(ldr&#x2F;str)</li>
-<li>跳转指令(b)</li>
-<li>过程调用指令(bl&#x2F;ret)</li>
-<li>特权指令(mrs&#x2F;msr)</li>
-</ul>
-]]></content>
-      <categories>
-        <category>four fundamental computer technology</category>
-      </categories>
-      <tags>
-        <tag>operator system</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>多终端同步博客</title>
-    <url>/posts/a7e41fa1/</url>
-    <content><![CDATA[<p>参考资料：<br><a href="https://segmentfault.com/a/1190000019459014">Hexo博客多端同步问题</a></p>
-]]></content>
-      <tags>
-        <tag>hexo tutorial</tag>
       </tags>
   </entry>
 </search>
