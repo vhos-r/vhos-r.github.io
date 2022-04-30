@@ -121,7 +121,7 @@ let c = p.constructor;  // 这是与原型关联的函数
 c === F                 // => true: 对任何F，F.prototype.constructor === F
 ```
 
-![](/images/类与实例对象关系图.png)
+![构造函数及其原型和实例](/images/构造函数及其原型和实例.svg)
 
 ES6新增了class 关键字，让定义类更方便。但在底层，仍然是构造函数和原型机制在起作用
 子类在类声明中通过extends关键字定义
