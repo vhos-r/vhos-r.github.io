@@ -228,28 +228,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/posts/4a17b156/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<span id="more"></span>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <tags>
-        <tag>hexo tutorial</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>vim tutorial</title>
     <url>/posts/9e9a6725/</url>
     <content><![CDATA[<div class="note info"><h2 id="Note"><a href="#Note" class="headerlink" title="Note:"></a>Note:</h2><p>本文内容摘自vimtutor教程，做个汇总方便查阅(●’◡’●)</p>
@@ -377,6 +355,28 @@
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/posts/4a17b156/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<span id="more"></span>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <tags>
+        <tag>hexo tutorial</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>会议纪要</title>
     <url>/posts/2c109fcd/</url>
     <content><![CDATA[<p>工作中难免会需要书写会议纪要等内容，一个好的格式能够体现作为一个职业人的专业素养，下面笔者便摘记工作中使用过的模板。</p>
@@ -398,15 +398,6 @@
       </categories>
       <tags>
         <tag>meeting</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>多终端同步博客</title>
-    <url>/posts/a7e41fa1/</url>
-    <content><![CDATA[<p>参考资料：<br><a href="https://segmentfault.com/a/1190000019459014">Hexo博客多端同步问题</a></p>
-]]></content>
-      <tags>
-        <tag>hexo tutorial</tag>
       </tags>
   </entry>
   <entry>
@@ -653,12 +644,298 @@
 <li>虚拟地址区域struct vmregion</li>
 <li>物理内存对象struct pmobject</li>
 </ul>
+<h2 id="进程与线程"><a href="#进程与线程" class="headerlink" title="进程与线程"></a><strong>进程与线程</strong></h2><hr>
+<p><strong>进程</strong></p>
+<ul>
+<li>每个进程都对应于一个运行中的程序</li>
+</ul>
+<p>进程的状态分为以下几种：</p>
+<ul>
+<li>新生状态<ul>
+<li>一个进程刚被创建出来，还未完成初始化，不能被调度执行</li>
+</ul>
+</li>
+<li>就绪状态<ul>
+<li>进程可以被调度执行，但还未被调度器选择</li>
+</ul>
+</li>
+<li>运行状态<ul>
+<li>进程正在CPU上运行</li>
+</ul>
+</li>
+<li>阻塞状态<ul>
+<li>进程需要等待外部事件，暂时无法被调度</li>
+</ul>
+</li>
+<li>终止状态<ul>
+<li>进程已完成执行，且不会再被调度</li>
+</ul>
+</li>
+</ul>
+<p><img src="/images/%E8%BF%9B%E7%A8%8B%E5%9C%A8%E4%B8%8D%E5%90%8C%E7%8A%B6%E6%80%81%E4%B9%8B%E9%97%B4%E5%88%87%E6%8D%A2.svg" alt="进程在不同状态之间切换"></p>
+<p>进程的内存空间布局</p>
+<ul>
+<li>用户栈<ul>
+<li>保存进程需要的各种临时数据，扩展方向是自顶向下</li>
+</ul>
+</li>
+<li>代码库<ul>
+<li>进程执行需要依赖的共享代码库，如libc – 只读</li>
+</ul>
+</li>
+<li>用户堆<ul>
+<li>进程动态分配的内存，扩展方向是自底向上</li>
+</ul>
+</li>
+<li>数据与代码段<ul>
+<li>保存在进程需要执行的二进制文件中，进程执行前，由操作系统载入虚拟地址空间</li>
+<li>数据段保存全局变量</li>
+<li>代码段保存进程执行的代码</li>
+</ul>
+</li>
+<li>内核部分<ul>
+<li>进程地址空间的最顶端</li>
+<li>每个进程的虚拟地址空间里都映射了相同的内核内存</li>
+</ul>
+</li>
+</ul>
+<p><img src="/images/%E5%85%B8%E5%9E%8B%E7%9A%84%E8%BF%9B%E7%A8%8B%E5%86%85%E5%AD%98%E7%A9%BA%E9%97%B4%E5%B8%83%E5%B1%80.svg" alt="典型的进程内存空间布局"></p>
+<p>进程控制块和上下文切换<br>PCB - Process Control Block – 进程控制块</p>
+<ul>
+<li>进程标识符 – PID - Process IDentifier</li>
+<li>进程状态</li>
+<li>虚拟内存状态</li>
+<li>打开的文件</li>
+<li>…</li>
+</ul>
+<p>上下文 - 进程运行时的寄存器状态，其能够用于保存和恢复一个进程在处理器上运行的状态</p>
+<p><img src="/images/%E8%BF%9B%E7%A8%8B%E4%B8%8A%E4%B8%8B%E6%96%87%E5%88%87%E6%8D%A2%E7%A4%BA%E6%84%8F%E5%9B%BE.svg" alt="进程上下文切换示意图"></p>
+<p>Linux的进程操作</p>
+<ol>
+<li>进程的创建：fork<ul>
+<li>调用一次，返回两次</li>
+<li>父进程，fork返回值是子进程PID</li>
+<li>子进程，fork返回值是0</li>
+</ul>
+</li>
+<li>进程的执行：exec<ul>
+<li>fork创建进程，exec执行用户指定的二进制文件</li>
+</ul>
+</li>
+<li>进程管理<ul>
+<li>进程监控 – wait</li>
+<li>进程组<ul>
+<li>进程集合，由一个或多个进程组成</li>
+</ul>
+</li>
+<li>会话<ul>
+<li>进程组的集合，可以由一个或多个进程组构成</li>
+<li>前台进程组</li>
+<li>后台进程组</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>讨论：fork过时了吗<ul>
+<li>fork优点：<ul>
+<li>fork接口设计简洁</li>
+<li>fork强调进程之间的强联系</li>
+</ul>
+</li>
+<li>fork局限性<ul>
+<li>fork实现愈加复杂</li>
+<li>fork性能太差</li>
+<li>fork存在潜在安全漏洞</li>
+</ul>
+</li>
+<li>Linux替代方案：<ul>
+<li>合二为一：posix_spawn</li>
+<li>限定场景：vfork</li>
+<li>精密控制：rfork&#x2F;clone</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p><strong>线程</strong><br>之所以引入线程，是因为随着计算机科学技术的发展，计算机拥有了更多的CPU核心，程序的可并行度提高，进程这一抽象开始显得过于笨重：</p>
+<ul>
+<li>创建进程的开销较大，需要完成创建独立的地址空间&#x2F;载入数据和代码段&#x2F;初始化堆等步骤</li>
+<li>进程拥有独立的虚拟地址空间，在进程间共享数据和同步比较麻烦<ul>
+<li>共享内存页（粒度较粗）</li>
+<li>进程间通信（开销较高）</li>
+</ul>
+</li>
+</ul>
+<p>线程 – 拥有独立的可执行单元，共享进程的地址空间，但又各自保存运行时所需的状态（状态）</p>
+<p>多线程的地址空间布局：</p>
+<ul>
+<li>分离的内核栈与用户栈</li>
+<li>共享的其他区域</li>
+</ul>
+<p><img src="/images/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E8%BF%9B%E7%A8%8B%E7%9A%84%E5%9C%B0%E5%9D%80%E7%A9%BA%E9%97%B4%E5%B8%83%E5%B1%80.svg" alt="多线程进程的地址空间布局"></p>
+<p>用户态线程与内核态线程 – 多线程模型：<br>a) 多对一模型<br>b) 一对一模型<br>c) 多对多模型</p>
+<p>TCB - Thread Control Block – 线程控制块<br>TLS - Thread Local Storage – 线程本地存储</p>
+<p>线程的基本接口：以POSIX线程库为例</p>
+<ol>
+<li>线程创建<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;pthread.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">pthread_create</span><span class="params">(<span class="type">pthread_t</span> *thread, <span class="type">const</span> <span class="type">pthread_attr_t</span> *attr,</span></span><br><span class="line"><span class="params">                    <span class="type">void</span> *(*start_routine) (<span class="type">void</span> *), <span class="type">void</span> *arg)</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Compile and link with -pthread.</span></span><br></pre></td></tr></table></figure></li>
+<li>线程退出<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;pthread.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">pthread_exit</span><span class="params">(<span class="type">void</span> *retval)</span>;</span><br></pre></td></tr></table></figure></li>
+<li>出让资源<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;pthread.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">pthread_yield</span><span class="params">(<span class="type">void</span>)</span>;</span><br></pre></td></tr></table></figure></li>
+<li>合并操作<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;pthread.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">pthread_join</span><span class="params">(<span class="type">pthread_t</span> thread, <span class="type">void</span> **retval)</span>;</span><br></pre></td></tr></table></figure></li>
+<li>挂起与唤醒<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 挂起方式1：等待固定时间</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">unsigned</span> <span class="type">int</span> <span class="title function_">sleep</span><span class="params">(<span class="type">unsigned</span> <span class="type">int</span> seconds)</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 挂起方式2：等待具体事件</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;pthread.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">pthread_cond_t</span> cond = PTHREAD_COND_INITIALIZER;</span><br><span class="line"><span class="type">int</span> <span class="title function_">pthread_cond_wait</span><span class="params">(<span class="type">pthread_cond_t</span> *cond, <span class="type">pthread_mutex_t</span> *mutex)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">pthread_cond_timedwait</span><span class="params">(<span class="type">pthread_cond_t</span> *cond, <span class="type">pthread_mutex_t</span> *mutex, <span class="type">const</span> <span class="keyword">struct</span> timespec *abstime)</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 唤醒</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">pthread_cond_signal</span><span class="params">(<span class="type">pthread_cond_t</span> *cond)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">pthread_cond_broadcast</span><span class="params">(<span class="type">pthread_cond_t</span> *cond)</span>;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>ChCore的线程上下文<br>线程上下主要是指处理器中大部分寄存器的值（AArch64架构）</p>
+<ul>
+<li>程序计数器PC – ELR_EL1</li>
+<li>通用寄存器 – X0 ~ X30</li>
+<li>特殊寄存器<ul>
+<li>SP_EL0 - 线程运行时的栈指针</li>
+<li>SPSR_EL1 - 线程执行的CPU状态</li>
+<li>TTBR0_EL1 - 线程对应的进程页表</li>
+</ul>
+</li>
+</ul>
+<p>ChCore中上下文切换实现</p>
+<ul>
+<li>进入内核态与上下文保存</li>
+<li>页表与内核栈的切换</li>
+<li>上下文恢复与返回用户态</li>
+</ul>
+<p><img src="/images/ChCore%E4%B8%8A%E4%B8%8B%E6%96%87%E5%88%87%E6%8D%A2%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E6%A0%88%E5%8F%98%E5%8C%96.svg" alt="ChCore上下文切换过程中的栈变化"></p>
+<p><strong>纤程</strong><br>用户态线程 – 纤程</p>
+<ul>
+<li>更轻量，开销更小，提高可扩展性</li>
+</ul>
+<p>POSIX的纤程支持：ucontext</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;ucontext.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">getcontext</span><span class="params">(<span class="type">ucontext_t</span> *ucp)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">setcontext</span><span class="params">(<span class="type">const</span> <span class="type">ucontext_t</span> *ucp)</span>;</span><br><span class="line"><span class="type">void</span> <span class="title function_">makecontext</span><span class="params">(<span class="type">ucontext_t</span> *ucp, <span class="type">void</span> (*func)(), <span class="type">int</span> argc, ...)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">swapcontext</span><span class="params">(<span class="type">ucontext_t</span> *oucp, <span class="type">const</span> <span class="type">ucontext_t</span> *ucp)</span>;</span><br></pre></td></tr></table></figure>
+
+<p>纤程上下文切换</p>
+<ul>
+<li>合作式多任务处理 – cooperative multitasking</li>
+</ul>
+<p>为了与操作系统提供的支持相区分，一般程序语言提供的纤程支持称为协程（Lua&#x2F;Go&#x2F;Ruby&#x2F;C++等）</p>
+<h2 id="操作系统调度"><a href="#操作系统调度" class="headerlink" title="操作系统调度"></a><strong>操作系统调度</strong></h2><hr>
+<p>进程是资源隔离的单位，一个进程可以有多个线程，这些线程在不同的CPU核心上并行执行，因此线程才是调度器的调度对象。<br>一般调度器会通过维护<strong>运行队列</strong>的方式来管理任务</p>
+<p>调度指标：</p>
+<ul>
+<li>吞吐量<ul>
+<li>单位时间内处理的任务数量</li>
+</ul>
+</li>
+<li>周转时间<ul>
+<li>任务从被发起直至执行结束所需的时间</li>
+</ul>
+</li>
+<li>响应时间<ul>
+<li>任务从被发起直至第一次向用户返回输出以响应用户所需时间</li>
+</ul>
+</li>
+<li>公平性</li>
+<li>资源利用率</li>
+<li>实时性</li>
+<li>能耗</li>
+</ul>
+<p>任务类型：</p>
+<ul>
+<li>批处理任务<ul>
+<li>比如机器学习的训练&#x2F;复杂的科学计算</li>
+</ul>
+</li>
+<li>交互式任务<ul>
+<li>比如程序调试</li>
+</ul>
+</li>
+<li>实时任务<ul>
+<li>比如车载系统中的距离探测器</li>
+</ul>
+</li>
+</ul>
+<p>调度器设计的困难点：</p>
+<ul>
+<li>调度指标多样性</li>
+<li>调度可参考的信息有限</li>
+<li>任务间的复杂交互</li>
+<li>许多方面存在权衡</li>
+</ul>
+<p>调度器中存在的权衡包括但不限于以下几点：</p>
+<ul>
+<li>调度开销与调度效果</li>
+<li>优先级与公平性</li>
+<li>性能与能耗</li>
+</ul>
+<p><strong>调度机制</strong><br>长期调度：触发间隔较长，它粗粒度地决定是否应该将一个新的进程纳入调度管理，负责增加系统的可被调度的进程的数量。<br>中期调度：触发相对频繁，它辅助换页机制，负责限制系统中可被调度的进程数量。<br>短期调度：触发最为频繁，它负责细粒度地调度进程的执行，做出相应的调度决策。</p>
+<p><strong>单核调度策略</strong><br>经典调度：</p>
+<ul>
+<li>先到先得 – First Come First Served - FCFS (First In First out - FIFO)<ul>
+<li>特点：简单直观</li>
+<li>弊端：在长短任务混合的场景下对短任务不友好</li>
+<li>弊端：对I&#x2F;O密集型任务不友好</li>
+</ul>
+</li>
+<li>最短任务优先 – Shortest Job First - SJF<ul>
+<li>弊端：必须预知任务的运行时间</li>
+<li>弊端：其表现严重依赖于任务到达时间点</li>
+</ul>
+</li>
+<li>最短完成时间任务优先 – Shortest Time-to-Completion First - STCF<ul>
+<li>弊端：必须预知任务的运行时间</li>
+<li>弊端：长任务饥饿</li>
+</ul>
+</li>
+<li>时间片轮转 – Round Robin - RR<ul>
+<li>时间片大小该如何选取？</li>
+<li>弊端：在任务运行时间相似的场景下平均周转时间高</li>
+</ul>
+</li>
+</ul>
+<p>优先级调度：</p>
+<ul>
+<li>多级队列 – Multi-Level Queue - MLQ<ul>
+<li>低优先级任务饥饿</li>
+<li>优先级反转</li>
+</ul>
+</li>
+<li>多级反馈队列 – Multi-Level Feedback Queue - MLFQ<ul>
+<li>短任务拥有更高的优先级</li>
+<li>低优先级的任务采用更长的时间片</li>
+<li>定时地将所有任务的优先级提升至最高</li>
+</ul>
+</li>
+</ul>
+<p>公平共享调度 – fair-share scheduling ：</p>
+<ul>
+<li>彩票调度<ul>
+<li>彩票转让</li>
+<li>彩票货币</li>
+<li>彩票通胀</li>
+</ul>
+</li>
+<li>步幅调度</li>
+</ul>
+<p>实时调度：</p>
+<ul>
+<li>速率单调 – Rate-Monotonic - RM</li>
+<li>最早截止时间优先 – Earliest Deadline First - EDF</li>
+</ul>
+<p>其他调度：</p>
+<ul>
+<li>借用虚拟时间 – Borrowed Virtual Time - BVT</li>
+</ul>
+<p><strong>多核调度策略</strong></p>
 ]]></content>
       <categories>
         <category>four fundamental computer technology</category>
       </categories>
       <tags>
         <tag>operator system</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>多终端同步博客</title>
+    <url>/posts/a7e41fa1/</url>
+    <content><![CDATA[<p>参考资料：<br><a href="https://segmentfault.com/a/1190000019459014">Hexo博客多端同步问题</a></p>
+]]></content>
+      <tags>
+        <tag>hexo tutorial</tag>
       </tags>
   </entry>
 </search>

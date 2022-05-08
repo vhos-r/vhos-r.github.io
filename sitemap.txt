@@ -10,8 +10,8 @@ https://vhos-r.github.io/categories/index.html
 https://vhos-r.github.io/tags/index.html
 https://vhos-r.github.io/
 https://vhos-r.github.io/tags/javascript/
-https://vhos-r.github.io/tags/hexo-tutorial/
 https://vhos-r.github.io/tags/vim/
+https://vhos-r.github.io/tags/hexo-tutorial/
 https://vhos-r.github.io/tags/meeting/
 https://vhos-r.github.io/tags/operator-system/
 https://vhos-r.github.io/categories/computer-language/
