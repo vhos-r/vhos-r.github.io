@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hello World</title>
+    <url>/posts/4a17b156/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<span id="more"></span>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <tags>
+        <tag>hexo tutorial</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JavaScript Note</title>
     <url>/posts/fbbf86b6/</url>
     <content><![CDATA[<h2 id="词法结构"><a href="#词法结构" class="headerlink" title="词法结构"></a><strong>词法结构</strong></h2><hr>
@@ -228,52 +250,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/posts/4a17b156/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<span id="more"></span>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <tags>
-        <tag>hexo tutorial</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>会议纪要</title>
-    <url>/posts/2c109fcd/</url>
-    <content><![CDATA[<p>工作中难免会需要书写会议纪要等内容，一个好的格式能够体现作为一个职业人的专业素养，下面笔者便摘记工作中使用过的模板。</p>
-<span id="more"></span>
-<p><strong>会议纪要大纲：</strong></p>
-<ul>
-<li>会议主题</li>
-<li>会议时间</li>
-<li>参会部门</li>
-<li>参会人员</li>
-<li>记录人员</li>
-<li>会议内容</li>
-<li>结论</li>
-<li>附件<code>[可选]</code></li>
-</ul>
-]]></content>
-      <categories>
-        <category>working</category>
-      </categories>
-      <tags>
-        <tag>meeting</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>vim tutorial</title>
     <url>/posts/9e9a6725/</url>
     <content><![CDATA[<div class="note info"><h2 id="Note"><a href="#Note" class="headerlink" title="Note:"></a>Note:</h2><p>本文内容摘自vimtutor教程，做个汇总方便查阅(●’◡’●)</p>
@@ -398,6 +374,30 @@
       </categories>
       <tags>
         <tag>vim</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>会议纪要</title>
+    <url>/posts/2c109fcd/</url>
+    <content><![CDATA[<p>工作中难免会需要书写会议纪要等内容，一个好的格式能够体现作为一个职业人的专业素养，下面笔者便摘记工作中使用过的模板。</p>
+<span id="more"></span>
+<p><strong>会议纪要大纲：</strong></p>
+<ul>
+<li>会议主题</li>
+<li>会议时间</li>
+<li>参会部门</li>
+<li>参会人员</li>
+<li>记录人员</li>
+<li>会议内容</li>
+<li>结论</li>
+<li>附件<code>[可选]</code></li>
+</ul>
+]]></content>
+      <categories>
+        <category>working</category>
+      </categories>
+      <tags>
+        <tag>meeting</tag>
       </tags>
   </entry>
   <entry>
@@ -872,6 +872,7 @@
 <li>性能与能耗</li>
 </ul>
 <p><strong>调度机制</strong><br>长期调度：触发间隔较长，它粗粒度地决定是否应该将一个新的进程纳入调度管理，负责增加系统的可被调度的进程的数量。<br>中期调度：触发相对频繁，它辅助换页机制，负责限制系统中可被调度的进程数量。<br>短期调度：触发最为频繁，它负责细粒度地调度进程的执行，做出相应的调度决策。</p>
+<p><img src="/images/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BF%9B%E7%A8%8B%E8%B0%83%E5%BA%A6%E7%A4%BA%E6%84%8F%E5%9B%BE.svg" alt="操作系统进程调度示意图"></p>
 <p><strong>单核调度策略</strong><br>经典调度：</p>
 <ul>
 <li>先到先得 – First Come First Served - FCFS (First In First out - FIFO)<ul>
@@ -930,6 +931,64 @@
 <li>借用虚拟时间 – Borrowed Virtual Time - BVT</li>
 </ul>
 <p><strong>多核调度策略</strong></p>
+<ul>
+<li>负载分担</li>
+<li>协同调度<ul>
+<li>群组调度</li>
+</ul>
+</li>
+<li>两级调度<ul>
+<li>全局调度器 &amp; 本地调度器</li>
+</ul>
+</li>
+<li>负载追踪与负载均衡</li>
+<li>能耗感知调度 – Energy Aware Scheduling - EAS<ul>
+<li>容量</li>
+<li>功率</li>
+</ul>
+</li>
+</ul>
+<p><strong>调度进阶机制</strong><br>处理器亲和性 – processor affinity</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Linux 提供的操作CPU核心的集合掩码的宏</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> _GNU_SOURCE             <span class="comment">/* See feature_test_macros(7) */</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sched.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">CPU_ZERO</span><span class="params">(<span class="type">cpu_set_t</span> *<span class="built_in">set</span>)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">CPU_SET</span><span class="params">(<span class="type">int</span> cpu, <span class="type">cpu_set_t</span> *<span class="built_in">set</span>)</span>;</span><br><span class="line"><span class="type">void</span> <span class="title function_">CPU_CLR</span><span class="params">(<span class="type">int</span> cpu, <span class="type">cpu_set_t</span> *<span class="built_in">set</span>)</span>;</span><br><span class="line"><span class="type">int</span>  <span class="title function_">CPU_ISSET</span><span class="params">(<span class="type">int</span> cpu, <span class="type">cpu_set_t</span> *<span class="built_in">set</span>)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span>  <span class="title function_">CPU_COUNT</span><span class="params">(<span class="type">cpu_set_t</span> *<span class="built_in">set</span>)</span>;</span><br><span class="line"><span class="comment">//...</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Linux 的任务亲和性接口</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> _GNU_SOURCE             <span class="comment">/* See feature_test_macros(7) */</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sched.h&gt;</span></span></span><br><span class="line"><span class="comment">// set and get a thread&#x27;s CPU affinity mask</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">sched_setaffinity</span><span class="params">(<span class="type">pid_t</span> pid, <span class="type">size_t</span> cpusetsize,</span></span><br><span class="line"><span class="params">                      <span class="type">const</span> <span class="type">cpu_set_t</span> *mask)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">sched_getaffinity</span><span class="params">(<span class="type">pid_t</span> pid, <span class="type">size_t</span> cpusetsize,</span></span><br><span class="line"><span class="params">                      <span class="type">cpu_set_t</span> *mask)</span>;</span><br></pre></td></tr></table></figure>
+
+<p>调度策略设置<br>Linux支持多种调度策略和调度器：</p>
+<ul>
+<li>完全公平调度器 – Completely Fair Scheduler - CFS</li>
+<li>实时调度器 – Real-Time scheduler - RT</li>
+<li>截止时间调度器 – DealLine scheduler - DL</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Linux 的调度策略修改机制</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sched.h&gt;</span></span></span><br><span class="line"><span class="comment">// sched_setattr, sched_getattr - set and get scheduling policy and attributes</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">sched_setattr</span><span class="params">(<span class="type">pid_t</span> pid, <span class="keyword">struct</span> sched_attr *attr,</span></span><br><span class="line"><span class="params">                  <span class="type">unsigned</span> <span class="type">int</span> flags)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">sched_getattr</span><span class="params">(<span class="type">pid_t</span> pid, <span class="keyword">struct</span> sched_attr *attr,</span></span><br><span class="line"><span class="params">                  <span class="type">unsigned</span> <span class="type">int</span> size, <span class="type">unsigned</span> <span class="type">int</span> flags)</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">sched_attr</span> &#123;</span></span><br><span class="line">    u32 size;              <span class="comment">/* Size of this structure */</span></span><br><span class="line">    u32 sched_policy;      <span class="comment">/* Policy (SCHED_*) */</span></span><br><span class="line">    u64 sched_flags;       <span class="comment">/* Flags */</span></span><br><span class="line">    s32 sched_nice;        <span class="comment">/* Nice value (SCHED_OTHER,</span></span><br><span class="line"><span class="comment">                              SCHED_BATCH) */</span></span><br><span class="line">    u32 sched_priority;    <span class="comment">/* Static priority (SCHED_FIFO,</span></span><br><span class="line"><span class="comment">                              SCHED_RR) */</span></span><br><span class="line">    <span class="comment">/* Remaining fields are for SCHED_DEADLINE */</span></span><br><span class="line">    u64 sched_runtime;</span><br><span class="line">    u64 sched_deadline;</span><br><span class="line">    u64 sched_period;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p><strong>案例分析：现代调度器</strong><br>Linux调度器：</p>
+<ul>
+<li>Linux2.4版本以前，使用 O(n) 调度器<ul>
+<li>调度开销大</li>
+<li>多核扩展性差</li>
+</ul>
+</li>
+<li>Linux2.6.0版本中使用新的 O(1) 调度器<ul>
+<li>交互式任务的判定算法过于复杂</li>
+<li>静态时间片带来的问题</li>
+</ul>
+</li>
+<li>Linux2.6.23开始使用完全公平调度器CFS<ul>
+<li>CFS调度器的动态时间片</li>
+<li>CFS调度器使用红黑树作为运行队列</li>
+<li>CFS阻塞任务唤醒</li>
+</ul>
+</li>
+</ul>
+<p>macOS&#x2F;iOS调度器<br>GCD - Grand Central Dispatch</p>
+<ul>
+<li>采用基于优先级的实时调度策略，使用服务质量等级（Quality of Service - QoS）为任务确定优先级<ul>
+<li>UserInteractive</li>
+<li>UserInitiated</li>
+<li>Default</li>
+<li>Utility</li>
+<li>Background</li>
+</ul>
+</li>
+</ul>
 ]]></content>
       <categories>
         <category>four fundamental computer technology</category>
