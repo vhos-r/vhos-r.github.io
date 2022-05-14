@@ -377,39 +377,6 @@
       </tags>
   </entry>
   <entry>
-    <title>会议纪要</title>
-    <url>/posts/2c109fcd/</url>
-    <content><![CDATA[<p>工作中难免会需要书写会议纪要等内容，一个好的格式能够体现作为一个职业人的专业素养，下面笔者便摘记工作中使用过的模板。</p>
-<span id="more"></span>
-<p><strong>会议纪要大纲：</strong></p>
-<ul>
-<li>会议主题</li>
-<li>会议时间</li>
-<li>参会部门</li>
-<li>参会人员</li>
-<li>记录人员</li>
-<li>会议内容</li>
-<li>结论</li>
-<li>附件<code>[可选]</code></li>
-</ul>
-]]></content>
-      <categories>
-        <category>working</category>
-      </categories>
-      <tags>
-        <tag>meeting</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>多终端同步博客</title>
-    <url>/posts/a7e41fa1/</url>
-    <content><![CDATA[<p>参考资料：<br><a href="https://segmentfault.com/a/1190000019459014">Hexo博客多端同步问题</a></p>
-]]></content>
-      <tags>
-        <tag>hexo tutorial</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>操作系统笔记</title>
     <url>/posts/8ce3e425/</url>
     <content><![CDATA[<mark class="label primary">声明：</mark>
@@ -989,12 +956,108 @@
 </ul>
 </li>
 </ul>
+<h2 id="进程间通信"><a href="#进程间通信" class="headerlink" title="进程间通信"></a><strong>进程间通信</strong></h2><hr>
+<p>Inter-Process Communication - IPC</p>
+<p><img src="/images/%E7%AE%80%E5%8D%95%E7%9A%84%E8%BF%9B%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1%E8%AE%BE%E8%AE%A1.svg" alt="简单的进程间通信设计"></p>
+<p><strong>宏内核进程间通信</strong></p>
+<ul>
+<li>管道<ul>
+<li>命名管道 &amp; 匿名管道</li>
+</ul>
+</li>
+<li>System V 消息队列</li>
+<li>System V 信号量</li>
+<li>System V 共享内存</li>
+<li>信号</li>
+<li>套接字</li>
+</ul>
+<p><img src="/images/%E5%AE%8F%E5%86%85%E6%A0%B8%E8%BF%9B%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1%E6%9C%BA%E5%88%B6%E5%AF%B9%E6%AF%94.svg" alt="宏内核进程间通信机制对比"></p>
+<p><strong>微内核进程间通信</strong></p>
+<p>Mach:早期的微内核进程间通信设计</p>
+<ul>
+<li>端口设计</li>
+<li>消息设计</li>
+</ul>
+<p>L4：围绕进程间通信优化而设计的微内核系统</p>
+<ul>
+<li>L4消息传递<ul>
+<li>短消息</li>
+<li>长消息</li>
+</ul>
+</li>
+<li>L4控制流转移<ul>
+<li>惰性调度</li>
+<li>直接进程切换</li>
+</ul>
+</li>
+<li>L4通信连接</li>
+<li>L4通信控制（权限检查）<ul>
+<li>氏族和酋长（已废弃）</li>
+<li>Capability</li>
+</ul>
+</li>
+</ul>
+<p>LRPC - Lightweight Remote Procedure Call – 轻量级远程过程调用：迁移线程模型</p>
+<ul>
+<li>优化控制流切换的性能和优化数据传输的性能</li>
+</ul>
+<p>迁移线程的基本原则：</p>
+<ul>
+<li>简化控制流切换，让客户端线程执行“服务端的代码”</li>
+<li>简化数据传输，共享参数栈和寄存器</li>
+<li>简化接口，减少序列化等开销</li>
+<li>优化并发，避免共享的全局数据结构</li>
+</ul>
+<p>案例分析：Android Binder<br>Binder IPC内核设计</p>
+<ul>
+<li>Binder 的命名服务</li>
+<li>线程池模型</li>
+<li>匿名共享内存 – 基于文件描述符的共享设计</li>
+</ul>
+<p>案例分析：ChCore进程间通信机制</p>
+<ul>
+<li>消息的传递和通知基于LRPC中的迁移线程技术和L4系列微内核中的直接进程切换技术</li>
+<li>数据的传输基于灵活的用户态共享内存</li>
+</ul>
 ]]></content>
       <categories>
         <category>four fundamental computer technology</category>
       </categories>
       <tags>
         <tag>operator system</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>多终端同步博客</title>
+    <url>/posts/a7e41fa1/</url>
+    <content><![CDATA[<p>参考资料：<br><a href="https://segmentfault.com/a/1190000019459014">Hexo博客多端同步问题</a></p>
+]]></content>
+      <tags>
+        <tag>hexo tutorial</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>会议纪要</title>
+    <url>/posts/2c109fcd/</url>
+    <content><![CDATA[<p>工作中难免会需要书写会议纪要等内容，一个好的格式能够体现作为一个职业人的专业素养，下面笔者便摘记工作中使用过的模板。</p>
+<span id="more"></span>
+<p><strong>会议纪要大纲：</strong></p>
+<ul>
+<li>会议主题</li>
+<li>会议时间</li>
+<li>参会部门</li>
+<li>参会人员</li>
+<li>记录人员</li>
+<li>会议内容</li>
+<li>结论</li>
+<li>附件<code>[可选]</code></li>
+</ul>
+]]></content>
+      <categories>
+        <category>working</category>
+      </categories>
+      <tags>
+        <tag>meeting</tag>
       </tags>
   </entry>
 </search>
