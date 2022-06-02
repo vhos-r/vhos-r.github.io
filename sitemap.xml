@@ -4,7 +4,7 @@
   <url>
     <loc>https://vhos-r.github.io/posts/8ce3e425/</loc>
     
-    <lastmod>2022-05-25</lastmod>
+    <lastmod>2022-06-02</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -94,43 +94,43 @@
 
   <url>
     <loc>https://vhos-r.github.io/</loc>
-    <lastmod>2022-05-25</lastmod>
+    <lastmod>2022-06-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>https://vhos-r.github.io/tags/javascript/</loc>
-    <lastmod>2022-05-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://vhos-r.github.io/tags/hexo-tutorial/</loc>
-    <lastmod>2022-05-25</lastmod>
+    <lastmod>2022-06-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://vhos-r.github.io/tags/vim/</loc>
-    <lastmod>2022-05-25</lastmod>
+    <lastmod>2022-06-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://vhos-r.github.io/tags/operator-system/</loc>
-    <lastmod>2022-05-25</lastmod>
+    <loc>https://vhos-r.github.io/tags/javascript/</loc>
+    <lastmod>2022-06-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://vhos-r.github.io/tags/meeting/</loc>
-    <lastmod>2022-05-25</lastmod>
+    <lastmod>2022-06-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://vhos-r.github.io/tags/operator-system/</loc>
+    <lastmod>2022-06-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -138,29 +138,29 @@
 
   
   <url>
-    <loc>https://vhos-r.github.io/categories/computer-language/</loc>
-    <lastmod>2022-05-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://vhos-r.github.io/categories/tools/</loc>
-    <lastmod>2022-05-25</lastmod>
+    <lastmod>2022-06-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://vhos-r.github.io/categories/four-fundamental-computer-technology/</loc>
-    <lastmod>2022-05-25</lastmod>
+    <loc>https://vhos-r.github.io/categories/computer-language/</loc>
+    <lastmod>2022-06-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://vhos-r.github.io/categories/working/</loc>
-    <lastmod>2022-05-25</lastmod>
+    <lastmod>2022-06-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://vhos-r.github.io/categories/four-fundamental-computer-technology/</loc>
+    <lastmod>2022-06-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

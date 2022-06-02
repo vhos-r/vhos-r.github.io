@@ -1,6 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hello World</title>
+    <url>/posts/4a17b156/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<span id="more"></span>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <tags>
+        <tag>hexo tutorial</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>vim tutorial</title>
+    <url>/posts/9e9a6725/</url>
+    <content><![CDATA[<div class="note info"><h2 id="Note"><a href="#Note" class="headerlink" title="Note:"></a>Note:</h2><p>本文内容摘自vimtutor教程，做个汇总方便查阅(●’◡’●)</p>
+</div>
+
+<span id="more"></span>
+
+<h2 id="第一讲小结"><a href="#第一讲小结" class="headerlink" title="第一讲小结"></a><strong>第一讲小结</strong></h2><hr>
+<ol>
+<li><p>光标在屏幕文本中的移动既可以用箭头键，也可以使用 hjkl 字母键。<br>h (左移)    j (下行)       k (上行)        l (右移)</p>
+</li>
+<li><p>欲进入 Vim 编辑器(从命令行提示符)，请输入：vim 文件名 &lt;回车&gt;</p>
+</li>
+<li><p>欲退出 Vim 编辑器，请输入 <code>&lt;ESC&gt;</code>   :q!   &lt;回车&gt; 放弃所有改动。<br>             或者输入 <code>&lt;ESC&gt;</code>   :wq   &lt;回车&gt; 保存改动。</p>
+</li>
+<li><p>在正常模式下删除光标所在位置的字符，请按： x</p>
+</li>
+<li><p>欲插入或添加文本，请输入：</p>
+<p>i   输入欲插入文本   <code>&lt;ESC&gt;</code>        在光标前插入文本<br>A   输入欲添加文本   <code>&lt;ESC&gt;</code>             在一行后添加文本</p>
+</li>
+</ol>
+<p>特别提示：按下 <code>&lt;ESC&gt;</code> 键会带您回到正常模式或者撤消一个不想输入或部分完整<br>的命令。</p>
+<h2 id="第二讲小结"><a href="#第二讲小结" class="headerlink" title="第二讲小结"></a><strong>第二讲小结</strong></h2><hr>
+<ol>
+<li><p>欲从当前光标删除至下一个单词，请输入：dw</p>
+</li>
+<li><p>欲从当前光标删除至当前行末尾，请输入：d$</p>
+</li>
+<li><p>欲删除整行，请输入：dd</p>
+</li>
+<li><p>欲重复一个动作，请在它前面加上一个数字：2w</p>
+</li>
+<li><p>在正常模式下修改命令的格式是：<br>      operator   [number]   motion<br>其中：<br>  operator - 操作符，代表要做的事情，比如 d 代表删除<br>  [number] - 可以附加的数字，代表动作重复的次数<br>  motion   - 动作，代表在所操作的文本上的移动，例如 w 代表单词(word)，<br> $ 代表行末等等。</p>
+</li>
+<li><p>欲移动光标到行首，请按数字0键：0</p>
+</li>
+<li><p>欲撤消以前的操作，请输入：u (小写的u)<br>欲撤消在一行中所做的改动，请输入：U (大写的U)<br>欲撤消以前的撤消命令，恢复以前的操作结果，请输入：CTRL-R</p>
+</li>
+</ol>
+<h2 id="第三讲小结"><a href="#第三讲小结" class="headerlink" title="第三讲小结"></a><strong>第三讲小结</strong></h2><hr>
+<ol>
+<li><p>要重新置入已经删除的文本内容，请按小写字母 p 键。该操作可以将已删除<br>的文本内容置于光标之后。如果最后一次删除的是一个整行，那么该行将置<br>于当前光标所在行的下一行。</p>
+</li>
+<li><p>要替换光标所在位置的字符，请输入小写的 r 和要替换掉原位置字符的新字<br>符即可。</p>
+</li>
+<li><p>更改类命令允许您改变从当前光标所在位置直到动作指示的位置中间的文本。<br>比如输入 ce 可以替换当前光标到单词的末尾的内容；输入 c$ 可以替换当<br>前光标到行末的内容。</p>
+</li>
+<li><p>更改类命令的格式是：</p>
+<p>c   [number]   motion</p>
+</li>
+</ol>
+<h2 id="第四讲小结"><a href="#第四讲小结" class="headerlink" title="第四讲小结"></a><strong>第四讲小结</strong></h2><hr>
+<ol>
+<li><p>CTRL-G 用于显示当前光标所在位置和文件状态信息。<br>G 用于将光标跳转至文件最后一行。<br>先敲入一个行号然后输入大写 G 则是将光标移动至该行号代表的行。<br>gg 用于将光标跳转至文件第一行。</p>
+</li>
+<li><p>输入 &#x2F; 然后紧随一个字符串是在当前所编辑的文档中正向查找该字符串。<br>输入 ? 然后紧随一个字符串则是在当前所编辑的文档中反向查找该字符串。<br>完成一次查找之后按 n 键是重复上一次的命令，可在同一方向上查<br>找下一个匹配字符串所在；或者按大写 N 向相反方向查找下一匹配字符串所在。<br>CTRL-O 带您跳转回较旧的位置，CTRL-I 则带您到较新的位置。</p>
+</li>
+<li><p>如果光标当前位置是括号(、)、[、]、{、}，按 % 会将光标移动到配对的括号上。</p>
+</li>
+<li><p>在一行内替换头一个字符串 old 为新的字符串 new，请输入  :s&#x2F;old&#x2F;new<br>在一行内替换所有的字符串 old 为新的字符串 new，请输入  :s&#x2F;old&#x2F;new&#x2F;g<br>在两行内替换所有的字符串 old 为新的字符串 new，请输入  :#,#s&#x2F;old&#x2F;new&#x2F;g<br>在文件内替换所有的字符串 old 为新的字符串 new，请输入  :%s&#x2F;old&#x2F;new&#x2F;g<br>进行全文替换时询问用户确认每个替换需添加 c 标志        :%s&#x2F;old&#x2F;new&#x2F;gc</p>
+</li>
+</ol>
+<h2 id="第五讲小结"><a href="#第五讲小结" class="headerlink" title="第五讲小结"></a><strong>第五讲小结</strong></h2><hr>
+<ol>
+<li><p>:!command 用于执行一个外部命令 command。</p>
+<p>请看一些实际例子：<br>(MS-DOS)      (Unix)<br> :!dir           :!ls           -  用于显示当前目录的内容。<br> :!del FILENAME   :!rm FILENAME   -  用于删除名为 FILENAME 的文件。</p>
+</li>
+<li><p>:w FILENAME  可将当前 VIM 中正在编辑的文件保存到名为 FILENAME 的文<br>件中。</p>
+</li>
+<li><p>v motion :w FILENAME 可将当前编辑文件中可视模式下选中的内容保存到文件<br>FILENAME 中。</p>
+</li>
+<li><p>:r FILENAME 可提取磁盘文件 FILENAME 并将其插入到当前文件的光标位置<br>后面。</p>
+</li>
+<li><p>:r !dir 可以读取 dir 命令的输出并将其放置到当前文件的光标位置后面。</p>
+</li>
+</ol>
+<h2 id="第六讲小结"><a href="#第六讲小结" class="headerlink" title="第六讲小结"></a><strong>第六讲小结</strong></h2><hr>
+<ol>
+<li><p>输入小写的 o 可以在光标下方打开新的一行并进入插入模式。<br>输入大写的 O 可以在光标上方打开新的一行。</p>
+</li>
+<li><p>输入小写的 a 可以在光标所在位置之后插入文本。<br>输入大写的 A 可以在光标所在行的行末之后插入文本。</p>
+</li>
+<li><p>e 命令可以使光标移动到单词末尾。</p>
+</li>
+<li><p>操作符 y 复制文本，p 粘贴先前复制的文本。</p>
+</li>
+<li><p>输入大写的 R 将进入替换模式，直至按 <code>&lt;ESC&gt;</code> 键回到正常模式。</p>
+</li>
+<li><p>输入 :set xxx 可以设置 xxx 选项。一些有用的选项如下：<br> ‘ic’ ‘ignorecase’    查找时忽略字母大小写<br>‘is’ ‘incsearch’    查找短语时显示部分匹配<br>‘hls’ ‘hlsearch’    高亮显示所有的匹配短语<br>选项名可以用完整版本，也可以用缩略版本。</p>
+</li>
+<li><p>在选项前加上 no 可以关闭选项：  :set noic</p>
+</li>
+</ol>
+<h2 id="第七讲小结"><a href="#第七讲小结" class="headerlink" title="第七讲小结"></a><strong>第七讲小结</strong></h2><hr>
+<ol>
+<li><p>输入 :help 或者按 <F1> 键或 <Help> 键可以打开帮助窗口。</p>
+</li>
+<li><p>输入 :help cmd 可以找到关于 cmd 命令的帮助。</p>
+</li>
+<li><p>输入 CTRL-W CTRL-W  可以使您在窗口之间跳转。</p>
+</li>
+<li><p>输入 :q 以关闭帮助窗口</p>
+</li>
+<li><p>您可以创建一个 vimrc 启动脚本文件用来保存您偏好的设置。</p>
+</li>
+<li><p>当输入 : 命令时，按 CTRL-D 可以查看可能的补全结果。<br>按 <TAB> 可以使用一个补全。</p>
+</li>
+</ol>
+<p>详情可以参考<a href="https://yianwillis.github.io/vimcdoc/doc/usr_toc.html">vim中文手册</a></p>
+<mark class="label ">小彩蛋</mark>
+<p>通过<code>man vimtutor</code> 可以查阅系统存放教程的具体位置</p>
+<pre><code>FILES
+       &#x2F;usr&#x2F;share&#x2F;vim&#x2F;vim81&#x2F;tutor&#x2F;tutor[.language]
+                      The Vimtutor text file(s).
+
+       &#x2F;usr&#x2F;share&#x2F;vim&#x2F;vim81&#x2F;tutor&#x2F;tutor.vim
+                      The Vim script used to copy the Vimtutor text file.</code></pre>
+
+]]></content>
+      <categories>
+        <category>tools</category>
+      </categories>
+      <tags>
+        <tag>vim</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JavaScript Note</title>
     <url>/posts/fbbf86b6/</url>
     <content><![CDATA[<h2 id="词法结构"><a href="#词法结构" class="headerlink" title="词法结构"></a><strong>词法结构</strong></h2><hr>
@@ -228,161 +377,27 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/posts/4a17b156/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+    <title>会议纪要</title>
+    <url>/posts/2c109fcd/</url>
+    <content><![CDATA[<p>工作中难免会需要书写会议纪要等内容，一个好的格式能够体现作为一个职业人的专业素养，下面笔者便摘记工作中使用过的模板。</p>
 <span id="more"></span>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <tags>
-        <tag>hexo tutorial</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>vim tutorial</title>
-    <url>/posts/9e9a6725/</url>
-    <content><![CDATA[<div class="note info"><h2 id="Note"><a href="#Note" class="headerlink" title="Note:"></a>Note:</h2><p>本文内容摘自vimtutor教程，做个汇总方便查阅(●’◡’●)</p>
-</div>
-
-<span id="more"></span>
-
-<h2 id="第一讲小结"><a href="#第一讲小结" class="headerlink" title="第一讲小结"></a><strong>第一讲小结</strong></h2><hr>
-<ol>
-<li><p>光标在屏幕文本中的移动既可以用箭头键，也可以使用 hjkl 字母键。<br>h (左移)    j (下行)       k (上行)        l (右移)</p>
-</li>
-<li><p>欲进入 Vim 编辑器(从命令行提示符)，请输入：vim 文件名 &lt;回车&gt;</p>
-</li>
-<li><p>欲退出 Vim 编辑器，请输入 <code>&lt;ESC&gt;</code>   :q!   &lt;回车&gt; 放弃所有改动。<br>             或者输入 <code>&lt;ESC&gt;</code>   :wq   &lt;回车&gt; 保存改动。</p>
-</li>
-<li><p>在正常模式下删除光标所在位置的字符，请按： x</p>
-</li>
-<li><p>欲插入或添加文本，请输入：</p>
-<p>i   输入欲插入文本   <code>&lt;ESC&gt;</code>        在光标前插入文本<br>A   输入欲添加文本   <code>&lt;ESC&gt;</code>             在一行后添加文本</p>
-</li>
-</ol>
-<p>特别提示：按下 <code>&lt;ESC&gt;</code> 键会带您回到正常模式或者撤消一个不想输入或部分完整<br>的命令。</p>
-<h2 id="第二讲小结"><a href="#第二讲小结" class="headerlink" title="第二讲小结"></a><strong>第二讲小结</strong></h2><hr>
-<ol>
-<li><p>欲从当前光标删除至下一个单词，请输入：dw</p>
-</li>
-<li><p>欲从当前光标删除至当前行末尾，请输入：d$</p>
-</li>
-<li><p>欲删除整行，请输入：dd</p>
-</li>
-<li><p>欲重复一个动作，请在它前面加上一个数字：2w</p>
-</li>
-<li><p>在正常模式下修改命令的格式是：<br>      operator   [number]   motion<br>其中：<br>  operator - 操作符，代表要做的事情，比如 d 代表删除<br>  [number] - 可以附加的数字，代表动作重复的次数<br>  motion   - 动作，代表在所操作的文本上的移动，例如 w 代表单词(word)，<br> $ 代表行末等等。</p>
-</li>
-<li><p>欲移动光标到行首，请按数字0键：0</p>
-</li>
-<li><p>欲撤消以前的操作，请输入：u (小写的u)<br>欲撤消在一行中所做的改动，请输入：U (大写的U)<br>欲撤消以前的撤消命令，恢复以前的操作结果，请输入：CTRL-R</p>
-</li>
-</ol>
-<h2 id="第三讲小结"><a href="#第三讲小结" class="headerlink" title="第三讲小结"></a><strong>第三讲小结</strong></h2><hr>
-<ol>
-<li><p>要重新置入已经删除的文本内容，请按小写字母 p 键。该操作可以将已删除<br>的文本内容置于光标之后。如果最后一次删除的是一个整行，那么该行将置<br>于当前光标所在行的下一行。</p>
-</li>
-<li><p>要替换光标所在位置的字符，请输入小写的 r 和要替换掉原位置字符的新字<br>符即可。</p>
-</li>
-<li><p>更改类命令允许您改变从当前光标所在位置直到动作指示的位置中间的文本。<br>比如输入 ce 可以替换当前光标到单词的末尾的内容；输入 c$ 可以替换当<br>前光标到行末的内容。</p>
-</li>
-<li><p>更改类命令的格式是：</p>
-<p>c   [number]   motion</p>
-</li>
-</ol>
-<h2 id="第四讲小结"><a href="#第四讲小结" class="headerlink" title="第四讲小结"></a><strong>第四讲小结</strong></h2><hr>
-<ol>
-<li><p>CTRL-G 用于显示当前光标所在位置和文件状态信息。<br>G 用于将光标跳转至文件最后一行。<br>先敲入一个行号然后输入大写 G 则是将光标移动至该行号代表的行。<br>gg 用于将光标跳转至文件第一行。</p>
-</li>
-<li><p>输入 &#x2F; 然后紧随一个字符串是在当前所编辑的文档中正向查找该字符串。<br>输入 ? 然后紧随一个字符串则是在当前所编辑的文档中反向查找该字符串。<br>完成一次查找之后按 n 键是重复上一次的命令，可在同一方向上查<br>找下一个匹配字符串所在；或者按大写 N 向相反方向查找下一匹配字符串所在。<br>CTRL-O 带您跳转回较旧的位置，CTRL-I 则带您到较新的位置。</p>
-</li>
-<li><p>如果光标当前位置是括号(、)、[、]、{、}，按 % 会将光标移动到配对的括号上。</p>
-</li>
-<li><p>在一行内替换头一个字符串 old 为新的字符串 new，请输入  :s&#x2F;old&#x2F;new<br>在一行内替换所有的字符串 old 为新的字符串 new，请输入  :s&#x2F;old&#x2F;new&#x2F;g<br>在两行内替换所有的字符串 old 为新的字符串 new，请输入  :#,#s&#x2F;old&#x2F;new&#x2F;g<br>在文件内替换所有的字符串 old 为新的字符串 new，请输入  :%s&#x2F;old&#x2F;new&#x2F;g<br>进行全文替换时询问用户确认每个替换需添加 c 标志        :%s&#x2F;old&#x2F;new&#x2F;gc</p>
-</li>
-</ol>
-<h2 id="第五讲小结"><a href="#第五讲小结" class="headerlink" title="第五讲小结"></a><strong>第五讲小结</strong></h2><hr>
-<ol>
-<li><p>:!command 用于执行一个外部命令 command。</p>
-<p>请看一些实际例子：<br>(MS-DOS)      (Unix)<br> :!dir           :!ls           -  用于显示当前目录的内容。<br> :!del FILENAME   :!rm FILENAME   -  用于删除名为 FILENAME 的文件。</p>
-</li>
-<li><p>:w FILENAME  可将当前 VIM 中正在编辑的文件保存到名为 FILENAME 的文<br>件中。</p>
-</li>
-<li><p>v motion :w FILENAME 可将当前编辑文件中可视模式下选中的内容保存到文件<br>FILENAME 中。</p>
-</li>
-<li><p>:r FILENAME 可提取磁盘文件 FILENAME 并将其插入到当前文件的光标位置<br>后面。</p>
-</li>
-<li><p>:r !dir 可以读取 dir 命令的输出并将其放置到当前文件的光标位置后面。</p>
-</li>
-</ol>
-<h2 id="第六讲小结"><a href="#第六讲小结" class="headerlink" title="第六讲小结"></a><strong>第六讲小结</strong></h2><hr>
-<ol>
-<li><p>输入小写的 o 可以在光标下方打开新的一行并进入插入模式。<br>输入大写的 O 可以在光标上方打开新的一行。</p>
-</li>
-<li><p>输入小写的 a 可以在光标所在位置之后插入文本。<br>输入大写的 A 可以在光标所在行的行末之后插入文本。</p>
-</li>
-<li><p>e 命令可以使光标移动到单词末尾。</p>
-</li>
-<li><p>操作符 y 复制文本，p 粘贴先前复制的文本。</p>
-</li>
-<li><p>输入大写的 R 将进入替换模式，直至按 <code>&lt;ESC&gt;</code> 键回到正常模式。</p>
-</li>
-<li><p>输入 :set xxx 可以设置 xxx 选项。一些有用的选项如下：<br> ‘ic’ ‘ignorecase’    查找时忽略字母大小写<br>‘is’ ‘incsearch’    查找短语时显示部分匹配<br>‘hls’ ‘hlsearch’    高亮显示所有的匹配短语<br>选项名可以用完整版本，也可以用缩略版本。</p>
-</li>
-<li><p>在选项前加上 no 可以关闭选项：  :set noic</p>
-</li>
-</ol>
-<h2 id="第七讲小结"><a href="#第七讲小结" class="headerlink" title="第七讲小结"></a><strong>第七讲小结</strong></h2><hr>
-<ol>
-<li><p>输入 :help 或者按 <F1> 键或 <Help> 键可以打开帮助窗口。</p>
-</li>
-<li><p>输入 :help cmd 可以找到关于 cmd 命令的帮助。</p>
-</li>
-<li><p>输入 CTRL-W CTRL-W  可以使您在窗口之间跳转。</p>
-</li>
-<li><p>输入 :q 以关闭帮助窗口</p>
-</li>
-<li><p>您可以创建一个 vimrc 启动脚本文件用来保存您偏好的设置。</p>
-</li>
-<li><p>当输入 : 命令时，按 CTRL-D 可以查看可能的补全结果。<br>按 <TAB> 可以使用一个补全。</p>
-</li>
-</ol>
-<p>详情可以参考<a href="https://yianwillis.github.io/vimcdoc/doc/usr_toc.html">vim中文手册</a></p>
-<mark class="label ">小彩蛋</mark>
-<p>通过<code>man vimtutor</code> 可以查阅系统存放教程的具体位置</p>
-<pre><code>FILES
-       &#x2F;usr&#x2F;share&#x2F;vim&#x2F;vim81&#x2F;tutor&#x2F;tutor[.language]
-                      The Vimtutor text file(s).
-
-       &#x2F;usr&#x2F;share&#x2F;vim&#x2F;vim81&#x2F;tutor&#x2F;tutor.vim
-                      The Vim script used to copy the Vimtutor text file.</code></pre>
-
+<p><strong>会议纪要大纲：</strong></p>
+<ul>
+<li>会议主题</li>
+<li>会议时间</li>
+<li>参会部门</li>
+<li>参会人员</li>
+<li>记录人员</li>
+<li>会议内容</li>
+<li>结论</li>
+<li>附件<code>[可选]</code></li>
+</ul>
 ]]></content>
       <categories>
-        <category>tools</category>
+        <category>working</category>
       </categories>
       <tags>
-        <tag>vim</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>多终端同步博客</title>
-    <url>/posts/a7e41fa1/</url>
-    <content><![CDATA[<p>参考资料：<br><a href="https://segmentfault.com/a/1190000019459014">Hexo博客多端同步问题</a></p>
-]]></content>
-      <tags>
-        <tag>hexo tutorial</tag>
+        <tag>meeting</tag>
       </tags>
   </entry>
   <entry>
@@ -1151,6 +1166,172 @@
 <li>futex机制实现的互斥锁能在竞争程度较低时，直接使用原子操作完成枷锁。</li>
 <li>在竞争程度较高时，应用程序能够通过系统调用挂起并等待被后续锁持有者唤醒。</li>
 </ul>
+<h2 id="文件系统"><a href="#文件系统" class="headerlink" title="文件系统"></a><strong>文件系统</strong></h2><hr>
+<p>文件 – 有名字的字符序列<br>文件元数据<br>文件系统 – 实现文件接口并负责管理文件数据和元数据的系统</p>
+<p>虚拟文件系统 – Virtual File System - VFS</p>
+<ul>
+<li>页缓存</li>
+<li>inode缓存</li>
+<li>目录项缓存</li>
+</ul>
+<p><strong>基于inode的文件系统</strong><br>inode与文件</p>
+<p><img src="/images/%E5%B8%B8%E8%A7%84%E6%96%87%E4%BB%B6%E6%95%B0%E6%8D%AE%E7%B4%A2%E5%BC%95.svg" alt="常规文件数据索引"></p>
+<center><font color='orange'>POSIX中定义的部分文件元数据</font></center>
+
+<table>
+<thead>
+<tr>
+<th>文件元数据</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>mode</td>
+<td>文件模式，其中包括文件类型和文件权限</td>
+</tr>
+<tr>
+<td>nlink</td>
+<td>指向此文件的链接个数</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>文件所属用户的ID</td>
+</tr>
+<tr>
+<td>gid</td>
+<td>文件所属用户组ID</td>
+</tr>
+<tr>
+<td>size</td>
+<td>文件的大小</td>
+</tr>
+<tr>
+<td>atime</td>
+<td>文件数据最近访问时间</td>
+</tr>
+<tr>
+<td>ctime</td>
+<td>文件元数据最近修改时间</td>
+</tr>
+<tr>
+<td>mtime</td>
+<td>文件数据最近修改时间</td>
+</tr>
+</tbody></table>
+<center><font color='orange'>Linux中支持的文件类型</font></center>
+
+<table>
+<thead>
+<tr>
+<th>文件类型</th>
+<th>文件用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>常规文件</td>
+<td>保存数据</td>
+</tr>
+<tr>
+<td>目录文件</td>
+<td>表示和组织一组文件</td>
+</tr>
+<tr>
+<td>符号链接文件</td>
+<td>保存符号链接（指向目标文件的路径）</td>
+</tr>
+<tr>
+<td>FIFO文件</td>
+<td>以队列形式传递数据，比FIFO文件更加灵活</td>
+</tr>
+<tr>
+<td>套接字文件</td>
+<td>用于传递数据，比FIFO文件更加灵活</td>
+</tr>
+<tr>
+<td>字符设备文件</td>
+<td>表示和访问字符设备</td>
+</tr>
+<tr>
+<td>块设备文件</td>
+<td>表示和访问块设备</td>
+</tr>
+</tbody></table>
+<p>文件名与目录</p>
+<p><img src="/images/%E7%9B%AE%E5%BD%95%E9%A1%B9.svg" alt="目录项"></p>
+<p>硬链接与符号链接</p>
+<p>存储布局</p>
+<ul>
+<li>超级块<ul>
+<li>魔法数字</li>
+</ul>
+</li>
+<li>块分配信息</li>
+<li>inode分配信息</li>
+<li>inode表</li>
+<li>文件数据块</li>
+</ul>
+<p><img src="/images/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AD%98%E5%82%A8%E5%B8%83%E5%B1%80.svg" alt="文件系统的存储布局"></p>
+<p><strong>虚拟文件系统</strong></p>
+<ul>
+<li>VFS中的超级块</li>
+<li>VFS中的inode</li>
+<li>VFS中的文件数据管理</li>
+<li>VFS中的目录项</li>
+</ul>
+<p>伪文件系统</p>
+<ul>
+<li>Linu实现了一些不用于保存文件数据的文件系统</li>
+</ul>
+<center><font color='orange'>Linux中的一些伪文件系统</font></center>
+
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">常用挂载点</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">procfs</td>
+<td align="center">&#x2F;proc</td>
+<td align="center">查看和操作进程相关的信息和配置</td>
+</tr>
+<tr>
+<td align="center">sysfs</td>
+<td align="center">&#x2F;sys</td>
+<td align="center">查看和操作与进程无关的系统配置</td>
+</tr>
+<tr>
+<td align="center">debugfs</td>
+<td align="center"></td>
+<td align="center">用于内核状态的调试</td>
+</tr>
+<tr>
+<td align="center">cgroupfs</td>
+<td align="center"></td>
+<td align="center">用于管理系统中的cgroup</td>
+</tr>
+<tr>
+<td align="center">configfs</td>
+<td align="center">&#x2F;sys&#x2F;kernel&#x2F;config</td>
+<td align="center">创建&#x2F;管理和删除内核对象</td>
+</tr>
+<tr>
+<td align="center">hugetlbfs</td>
+<td align="center"></td>
+<td align="center">查看和管理系统中的大页信息</td>
+</tr>
+</tbody></table>
+<p><strong>其他文件系统</strong></p>
+<ul>
+<li>FAT文件系统<ul>
+<li>文件分配表 – File Allocation Table - FAT</li>
+</ul>
+</li>
+<li>NTFS - New Technology File System</li>
+<li>FUSE与用户态文件系统</li>
+</ul>
 ]]></content>
       <categories>
         <category>four fundamental computer technology</category>
@@ -1160,27 +1341,12 @@
       </tags>
   </entry>
   <entry>
-    <title>会议纪要</title>
-    <url>/posts/2c109fcd/</url>
-    <content><![CDATA[<p>工作中难免会需要书写会议纪要等内容，一个好的格式能够体现作为一个职业人的专业素养，下面笔者便摘记工作中使用过的模板。</p>
-<span id="more"></span>
-<p><strong>会议纪要大纲：</strong></p>
-<ul>
-<li>会议主题</li>
-<li>会议时间</li>
-<li>参会部门</li>
-<li>参会人员</li>
-<li>记录人员</li>
-<li>会议内容</li>
-<li>结论</li>
-<li>附件<code>[可选]</code></li>
-</ul>
+    <title>多终端同步博客</title>
+    <url>/posts/a7e41fa1/</url>
+    <content><![CDATA[<p>参考资料：<br><a href="https://segmentfault.com/a/1190000019459014">Hexo博客多端同步问题</a></p>
 ]]></content>
-      <categories>
-        <category>working</category>
-      </categories>
       <tags>
-        <tag>meeting</tag>
+        <tag>hexo tutorial</tag>
       </tags>
   </entry>
 </search>
