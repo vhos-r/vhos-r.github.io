@@ -3,7 +3,7 @@ title: JavaScript Note
 tags:
   - javascript
 categories:
-  - computer language
+  - 编程语言
 abbrlink: fbbf86b6
 date: 2022-04-04 14:08:48
 ---
