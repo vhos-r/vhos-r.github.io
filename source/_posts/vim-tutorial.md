@@ -3,7 +3,7 @@ title: vim tutorial
 tags:
   - vim
 categories:
-  - tools
+  - 工具
 abbrlink: 9e9a6725
 date: 2022-04-06 22:13:08
 ---
