@@ -167,7 +167,7 @@ avatar:
   # If true, the avatar will be dispalyed in circle.
   rounded: false
   # If true, the avatar will be rotated with the cursor.
-  rotated: false
+  rotated: true
 
 # Posts / Categories / Tags in sidebar.
 site_state: true
@@ -283,15 +283,15 @@ follow_me:
 # Dependencies: https://github.com/tea3/hexo-related-popular-posts
 related_posts:
   enable: true
-  title: 相关文章 # Custom header, leave empty to use the default one
-  display_in_home: false
+  title: # Custom header, leave empty to use the default one
+  display_in_home: true
   params:
     maxCount: 5
     #PPMixingRate: 0.0
     #isDate: false
     #isImage: false
     #isExcerpt: false
-  icon: fa fa-signs-post
+  # icon: fa fa-signs-post
 
 
 # Post edit
