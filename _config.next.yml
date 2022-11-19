@@ -88,7 +88,7 @@ footer:
 creative_commons:
   license: by-nc-sa
   sidebar: true
-  post: false
+  post: true
   language: deed.zh
 
 
@@ -121,6 +121,7 @@ menu:
   tags: /tags/ || fa fa-tags
   categories: /categories/ || fa fa-th
   archives: /archives/ || fa fa-archive
+  book: /reading/ || fa fa-book-open
   # schedule: /schedule/ || fa fa-calendar
   # sitemap: /sitemap.xml || fa fa-sitemap
   # commonweal: /404/ || fa fa-heartbeat
@@ -281,18 +282,21 @@ follow_me:
 
 # Related popular posts
 # Dependencies: https://github.com/tea3/hexo-related-popular-posts
-related_posts:
-  enable: true
-  title: # Custom header, leave empty to use the default one
-  display_in_home: true
-  params:
-    maxCount: 5
+# related_posts:
+#   enable: true
+#   title: # Custom header, leave empty to use the default one
+#   display_in_home: false
+#   params:
+#     maxCount: 5
     #PPMixingRate: 0.0
     #isDate: false
     #isImage: false
     #isExcerpt: false
   # icon: fa fa-signs-post
 
+related_posts:
+  enable: true
+  display_in_home: true
 
 # Post edit
 # Dependencies: https://github.com/hexojs/hexo-deployer-git
