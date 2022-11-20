@@ -91,7 +91,7 @@
 <p>eg:</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> F = <span class="keyword">function</span>(<span class="params"></span>) &#123;&#125;;  <span class="comment">// 这是一个函数对象</span></span><br><span class="line"><span class="keyword">let</span> p = F.<span class="property"><span class="keyword">prototype</span></span>;    <span class="comment">// 这是一个与F关联的原型对象</span></span><br><span class="line"><span class="keyword">let</span> c = p.<span class="property">constructor</span>;  <span class="comment">// 这是与原型关联的函数</span></span><br><span class="line">c === F                 <span class="comment">// =&gt; true: 对任何F，F.prototype.constructor === F</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="/images/%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E5%8F%8A%E5%85%B6%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%AE%9E%E4%BE%8B.svg" alt="构造函数及其原型和实例"></p>
+<p><img src="/images/JavaScript-Note/%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E5%8F%8A%E5%85%B6%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%AE%9E%E4%BE%8B.svg" alt="构造函数及其原型和实例"></p>
 <p>ES6新增了class 关键字，让定义类更方便。但在底层，仍然是构造函数和原型机制在起作用<br>子类在类声明中通过extends关键字定义<br>子类可以通过super 关键字调用父类构造函数或父类中被覆盖的方法</p>
 <h2 id="模块"><a href="#模块" class="headerlink" title="模块"></a><strong>模块</strong></h2><hr>
 <p>模块化的目标是让程序员隐藏自己代码的实现细节，从而让不同来源的代码块可以组装成一个大型程序，又不必担心某个代码块会重写其他代码块的函数或变量。本章解释了三种不同的JavaScript模块系统：</p>
@@ -228,6 +228,30 @@
       </tags>
   </entry>
   <entry>
+    <title>会议纪要</title>
+    <url>/posts/2c109fcd/</url>
+    <content><![CDATA[<p>工作中难免会需要书写会议纪要等内容，一个好的格式能够体现作为一个职业人的专业素养，下面笔者便摘记工作中使用过的模板。</p>
+<span id="more"></span>
+<p><strong>会议纪要大纲：</strong></p>
+<ul>
+<li>会议主题</li>
+<li>会议时间</li>
+<li>参会部门</li>
+<li>参会人员</li>
+<li>记录人员</li>
+<li>会议内容</li>
+<li>结论</li>
+<li>附件<code>[可选]</code></li>
+</ul>
+]]></content>
+      <categories>
+        <category>工作</category>
+      </categories>
+      <tags>
+        <tag>meeting</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>vim tutorial</title>
     <url>/posts/9e9a6725/</url>
     <content><![CDATA[<div class="note info"><h2 id="Note"><a href="#Note" class="headerlink" title="Note:"></a>Note:</h2><p>本文内容摘自vimtutor教程，做个汇总方便查阅(●’◡’●)</p>
@@ -352,1101 +376,6 @@
       </categories>
       <tags>
         <tag>vim</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>会议纪要</title>
-    <url>/posts/2c109fcd/</url>
-    <content><![CDATA[<p>工作中难免会需要书写会议纪要等内容，一个好的格式能够体现作为一个职业人的专业素养，下面笔者便摘记工作中使用过的模板。</p>
-<span id="more"></span>
-<p><strong>会议纪要大纲：</strong></p>
-<ul>
-<li>会议主题</li>
-<li>会议时间</li>
-<li>参会部门</li>
-<li>参会人员</li>
-<li>记录人员</li>
-<li>会议内容</li>
-<li>结论</li>
-<li>附件<code>[可选]</code></li>
-</ul>
-]]></content>
-      <categories>
-        <category>工作</category>
-      </categories>
-      <tags>
-        <tag>meeting</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>多终端同步博客</title>
-    <url>/posts/a7e41fa1/</url>
-    <content><![CDATA[<p>参考资料：<br><a href="https://segmentfault.com/a/1190000019459014">Hexo博客多端同步问题</a></p>
-]]></content>
-      <tags>
-        <tag>hexo tutorial</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>操作系统笔记</title>
-    <url>/posts/8ce3e425/</url>
-    <content><![CDATA[<mark class="label primary">声明：</mark>
-<p>以下笔记内容摘自现代操作系统原理与实现.陈海波、夏虞斌 等著</p>
-<span id="more"></span>
-
-<h2 id="操作系统概述"><a href="#操作系统概述" class="headerlink" title="操作系统概述"></a><strong>操作系统概述</strong></h2><hr>
-<p>操作系统有两个职责：对<strong>硬件</strong>进行管理和抽象，为<strong>应用</strong>提供服务并进行管理</p>
-<p><img src="/images/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%AE%80%E8%A6%81%E7%BB%93%E6%9E%84.svg" alt="操作系统简要结构"></p>
-<p>操作系统简史</p>
-<ul>
-<li>GM-NAA I&#x2F;O: 第一个(批处理)操作系统</li>
-<li>OS&#x2F;360: 从专用走向通用</li>
-<li>Multics&#x2F;UNIX&#x2F;Linux: 分时与多任务</li>
-<li>macOS&#x2F;Windows: 以人为本的人机交互</li>
-</ul>
-<p>操作系统接口<br>从应用角度，操作系统提供了不同层次的接口，主要包括：</p>
-<ul>
-<li>系统调用接口</li>
-<li>POSIX接口</li>
-<li>领域应用接口</li>
-</ul>
-<p><img src="/images/%E4%B8%8D%E5%90%8C%E5%B1%82%E6%AC%A1%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%8E%A5%E5%8F%A3.svg" alt="不同层次的操作系统接口"></p>
-<p>ChCore用于本书教学而开发的实验操作系统，基本结构如下所示：</p>
-<p><img src="/images/ChCore%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E7%A4%BA%E6%84%8F%E5%9B%BE.svg" alt="ChCore系统架构示意图"></p>
-<h2 id="硬件结构"><a href="#硬件结构" class="headerlink" title="硬件结构"></a><strong>硬件结构</strong></h2><hr>
-<p>冯·诺伊曼结构包括三个主要部分：</p>
-<ul>
-<li>中央处理单元</li>
-<li>存储器</li>
-<li>输入输出</li>
-</ul>
-<p><img src="/images/%E5%86%AF%E8%AF%BA%E4%BE%9D%E6%9B%BC%E7%BB%93%E6%9E%84%E7%A4%BA%E6%84%8F%E5%9B%BE.svg" alt="冯诺依曼结构示意图"></p>
-<p>ISA- Instruction Set Architecture - 指令集架构</p>
-<ul>
-<li>RISC(Reduced Instruction Set Computer)- 精简指令集计算机</li>
-<li>CISC(Complex Instruction Set Computer)- 复杂指令集计算机</li>
-</ul>
-<p>RISC - AArch64<br>每条指令的长度固定4字节，指令类型包括：</p>
-<ul>
-<li>数据搬移指令(mov)</li>
-<li>寄存器计算指令(add&#x2F;sub)</li>
-<li>内存读写指令(ldr&#x2F;str)</li>
-<li>跳转指令(b)</li>
-<li>过程调用指令(bl&#x2F;ret)</li>
-<li>特权指令(mrs&#x2F;msr)</li>
-</ul>
-<h2 id="操作系统结构"><a href="#操作系统结构" class="headerlink" title="操作系统结构"></a><strong>操作系统结构</strong></h2><hr>
-<p>在构建复杂系统时，必须合理考虑其内部结构，在不同的需求之间进行<strong>权衡</strong>。</p>
-<p>操作系统乃至计算机系统中控制复杂度的一个重要设计原则是：将<strong>策略</strong>与<strong>机制</strong>相分离。<br>策略表示“做什么”，机制表示“如何做”</p>
-<center><font color=#F78A52>典型的操作系统机制与策略</font></center>
-
-<table>
-<thead>
-<tr>
-<th align="center"></th>
-<th align="center">策略</th>
-<th align="center">机制</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">登录</td>
-<td align="center">什么用户、以什么权限登录等</td>
-<td align="center">输入处理、策略文件管理、桌面启动加载等</td>
-</tr>
-<tr>
-<td align="center">调度</td>
-<td align="center">先到先得、时间片轮转等</td>
-<td align="center">调度队列的设计、调度实体的表示、调度的中断处理等</td>
-</tr>
-</tbody></table>
-<p>管理复杂系统的重要方法是M.A.L.H方法，即</p>
-<ul>
-<li>模块化(modularity)</li>
-<li>抽象(abstraction)</li>
-<li>分层(layering)<ul>
-<li>不同类模块之间的层级</li>
-</ul>
-</li>
-<li>层级(hierarchy)<ul>
-<li>同类模块之间的分层</li>
-</ul>
-</li>
-</ul>
-<p>操作系统内核架构：</p>
-<ul>
-<li>简要结构</li>
-<li>宏内核</li>
-<li>微内核</li>
-<li>外核</li>
-<li>多核 &amp; 混合内核</li>
-</ul>
-<p><strong>简要结构</strong><br>一些功能较为简单的操作系统，会选择将应用程序与操作系统放置在同一个地址空间中，无需底层硬件提供复杂的内存管理、特权级隔离等功能。</p>
-<p>典型示例：MS-DOS(MicrSoft Disk Operating System)<br>优点：应用程序对操作系统服务的调用无需切换地址空间和权限层级，因此更加高效。<br>缺点：任何一个应用或操作系统模块出现了问题，均有可能使整个系统崩溃。</p>
-<p><img src="/images/MS-DOS%E7%9A%84%E7%B3%BB%E7%BB%9F%E7%BB%93%E6%9E%84.svg" alt="MS-DOS的系统结构"></p>
-<p><strong>宏内核架构</strong><br>又称<strong>单内核</strong>，其特征是操作系统内核的所有模块(包括进程调度、内存管理、文件系统、设备驱动等)均运行在内核态，具备直接操作硬件的能力，这类操作系统包裹UNIX&#x2F;Linux、FreeBSD等。</p>
-<p><img src="/images/%E5%AE%8F%E5%86%85%E6%A0%B8%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84.svg" alt="宏内核的基本结构"></p>
-<p><strong>微内核</strong><br>将单个功能或模块(如文件系统、设备驱动等)从内核中拆分出来，作为一个独立的服务部署到独立的运行环境中；内核仅保留极少的功能，为这些服务提供通信等基础能力，使其能够互相协作以完成操作系统所必需的功能。</p>
-<p><strong>外核架构</strong><br>外核架构可以为不同应用提供定制化的高效资源管理：按照不同应用领域的要求，将对硬件资源的抽象模块化为一系列的库(即<strong>LibOS</strong>).</p>
-<p>操作系统框架结构：</p>
-<ul>
-<li>Android 系统框架</li>
-<li>ROS 系统框架</li>
-</ul>
-<p><strong>Android 系统框架</strong><br>在Linux内核之上运行的Android系统框架包括如下几个主要组件：</p>
-<ol>
-<li>硬件抽象层</li>
-<li>Android库</li>
-<li>Android运行环境</li>
-<li>Android应用框架</li>
-<li>服务化架构与BinderIPC</li>
-</ol>
-<p><img src="/images/Android%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84.svg" alt="Android操作系统架构"></p>
-<h2 id="内存管理"><a href="#内存管理" class="headerlink" title="内存管理"></a><strong>内存管理</strong></h2><hr>
-<p>Q:操作系统如何让不同的应用程序能够即<em><strong>高效</strong></em> 又 <em><strong>安全</strong></em>地共同使用物理内存资源呢？<br>A:在应用程序与物理内存之间加入一个新的抽象：<font color=#F78A52>虚拟内存</font></p>
-<p>虚拟内存的设计三目标：</p>
-<ul>
-<li>高效性<ul>
-<li>不能在应用程运行的过程中造成明显的性能开销</li>
-<li>不应该占用过多的物理内存资源，明显降低物理内存的有效利用率</li>
-</ul>
-</li>
-<li>安全性<ul>
-<li>虚拟内存抽象需要使不同应用程序的内存互相隔离</li>
-</ul>
-</li>
-<li>透明性<ul>
-<li>应用开发者在编程时无须考虑虚拟内存抽象</li>
-</ul>
-</li>
-</ul>
-<p><strong>虚拟地址 &amp; 物理地址</strong></p>
-<p><img src="/images/CPU%E5%9C%B0%E5%9D%80%E7%BF%BB%E8%AF%91%E7%A4%BA%E6%84%8F%E5%9B%BE.svg" alt="CPU地址翻译示意图"></p>
-<p>MMU - Memory Management Unit – 内存管理单元，负责虚拟地址到物理地址的转换</p>
-<p>TLB - Translation Lookaside Buffer – 转址旁路缓存，加速地址翻译的过程</p>
-<p>MMU将虚拟地址翻译为物理地址的主要机制有两种：</p>
-<ul>
-<li>分段机制<ul>
-<li>操作系统能够实现物理内存资源的离散分配，易造成外部碎片</li>
-</ul>
-</li>
-<li>分页机制<ul>
-<li>被现代操作系统广泛采用</li>
-</ul>
-</li>
-</ul>
-<p><img src="/images/%E5%88%86%E6%AE%B5%E6%9C%BA%E5%88%B6%E4%B8%8B%E5%9C%B0%E5%9D%80%E7%BF%BB%E8%AF%91%E8%A7%84%E5%88%99%E7%A4%BA%E6%84%8F%E5%9B%BE.svg" alt="分段机制下地址翻译规则示意图"></p>
-<p><strong>基于分页的虚拟内存</strong><br>AArch64架构下的4级页表</p>
-<p><img src="/images/AArch64%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E4%B8%8B%E5%9F%BA%E4%BA%8E4%E7%BA%A7%E9%A1%B5%E8%A1%A8%E7%9A%84%E5%9C%B0%E5%9D%80%E7%BF%BB%E8%AF%91.svg" alt="AArch64体系结构下基于4级页表的地址翻译"></p>
-<p>一个64位的虚拟地址在逻辑上被划分成如下几个部分：</p>
-<ul>
-<li>第63位至48位：全为0或者全为1（硬件要求）</li>
-<li>第47位至39位：这9位作为该虚拟地址在第0级页表中的索引值，对应图中的虚拟页号0</li>
-<li>第38位至30位：这9位作为该虚拟地址在第1级页表中的索引值，对应图中的虚拟页号1</li>
-<li>第29位至21位：这9位作为该虚拟地址在第2级页表中的索引值，对应图中的虚拟页号2</li>
-<li>第20位至12位：这9位作为该虚拟地址在第3级页表中的索引值，对应图中的虚拟页号3</li>
-<li>第11位至0位：由于页的大小是4KB，所以低12位代表页内偏移量</li>
-</ul>
-<p>TLB：加速地址翻译</p>
-<p><img src="/images/TLB%E7%9A%84%E7%BB%93%E6%9E%84%E7%A4%BA%E6%84%8F%E5%9B%BE.svg" alt="TLB的结构示意图"></p>
-<p>TLB刷新? 切换应用主动刷新TLB<br>避免刷新带来的开销：</p>
-<ul>
-<li>AArch64体系，采用ASID(Address Space IDentifier)</li>
-<li>x86-64, 采用PCID(Process Context IDentifier)</li>
-</ul>
-<p>缺页 &amp; 换页异常</p>
-<p>页替换策略</p>
-<ul>
-<li>MIN策略&#x2F;OPT策略</li>
-<li>FIFO策略</li>
-<li>Second Chance策略</li>
-<li>LRU策略</li>
-<li>MRU策略</li>
-<li>时钟算法策略</li>
-</ul>
-<p>工作集模型：能够有效地避免颠簸现象的发生</p>
-<p><strong>虚拟内存功能</strong></p>
-<ul>
-<li>共享内存<ul>
-<li>让不同应用程序之间互相通信&#x2F;传递数据</li>
-</ul>
-</li>
-<li>写时拷贝<ul>
-<li>能够节约物理内存资源，比如不同的应用程序以写时拷贝的方式映射相同的动态链接库</li>
-<li>让父子程序以只读方式共享全部内存数据，避免内存拷贝操作带来的时间和空间开销</li>
-</ul>
-</li>
-<li>内存去重</li>
-<li>内存压缩</li>
-<li>大页<ul>
-<li>减少TLB缓存项的消耗，从而有机会提高TLB命中率</li>
-<li>减少页表级数，从而提升查询页表的效率</li>
-<li>应用程序可能未使用整个大页而造成物理内存资源浪费</li>
-<li>增加操作系统管理内存的复杂度</li>
-</ul>
-</li>
-</ul>
-<p><strong>物理内存分配与管理</strong></p>
-<ol>
-<li>物理内存分配器设计的连个重要评价维度：<ul>
-<li>内存资源利用率<ul>
-<li>内存碎片 – 无法被利用的内存，其直接导致内存资源利用率的下降<ul>
-<li>内部碎片</li>
-<li>外部碎片</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>性能<ul>
-<li>尽可能降低分配延迟和节约CPU资源</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>伙伴系统 - buddy system<ul>
-<li>在现代操作系统中被广泛地用于分配连续的物理内存页</li>
-<li>将物理内存划分成连续的块，以块作为基本单位进行分配<br><img src="/images/%E4%BC%99%E4%BC%B4%E5%9D%97%E7%9A%84%E5%88%86%E8%A3%82%E4%B8%8E%E5%90%88%E5%B9%B6.svg" alt="伙伴块的分裂与合并"></li>
-</ul>
-</li>
-<li>SLAB分配器<ul>
-<li>用于分配几十个或几百个字节的小内存</li>
-<li>SLAB&#x2F;SLUB&#x2F;SLOB 统称 SLAB分配器</li>
-</ul>
-</li>
-<li>常用的空闲链表<ul>
-<li>隐式空闲链表</li>
-<li>显示空闲链表</li>
-<li>分离空闲链表</li>
-</ul>
-</li>
-<li>物理内存与CPU缓存<ul>
-<li>软件方案：染色机制</li>
-<li>硬件方案：Intel CAT</li>
-<li>硬件方案：ARMv8-A MPAM(Memory System Resource Partitioning and Monitoring)</li>
-</ul>
-</li>
-</ol>
-<p><strong>ChCore内存管理机制</strong><br>实验内核ChCore，内存管理部分三个重要数据结构：</p>
-<ul>
-<li>虚拟地址空间struct vmspace</li>
-<li>虚拟地址区域struct vmregion</li>
-<li>物理内存对象struct pmobject</li>
-</ul>
-<h2 id="进程与线程"><a href="#进程与线程" class="headerlink" title="进程与线程"></a><strong>进程与线程</strong></h2><hr>
-<p><strong>进程</strong></p>
-<ul>
-<li>每个进程都对应于一个运行中的程序</li>
-</ul>
-<p>进程的状态分为以下几种：</p>
-<ul>
-<li>新生状态<ul>
-<li>一个进程刚被创建出来，还未完成初始化，不能被调度执行</li>
-</ul>
-</li>
-<li>就绪状态<ul>
-<li>进程可以被调度执行，但还未被调度器选择</li>
-</ul>
-</li>
-<li>运行状态<ul>
-<li>进程正在CPU上运行</li>
-</ul>
-</li>
-<li>阻塞状态<ul>
-<li>进程需要等待外部事件，暂时无法被调度</li>
-</ul>
-</li>
-<li>终止状态<ul>
-<li>进程已完成执行，且不会再被调度</li>
-</ul>
-</li>
-</ul>
-<p><img src="/images/%E8%BF%9B%E7%A8%8B%E5%9C%A8%E4%B8%8D%E5%90%8C%E7%8A%B6%E6%80%81%E4%B9%8B%E9%97%B4%E5%88%87%E6%8D%A2.svg" alt="进程在不同状态之间切换"></p>
-<p>进程的内存空间布局</p>
-<ul>
-<li>用户栈<ul>
-<li>保存进程需要的各种临时数据，扩展方向是自顶向下</li>
-</ul>
-</li>
-<li>代码库<ul>
-<li>进程执行需要依赖的共享代码库，如libc – 只读</li>
-</ul>
-</li>
-<li>用户堆<ul>
-<li>进程动态分配的内存，扩展方向是自底向上</li>
-</ul>
-</li>
-<li>数据与代码段<ul>
-<li>保存在进程需要执行的二进制文件中，进程执行前，由操作系统载入虚拟地址空间</li>
-<li>数据段保存全局变量</li>
-<li>代码段保存进程执行的代码</li>
-</ul>
-</li>
-<li>内核部分<ul>
-<li>进程地址空间的最顶端</li>
-<li>每个进程的虚拟地址空间里都映射了相同的内核内存</li>
-</ul>
-</li>
-</ul>
-<p><img src="/images/%E5%85%B8%E5%9E%8B%E7%9A%84%E8%BF%9B%E7%A8%8B%E5%86%85%E5%AD%98%E7%A9%BA%E9%97%B4%E5%B8%83%E5%B1%80.svg" alt="典型的进程内存空间布局"></p>
-<p>进程控制块和上下文切换<br>PCB - Process Control Block – 进程控制块</p>
-<ul>
-<li>进程标识符 – PID - Process IDentifier</li>
-<li>进程状态</li>
-<li>虚拟内存状态</li>
-<li>打开的文件</li>
-<li>…</li>
-</ul>
-<p>上下文 - 进程运行时的寄存器状态，其能够用于保存和恢复一个进程在处理器上运行的状态</p>
-<p><img src="/images/%E8%BF%9B%E7%A8%8B%E4%B8%8A%E4%B8%8B%E6%96%87%E5%88%87%E6%8D%A2%E7%A4%BA%E6%84%8F%E5%9B%BE.svg" alt="进程上下文切换示意图"></p>
-<p>Linux的进程操作</p>
-<ol>
-<li>进程的创建：fork<ul>
-<li>调用一次，返回两次</li>
-<li>父进程，fork返回值是子进程PID</li>
-<li>子进程，fork返回值是0</li>
-</ul>
-</li>
-<li>进程的执行：exec<ul>
-<li>fork创建进程，exec执行用户指定的二进制文件</li>
-</ul>
-</li>
-<li>进程管理<ul>
-<li>进程监控 – wait</li>
-<li>进程组<ul>
-<li>进程集合，由一个或多个进程组成</li>
-</ul>
-</li>
-<li>会话<ul>
-<li>进程组的集合，可以由一个或多个进程组构成</li>
-<li>前台进程组</li>
-<li>后台进程组</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>讨论：fork过时了吗<ul>
-<li>fork优点：<ul>
-<li>fork接口设计简洁</li>
-<li>fork强调进程之间的强联系</li>
-</ul>
-</li>
-<li>fork局限性<ul>
-<li>fork实现愈加复杂</li>
-<li>fork性能太差</li>
-<li>fork存在潜在安全漏洞</li>
-</ul>
-</li>
-<li>Linux替代方案：<ul>
-<li>合二为一：posix_spawn</li>
-<li>限定场景：vfork</li>
-<li>精密控制：rfork&#x2F;clone</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-<p><strong>线程</strong><br>之所以引入线程，是因为随着计算机科学技术的发展，计算机拥有了更多的CPU核心，程序的可并行度提高，进程这一抽象开始显得过于笨重：</p>
-<ul>
-<li>创建进程的开销较大，需要完成创建独立的地址空间&#x2F;载入数据和代码段&#x2F;初始化堆等步骤</li>
-<li>进程拥有独立的虚拟地址空间，在进程间共享数据和同步比较麻烦<ul>
-<li>共享内存页（粒度较粗）</li>
-<li>进程间通信（开销较高）</li>
-</ul>
-</li>
-</ul>
-<p>线程 – 拥有独立的可执行单元，共享进程的地址空间，但又各自保存运行时所需的状态（状态）</p>
-<p>多线程的地址空间布局：</p>
-<ul>
-<li>分离的内核栈与用户栈</li>
-<li>共享的其他区域</li>
-</ul>
-<p><img src="/images/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E8%BF%9B%E7%A8%8B%E7%9A%84%E5%9C%B0%E5%9D%80%E7%A9%BA%E9%97%B4%E5%B8%83%E5%B1%80.svg" alt="多线程进程的地址空间布局"></p>
-<p>用户态线程与内核态线程 – 多线程模型：<br>a) 多对一模型<br>b) 一对一模型<br>c) 多对多模型</p>
-<p>TCB - Thread Control Block – 线程控制块<br>TLS - Thread Local Storage – 线程本地存储</p>
-<p>线程的基本接口：以POSIX线程库为例</p>
-<ol>
-<li>线程创建<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;pthread.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">pthread_create</span><span class="params">(<span class="type">pthread_t</span> *thread, <span class="type">const</span> <span class="type">pthread_attr_t</span> *attr,</span></span><br><span class="line"><span class="params">                    <span class="type">void</span> *(*start_routine) (<span class="type">void</span> *), <span class="type">void</span> *arg)</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Compile and link with -pthread.</span></span><br></pre></td></tr></table></figure></li>
-<li>线程退出<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;pthread.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">pthread_exit</span><span class="params">(<span class="type">void</span> *retval)</span>;</span><br></pre></td></tr></table></figure></li>
-<li>出让资源<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;pthread.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">pthread_yield</span><span class="params">(<span class="type">void</span>)</span>;</span><br></pre></td></tr></table></figure></li>
-<li>合并操作<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;pthread.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">pthread_join</span><span class="params">(<span class="type">pthread_t</span> thread, <span class="type">void</span> **retval)</span>;</span><br></pre></td></tr></table></figure></li>
-<li>挂起与唤醒<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 挂起方式1：等待固定时间</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">unsigned</span> <span class="type">int</span> <span class="title function_">sleep</span><span class="params">(<span class="type">unsigned</span> <span class="type">int</span> seconds)</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 挂起方式2：等待具体事件</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;pthread.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">pthread_cond_t</span> cond = PTHREAD_COND_INITIALIZER;</span><br><span class="line"><span class="type">int</span> <span class="title function_">pthread_cond_wait</span><span class="params">(<span class="type">pthread_cond_t</span> *cond, <span class="type">pthread_mutex_t</span> *mutex)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">pthread_cond_timedwait</span><span class="params">(<span class="type">pthread_cond_t</span> *cond, <span class="type">pthread_mutex_t</span> *mutex, <span class="type">const</span> <span class="keyword">struct</span> timespec *abstime)</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 唤醒</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">pthread_cond_signal</span><span class="params">(<span class="type">pthread_cond_t</span> *cond)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">pthread_cond_broadcast</span><span class="params">(<span class="type">pthread_cond_t</span> *cond)</span>;</span><br></pre></td></tr></table></figure></li>
-</ol>
-<p>ChCore的线程上下文<br>线程上下主要是指处理器中大部分寄存器的值（AArch64架构）</p>
-<ul>
-<li>程序计数器PC – ELR_EL1</li>
-<li>通用寄存器 – X0 ~ X30</li>
-<li>特殊寄存器<ul>
-<li>SP_EL0 - 线程运行时的栈指针</li>
-<li>SPSR_EL1 - 线程执行的CPU状态</li>
-<li>TTBR0_EL1 - 线程对应的进程页表</li>
-</ul>
-</li>
-</ul>
-<p>ChCore中上下文切换实现</p>
-<ul>
-<li>进入内核态与上下文保存</li>
-<li>页表与内核栈的切换</li>
-<li>上下文恢复与返回用户态</li>
-</ul>
-<p><img src="/images/ChCore%E4%B8%8A%E4%B8%8B%E6%96%87%E5%88%87%E6%8D%A2%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E6%A0%88%E5%8F%98%E5%8C%96.svg" alt="ChCore上下文切换过程中的栈变化"></p>
-<p><strong>纤程</strong><br>用户态线程 – 纤程</p>
-<ul>
-<li>更轻量，开销更小，提高可扩展性</li>
-</ul>
-<p>POSIX的纤程支持：ucontext</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;ucontext.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">getcontext</span><span class="params">(<span class="type">ucontext_t</span> *ucp)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">setcontext</span><span class="params">(<span class="type">const</span> <span class="type">ucontext_t</span> *ucp)</span>;</span><br><span class="line"><span class="type">void</span> <span class="title function_">makecontext</span><span class="params">(<span class="type">ucontext_t</span> *ucp, <span class="type">void</span> (*func)(), <span class="type">int</span> argc, ...)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">swapcontext</span><span class="params">(<span class="type">ucontext_t</span> *oucp, <span class="type">const</span> <span class="type">ucontext_t</span> *ucp)</span>;</span><br></pre></td></tr></table></figure>
-
-<p>纤程上下文切换</p>
-<ul>
-<li>合作式多任务处理 – cooperative multitasking</li>
-</ul>
-<p>为了与操作系统提供的支持相区分，一般程序语言提供的纤程支持称为协程（Lua&#x2F;Go&#x2F;Ruby&#x2F;C++等）</p>
-<h2 id="操作系统调度"><a href="#操作系统调度" class="headerlink" title="操作系统调度"></a><strong>操作系统调度</strong></h2><hr>
-<p>进程是资源隔离的单位，一个进程可以有多个线程，这些线程在不同的CPU核心上并行执行，因此线程才是调度器的调度对象。<br>一般调度器会通过维护<strong>运行队列</strong>的方式来管理任务</p>
-<p>调度指标：</p>
-<ul>
-<li>吞吐量<ul>
-<li>单位时间内处理的任务数量</li>
-</ul>
-</li>
-<li>周转时间<ul>
-<li>任务从被发起直至执行结束所需的时间</li>
-</ul>
-</li>
-<li>响应时间<ul>
-<li>任务从被发起直至第一次向用户返回输出以响应用户所需时间</li>
-</ul>
-</li>
-<li>公平性</li>
-<li>资源利用率</li>
-<li>实时性</li>
-<li>能耗</li>
-</ul>
-<p>任务类型：</p>
-<ul>
-<li>批处理任务<ul>
-<li>比如机器学习的训练&#x2F;复杂的科学计算</li>
-</ul>
-</li>
-<li>交互式任务<ul>
-<li>比如程序调试</li>
-</ul>
-</li>
-<li>实时任务<ul>
-<li>比如车载系统中的距离探测器</li>
-</ul>
-</li>
-</ul>
-<p>调度器设计的困难点：</p>
-<ul>
-<li>调度指标多样性</li>
-<li>调度可参考的信息有限</li>
-<li>任务间的复杂交互</li>
-<li>许多方面存在权衡</li>
-</ul>
-<p>调度器中存在的权衡包括但不限于以下几点：</p>
-<ul>
-<li>调度开销与调度效果</li>
-<li>优先级与公平性</li>
-<li>性能与能耗</li>
-</ul>
-<p><strong>调度机制</strong><br>长期调度：触发间隔较长，它粗粒度地决定是否应该将一个新的进程纳入调度管理，负责增加系统的可被调度的进程的数量。<br>中期调度：触发相对频繁，它辅助换页机制，负责限制系统中可被调度的进程数量。<br>短期调度：触发最为频繁，它负责细粒度地调度进程的执行，做出相应的调度决策。</p>
-<p><img src="/images/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BF%9B%E7%A8%8B%E8%B0%83%E5%BA%A6%E7%A4%BA%E6%84%8F%E5%9B%BE.svg" alt="操作系统进程调度示意图"></p>
-<p><strong>单核调度策略</strong><br>经典调度：</p>
-<ul>
-<li>先到先得 – First Come First Served - FCFS (First In First out - FIFO)<ul>
-<li>特点：简单直观</li>
-<li>弊端：在长短任务混合的场景下对短任务不友好</li>
-<li>弊端：对I&#x2F;O密集型任务不友好</li>
-</ul>
-</li>
-<li>最短任务优先 – Shortest Job First - SJF<ul>
-<li>弊端：必须预知任务的运行时间</li>
-<li>弊端：其表现严重依赖于任务到达时间点</li>
-</ul>
-</li>
-<li>最短完成时间任务优先 – Shortest Time-to-Completion First - STCF<ul>
-<li>弊端：必须预知任务的运行时间</li>
-<li>弊端：长任务饥饿</li>
-</ul>
-</li>
-<li>时间片轮转 – Round Robin - RR<ul>
-<li>时间片大小该如何选取？</li>
-<li>弊端：在任务运行时间相似的场景下平均周转时间高</li>
-</ul>
-</li>
-</ul>
-<p>优先级调度：</p>
-<ul>
-<li>多级队列 – Multi-Level Queue - MLQ<ul>
-<li>低优先级任务饥饿</li>
-<li>优先级反转</li>
-</ul>
-</li>
-<li>多级反馈队列 – Multi-Level Feedback Queue - MLFQ<ul>
-<li>短任务拥有更高的优先级</li>
-<li>低优先级的任务采用更长的时间片</li>
-<li>定时地将所有任务的优先级提升至最高</li>
-</ul>
-</li>
-</ul>
-<p>公平共享调度 – fair-share scheduling ：</p>
-<ul>
-<li>彩票调度<ul>
-<li>彩票转让</li>
-<li>彩票货币</li>
-<li>彩票通胀</li>
-</ul>
-</li>
-<li>步幅调度</li>
-</ul>
-<p>实时调度：</p>
-<ul>
-<li>速率单调 – Rate-Monotonic - RM</li>
-<li>最早截止时间优先 – Earliest Deadline First - EDF</li>
-</ul>
-<p>其他调度：</p>
-<ul>
-<li>借用虚拟时间 – Borrowed Virtual Time - BVT</li>
-</ul>
-<p><strong>多核调度策略</strong></p>
-<ul>
-<li>负载分担</li>
-<li>协同调度<ul>
-<li>群组调度</li>
-</ul>
-</li>
-<li>两级调度<ul>
-<li>全局调度器 &amp; 本地调度器</li>
-</ul>
-</li>
-<li>负载追踪与负载均衡</li>
-<li>能耗感知调度 – Energy Aware Scheduling - EAS<ul>
-<li>容量</li>
-<li>功率</li>
-</ul>
-</li>
-</ul>
-<p><strong>调度进阶机制</strong><br>处理器亲和性 – processor affinity</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Linux 提供的操作CPU核心的集合掩码的宏</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> _GNU_SOURCE             <span class="comment">/* See feature_test_macros(7) */</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sched.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">CPU_ZERO</span><span class="params">(<span class="type">cpu_set_t</span> *<span class="built_in">set</span>)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">CPU_SET</span><span class="params">(<span class="type">int</span> cpu, <span class="type">cpu_set_t</span> *<span class="built_in">set</span>)</span>;</span><br><span class="line"><span class="type">void</span> <span class="title function_">CPU_CLR</span><span class="params">(<span class="type">int</span> cpu, <span class="type">cpu_set_t</span> *<span class="built_in">set</span>)</span>;</span><br><span class="line"><span class="type">int</span>  <span class="title function_">CPU_ISSET</span><span class="params">(<span class="type">int</span> cpu, <span class="type">cpu_set_t</span> *<span class="built_in">set</span>)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span>  <span class="title function_">CPU_COUNT</span><span class="params">(<span class="type">cpu_set_t</span> *<span class="built_in">set</span>)</span>;</span><br><span class="line"><span class="comment">//...</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Linux 的任务亲和性接口</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> _GNU_SOURCE             <span class="comment">/* See feature_test_macros(7) */</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sched.h&gt;</span></span></span><br><span class="line"><span class="comment">// set and get a thread&#x27;s CPU affinity mask</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">sched_setaffinity</span><span class="params">(<span class="type">pid_t</span> pid, <span class="type">size_t</span> cpusetsize,</span></span><br><span class="line"><span class="params">                      <span class="type">const</span> <span class="type">cpu_set_t</span> *mask)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">sched_getaffinity</span><span class="params">(<span class="type">pid_t</span> pid, <span class="type">size_t</span> cpusetsize,</span></span><br><span class="line"><span class="params">                      <span class="type">cpu_set_t</span> *mask)</span>;</span><br></pre></td></tr></table></figure>
-
-<p>调度策略设置<br>Linux支持多种调度策略和调度器：</p>
-<ul>
-<li>完全公平调度器 – Completely Fair Scheduler - CFS</li>
-<li>实时调度器 – Real-Time scheduler - RT</li>
-<li>截止时间调度器 – DealLine scheduler - DL</li>
-</ul>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Linux 的调度策略修改机制</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sched.h&gt;</span></span></span><br><span class="line"><span class="comment">// sched_setattr, sched_getattr - set and get scheduling policy and attributes</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">sched_setattr</span><span class="params">(<span class="type">pid_t</span> pid, <span class="keyword">struct</span> sched_attr *attr,</span></span><br><span class="line"><span class="params">                  <span class="type">unsigned</span> <span class="type">int</span> flags)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">sched_getattr</span><span class="params">(<span class="type">pid_t</span> pid, <span class="keyword">struct</span> sched_attr *attr,</span></span><br><span class="line"><span class="params">                  <span class="type">unsigned</span> <span class="type">int</span> size, <span class="type">unsigned</span> <span class="type">int</span> flags)</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">sched_attr</span> &#123;</span></span><br><span class="line">    u32 size;              <span class="comment">/* Size of this structure */</span></span><br><span class="line">    u32 sched_policy;      <span class="comment">/* Policy (SCHED_*) */</span></span><br><span class="line">    u64 sched_flags;       <span class="comment">/* Flags */</span></span><br><span class="line">    s32 sched_nice;        <span class="comment">/* Nice value (SCHED_OTHER,</span></span><br><span class="line"><span class="comment">                              SCHED_BATCH) */</span></span><br><span class="line">    u32 sched_priority;    <span class="comment">/* Static priority (SCHED_FIFO,</span></span><br><span class="line"><span class="comment">                              SCHED_RR) */</span></span><br><span class="line">    <span class="comment">/* Remaining fields are for SCHED_DEADLINE */</span></span><br><span class="line">    u64 sched_runtime;</span><br><span class="line">    u64 sched_deadline;</span><br><span class="line">    u64 sched_period;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<p><strong>案例分析：现代调度器</strong><br>Linux调度器：</p>
-<ul>
-<li>Linux2.4版本以前，使用 O(n) 调度器<ul>
-<li>调度开销大</li>
-<li>多核扩展性差</li>
-</ul>
-</li>
-<li>Linux2.6.0版本中使用新的 O(1) 调度器<ul>
-<li>交互式任务的判定算法过于复杂</li>
-<li>静态时间片带来的问题</li>
-</ul>
-</li>
-<li>Linux2.6.23开始使用完全公平调度器CFS<ul>
-<li>CFS调度器的动态时间片</li>
-<li>CFS调度器使用红黑树作为运行队列</li>
-<li>CFS阻塞任务唤醒</li>
-</ul>
-</li>
-</ul>
-<p>macOS&#x2F;iOS调度器<br>GCD - Grand Central Dispatch</p>
-<ul>
-<li>采用基于优先级的实时调度策略，使用服务质量等级（Quality of Service - QoS）为任务确定优先级<ul>
-<li>UserInteractive</li>
-<li>UserInitiated</li>
-<li>Default</li>
-<li>Utility</li>
-<li>Background</li>
-</ul>
-</li>
-</ul>
-<h2 id="进程间通信"><a href="#进程间通信" class="headerlink" title="进程间通信"></a><strong>进程间通信</strong></h2><hr>
-<p>Inter-Process Communication - IPC</p>
-<p><img src="/images/%E7%AE%80%E5%8D%95%E7%9A%84%E8%BF%9B%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1%E8%AE%BE%E8%AE%A1.svg" alt="简单的进程间通信设计"></p>
-<p><strong>宏内核进程间通信</strong></p>
-<ul>
-<li>管道<ul>
-<li>命名管道 &amp; 匿名管道</li>
-</ul>
-</li>
-<li>System V 消息队列</li>
-<li>System V 信号量</li>
-<li>System V 共享内存</li>
-<li>信号</li>
-<li>套接字</li>
-</ul>
-<p><img src="/images/%E5%AE%8F%E5%86%85%E6%A0%B8%E8%BF%9B%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1%E6%9C%BA%E5%88%B6%E5%AF%B9%E6%AF%94.svg" alt="宏内核进程间通信机制对比"></p>
-<p><strong>微内核进程间通信</strong></p>
-<p>Mach:早期的微内核进程间通信设计</p>
-<ul>
-<li>端口设计</li>
-<li>消息设计</li>
-</ul>
-<p>L4：围绕进程间通信优化而设计的微内核系统</p>
-<ul>
-<li>L4消息传递<ul>
-<li>短消息</li>
-<li>长消息</li>
-</ul>
-</li>
-<li>L4控制流转移<ul>
-<li>惰性调度</li>
-<li>直接进程切换</li>
-</ul>
-</li>
-<li>L4通信连接</li>
-<li>L4通信控制（权限检查）<ul>
-<li>氏族和酋长（已废弃）</li>
-<li>Capability</li>
-</ul>
-</li>
-</ul>
-<p>LRPC - Lightweight Remote Procedure Call – 轻量级远程过程调用：迁移线程模型</p>
-<ul>
-<li>优化控制流切换的性能和优化数据传输的性能</li>
-</ul>
-<p>迁移线程的基本原则：</p>
-<ul>
-<li>简化控制流切换，让客户端线程执行“服务端的代码”</li>
-<li>简化数据传输，共享参数栈和寄存器</li>
-<li>简化接口，减少序列化等开销</li>
-<li>优化并发，避免共享的全局数据结构</li>
-</ul>
-<p>案例分析：Android Binder<br>Binder IPC内核设计</p>
-<ul>
-<li>Binder 的命名服务</li>
-<li>线程池模型</li>
-<li>匿名共享内存 – 基于文件描述符的共享设计</li>
-</ul>
-<p>案例分析：ChCore进程间通信机制</p>
-<ul>
-<li>消息的传递和通知基于LRPC中的迁移线程技术和L4系列微内核中的直接进程切换技术</li>
-<li>数据的传输基于灵活的用户态共享内存</li>
-</ul>
-<h2 id="同步原语"><a href="#同步原语" class="headerlink" title="同步原语"></a><strong>同步原语</strong></h2><hr>
-<p><strong>互斥锁</strong><br>竞争冒险 – race hazard：程序的正确性依赖于特定执行顺序的情况<br>互斥访问 – mutual exclusion：任意时刻只允许至多一个线程访问的方式<br>临界区 – critical section：保证互斥访问共享资源的代码区域<br>临界区问题：通过设计协议来保证互斥访问临界区的问题</p>
-<p>保证程序正确的算法需满足以下三个条件：</p>
-<ul>
-<li>互斥访问</li>
-<li>有限等待</li>
-<li>空闲让进</li>
-</ul>
-<p>解决临界区问题的算法：</p>
-<ul>
-<li>硬件实现：关闭中断<ul>
-<li>多核环境，关闭中断方法不适用</li>
-</ul>
-</li>
-<li>软件实现：皮特森算法<ul>
-<li>只能应对两个线程的情况</li>
-</ul>
-</li>
-<li>软硬件协同：使用原子操作实现互斥锁<ul>
-<li>原子操作 – atomic operation<ul>
-<li>比较与置换 – Compare-And-Swap - CAS</li>
-<li>拿取并累加 – Fetch-And-Add - FAA</li>
-</ul>
-</li>
-<li>互斥锁抽象 - 互斥锁<ul>
-<li>自旋锁 – spin lock</li>
-<li>排号自旋锁 – ticket lock</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p><strong>条件变量</strong><br>在生产者与消费者模型中，当剩余空位为0时，生产者会陷入循环等待，也称循环忙等，从而浪费CPU资源，增加系统能耗，人们希望使用一种挂起&#x2F;唤醒机制来解决这个问题，即条件变量。</p>
-<p>cond_wait</p>
-<ul>
-<li>挂起当前线程</li>
-<li>调用cond_wait前需要获取搭配的互斥锁</li>
-<li>cond_wait在挂起当前线程的同时，互斥锁会被原子地释放</li>
-<li>cond_wait返回之前会重新获取互斥锁</li>
-</ul>
-<p>cond_signal</p>
-<ul>
-<li>唤醒等待在该条件变量上的线程</li>
-</ul>
-<p><strong>信号量</strong></p>
-<p><strong>读写锁</strong></p>
-<ul>
-<li>读共享数据的线程相互之间不会干扰</li>
-<li>写共享数据的线程与读共享数据的线程不能同时执行</li>
-</ul>
-<p>读写锁的实现：</p>
-<ul>
-<li>偏向读者的读写锁<ul>
-<li>提高读者之间的并行度</li>
-<li>可能面临很高的写延迟</li>
-</ul>
-</li>
-<li>偏向写者的读写锁<ul>
-<li>降低读者之间的并行度</li>
-<li>写者可以在读者离开临界区立刻进入临界区</li>
-</ul>
-</li>
-</ul>
-<p><strong>RCU</strong><br>RCU – Read-Copy Update</p>
-<ul>
-<li>订阅&#x2F;发布机制</li>
-<li>宽期限</li>
-</ul>
-<p><strong>管程</strong></p>
-<ul>
-<li>共享的数据</li>
-<li>操作共享数据的函数</li>
-</ul>
-<p>管程是一种高层级的抽象，其利用其他同步原语实现了一套干净的接口。</p>
-<p><strong>同步带来的问题</strong></p>
-<ol>
-<li>死锁</li>
-<li>活锁</li>
-</ol>
-<p>死锁产生的原因：</p>
-<ul>
-<li>互斥访问</li>
-<li>持有并等待</li>
-<li>资源非抢占</li>
-<li>循环等待</li>
-</ul>
-<p>死锁检测与恢复</p>
-<ul>
-<li>检测是否有循环等待，并打破循环等待</li>
-</ul>
-<p>死锁预防</p>
-<ul>
-<li>避免互斥访问</li>
-<li>不允许持有并等待</li>
-<li>允许资源被抢占</li>
-<li>避免循环等待</li>
-</ul>
-<p>死锁避免</p>
-<ul>
-<li>银行家算法<ul>
-<li>检查是否处于安全状态</li>
-</ul>
-</li>
-</ul>
-<p>优先级反转</p>
-<ul>
-<li>由于同步导致线程执行顺序违反预设优先级的问题</li>
-</ul>
-<p>处理办法：</p>
-<ul>
-<li>不可抢占临界区协议 – Non-preemptive Critical section Protocol - NCP</li>
-<li>优先级继承协议 – Priority Inheritance Protocol - PIP</li>
-<li>优先级置顶协议 – Priority Ceiling Protocol - PCP<ul>
-<li>即时优先级置顶协议 – Immediate Priority Ceiling Protocol - IPCP</li>
-<li>原生优先级置顶协议 – Origin Priority Ceiling Protocol - OPCP</li>
-</ul>
-</li>
-</ul>
-<p><strong>案例分析：Linux中的futex</strong></p>
-<ul>
-<li>futex机制实现的互斥锁能在竞争程度较低时，直接使用原子操作完成枷锁。</li>
-<li>在竞争程度较高时，应用程序能够通过系统调用挂起并等待被后续锁持有者唤醒。</li>
-</ul>
-<h2 id="文件系统"><a href="#文件系统" class="headerlink" title="文件系统"></a><strong>文件系统</strong></h2><hr>
-<p>文件 – 有名字的字符序列<br>文件元数据<br>文件系统 – 实现文件接口并负责管理文件数据和元数据的系统</p>
-<p>虚拟文件系统 – Virtual File System - VFS</p>
-<ul>
-<li>页缓存</li>
-<li>inode缓存</li>
-<li>目录项缓存</li>
-</ul>
-<p><strong>基于inode的文件系统</strong><br>inode与文件</p>
-<p><img src="/images/%E5%B8%B8%E8%A7%84%E6%96%87%E4%BB%B6%E6%95%B0%E6%8D%AE%E7%B4%A2%E5%BC%95.svg" alt="常规文件数据索引"></p>
-<center><font color='orange'>POSIX中定义的部分文件元数据</font></center>
-
-<table>
-<thead>
-<tr>
-<th>文件元数据</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>mode</td>
-<td>文件模式，其中包括文件类型和文件权限</td>
-</tr>
-<tr>
-<td>nlink</td>
-<td>指向此文件的链接个数</td>
-</tr>
-<tr>
-<td>uid</td>
-<td>文件所属用户的ID</td>
-</tr>
-<tr>
-<td>gid</td>
-<td>文件所属用户组ID</td>
-</tr>
-<tr>
-<td>size</td>
-<td>文件的大小</td>
-</tr>
-<tr>
-<td>atime</td>
-<td>文件数据最近访问时间</td>
-</tr>
-<tr>
-<td>ctime</td>
-<td>文件元数据最近修改时间</td>
-</tr>
-<tr>
-<td>mtime</td>
-<td>文件数据最近修改时间</td>
-</tr>
-</tbody></table>
-<center><font color='orange'>Linux中支持的文件类型</font></center>
-
-<table>
-<thead>
-<tr>
-<th>文件类型</th>
-<th>文件用途</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>常规文件</td>
-<td>保存数据</td>
-</tr>
-<tr>
-<td>目录文件</td>
-<td>表示和组织一组文件</td>
-</tr>
-<tr>
-<td>符号链接文件</td>
-<td>保存符号链接（指向目标文件的路径）</td>
-</tr>
-<tr>
-<td>FIFO文件</td>
-<td>以队列形式传递数据，比FIFO文件更加灵活</td>
-</tr>
-<tr>
-<td>套接字文件</td>
-<td>用于传递数据，比FIFO文件更加灵活</td>
-</tr>
-<tr>
-<td>字符设备文件</td>
-<td>表示和访问字符设备</td>
-</tr>
-<tr>
-<td>块设备文件</td>
-<td>表示和访问块设备</td>
-</tr>
-</tbody></table>
-<p>文件名与目录</p>
-<p><img src="/images/%E7%9B%AE%E5%BD%95%E9%A1%B9.svg" alt="目录项"></p>
-<p>硬链接与符号链接</p>
-<p>存储布局</p>
-<ul>
-<li>超级块<ul>
-<li>魔法数字</li>
-</ul>
-</li>
-<li>块分配信息</li>
-<li>inode分配信息</li>
-<li>inode表</li>
-<li>文件数据块</li>
-</ul>
-<p><img src="/images/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AD%98%E5%82%A8%E5%B8%83%E5%B1%80.svg" alt="文件系统的存储布局"></p>
-<p><strong>虚拟文件系统</strong></p>
-<ul>
-<li>VFS中的超级块</li>
-<li>VFS中的inode</li>
-<li>VFS中的文件数据管理</li>
-<li>VFS中的目录项</li>
-</ul>
-<p>伪文件系统</p>
-<ul>
-<li>Linu实现了一些不用于保存文件数据的文件系统</li>
-</ul>
-<center><font color='orange'>Linux中的一些伪文件系统</font></center>
-
-<table>
-<thead>
-<tr>
-<th align="center"></th>
-<th align="center">常用挂载点</th>
-<th align="center">描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">procfs</td>
-<td align="center">&#x2F;proc</td>
-<td align="center">查看和操作进程相关的信息和配置</td>
-</tr>
-<tr>
-<td align="center">sysfs</td>
-<td align="center">&#x2F;sys</td>
-<td align="center">查看和操作与进程无关的系统配置</td>
-</tr>
-<tr>
-<td align="center">debugfs</td>
-<td align="center"></td>
-<td align="center">用于内核状态的调试</td>
-</tr>
-<tr>
-<td align="center">cgroupfs</td>
-<td align="center"></td>
-<td align="center">用于管理系统中的cgroup</td>
-</tr>
-<tr>
-<td align="center">configfs</td>
-<td align="center">&#x2F;sys&#x2F;kernel&#x2F;config</td>
-<td align="center">创建&#x2F;管理和删除内核对象</td>
-</tr>
-<tr>
-<td align="center">hugetlbfs</td>
-<td align="center"></td>
-<td align="center">查看和管理系统中的大页信息</td>
-</tr>
-</tbody></table>
-<p><strong>其他文件系统</strong></p>
-<ul>
-<li>FAT文件系统<ul>
-<li>文件分配表 – File Allocation Table - FAT</li>
-</ul>
-</li>
-<li>NTFS - New Technology File System</li>
-<li>FUSE与用户态文件系统</li>
-</ul>
-<h2 id="设备管理"><a href="#设备管理" class="headerlink" title="设备管理"></a><strong>设备管理</strong></h2><hr>
-<p>总线：</p>
-<ul>
-<li>AMBA总线</li>
-<li>PCI总线</li>
-</ul>
-<p>可编程I&#x2F;O：</p>
-<ul>
-<li>控制寄存器</li>
-<li>状态寄存器</li>
-<li>输入&#x2F;输出寄存器</li>
-</ul>
-<p>高效数据传输：DMA - Direct Memory Access – 直接内存访问</p>
-<p>设备地址翻译：IOMMU - Input-Output Memory Management Unit – 输入输出内存管理单元</p>
-<p>设备识别：</p>
-<ul>
-<li>设备树</li>
-<li>ACPI - Advanced Configuration and Power Interface – 高级配置与电源接口</li>
-</ul>
-<p>中断控制器：</p>
-<ul>
-<li>ICOLL - Interrupt Collector</li>
-<li>GIC - Generic Interrupt Controller – 通用中断控制器</li>
-</ul>
-<p>中断类型：</p>
-<ul>
-<li>软件生成中断</li>
-<li>私有设备中断</li>
-<li>共享设备中断</li>
-</ul>
-<p>中断优先级 - 中断号</p>
-<p>中断状态：</p>
-<ul>
-<li>Inactive</li>
-<li>Pending</li>
-<li>Active</li>
-<li>Active &amp; Pending</li>
-</ul>
-<p>中断处理：</p>
-<ul>
-<li>上半部<ul>
-<li>硬中断</li>
-</ul>
-</li>
-<li>下半部<ul>
-<li>软中断</li>
-<li>tasklet</li>
-<li>工作队列</li>
-</ul>
-</li>
-</ul>
-<p>设备驱动 - 操作系统中负责控制设备的定制化程序</p>
-<p>Linux设别驱动模型</p>
-<p>Linux系统三种基本设备抽象：</p>
-<ul>
-<li>字符设备</li>
-<li>块设备</li>
-<li>网络设备</li>
-</ul>
-<h2 id="系统虚拟化"><a href="#系统虚拟化" class="headerlink" title="系统虚拟化"></a><strong>系统虚拟化</strong></h2><hr>
-<p>系统虚拟化技术：</p>
-<ul>
-<li>CPU虚拟化</li>
-<li>内存虚拟化</li>
-<li>I&#x2F;O虚拟化</li>
-</ul>
-<p><strong>CPU虚拟化：</strong></p>
-<table>
-    <tr>
-        <th>软件技术</th>
-        <th>硬件虚拟化技术</th>
-    </tr >
-  <tr >
-      <td>解释执行</td>
-        <td rowspan="4">新的硬件特权级所有敏感指令可下陷 </td>
-    </tr>
-  <tr>
-        <td>动态二进制翻译</td>
-    </tr>
-    <tr>
-        <td>扫描和翻译</td>
-    </tr>
-    <tr>
-        <td>半虚拟化技术</td>
-    </tr>
-</table>
-
-
-<p><strong>内存虚拟化：</strong></p>
-<table>
-  <caption style="color:orange">内存虚拟化技术总结</caption>
-    <tr>
-        <th>软件技术</th>
-        <th>硬件虚拟化技术</th>
-    </tr >
-  <tr >
-      <td>解释执行</td>
-        <td rowspan="2">第二阶段地址翻译</td>
-    </tr>
-  <tr>
-        <td>直接页表映射</td>
-    </tr>
-</table>
-
-
-<p><strong>I&#x2F;O虚拟化：</strong></p>
-<table>
-  <caption style="color:orange">I/O虚拟化技术总结</caption>
-    <tr>
-        <th>软件技术</th>
-        <th>硬件虚拟化技术</th>
-    </tr >
-  <tr >
-      <td>软件模拟方法</td>
-        <td rowspan="2">设备直通（IOMMU 和 SR-IOV）</td>
-    </tr>
-  <tr>
-        <td>半虚拟化方法</td>
-    </tr>
-</table>
-
-<p>中断虚拟化</p>
-]]></content>
-      <categories>
-        <category>四大件</category>
-      </categories>
-      <tags>
-        <tag>operator system</tag>
       </tags>
   </entry>
   <entry>
@@ -1744,7 +673,7 @@
 <p>网络层的两个层面：<br>1.数据层面<br>2.控制层面</p>
 <h3 id="网际协议IP"><a href="#网际协议IP" class="headerlink" title="网际协议IP"></a>网际协议IP</h3><p>IP地址及其表示方法<br>使用点分十进制记法可以提高可读性<br>IP地址 ::&#x3D; {&lt;网络号&gt;, &lt;主机号&gt;}</p>
 <p>分类的IP地址</p>
-<p><img src="/../images/%E5%88%86%E7%B1%BBIP%E5%9C%B0%E5%9D%80.svg" alt="分类IP地址"></p>
+<p><img src="/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%94%E8%AE%B0/%E5%88%86%E7%B1%BBIP%E5%9C%B0%E5%9D%80.svg" alt="分类IP地址"></p>
 <p>无分类编址CIDR<br>CIDR - Classless Inter-Domain Routing – 无分类域间路由选择<br>IP地址 ::&#x3D; {&lt;网络前缀&gt;, &lt;主机号&gt;}<br>使用斜线记法，或称CIDR记法<br>地址掩码或称掩码，又称子网掩码<br>路由聚合<br>网络前缀越短的地址块所包含的地址数就越多</p>
 <p>地址解析协议ARP</p>
 <p>IP数据包的格式：</p>
@@ -2007,13 +936,13 @@
 <li>连接释放</li>
 </ul>
 <p>TCP的连接建立</p>
-<p><img src="/../images/%E4%B8%89%E6%8A%A5%E6%96%87%E6%8F%A1%E6%89%8B.png" alt="三报文握手"></p>
+<p><img src="/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%94%E8%AE%B0/%E4%B8%89%E6%8A%A5%E6%96%87%E6%8F%A1%E6%89%8B.png" alt="三报文握手"></p>
 <p>Q:为什么A最后还要发送一次确认呢？<br>A:这主要是为了防止已失效的连接请求报文段突然又传送到了B，因而产生错误。</p>
 <p>TCP的连接释放</p>
-<p><img src="/../images/%E5%9B%9B%E6%8A%A5%E6%96%87%E6%8C%A5%E6%89%8B.jpg" alt="四报文挥手"></p>
+<p><img src="/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%94%E8%AE%B0/%E5%9B%9B%E6%8A%A5%E6%96%87%E6%8C%A5%E6%89%8B.jpg" alt="四报文挥手"></p>
 <p>Q:为什么A在TIME-WAIT状态必须等待2MSL的时间呢？<br>A:1.为了保证A发送的最后一个ACK报文能够到达B;<br>  2.防止“已失效的连接请求报文段”出现在本连接中。</p>
 <p>TCP的有限状态机</p>
-<p><img src="/../images/tcp%E6%9C%89%E9%99%90%E7%8A%B6%E6%80%81%E6%9C%BA.jpg" alt="四报文挥手"></p>
+<p><img src="/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%94%E8%AE%B0/tcp%E6%9C%89%E9%99%90%E7%8A%B6%E6%80%81%E6%9C%BA.jpg" alt="四报文挥手"></p>
 <h2 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a><strong>应用层</strong></h2><hr>
 <h3 id="域名系统DNS"><a href="#域名系统DNS" class="headerlink" title="域名系统DNS"></a>域名系统DNS</h3><p>DNS - Domain Name System</p>
 <ul>
@@ -2105,7 +1034,7 @@
 <li>邮件服务器</li>
 <li>邮件发送协议（如SMTP）&amp; 邮件读取协议（如POP3）</li>
 </ul>
-<p><img src="/../images/%E7%94%B5%E5%AD%90%E9%82%AE%E4%BB%B6%E7%9A%84%E6%9C%80%E4%B8%BB%E8%A6%81%E7%9A%84%E7%BB%84%E6%88%90%E6%9E%84%E4%BB%B6.jpg" alt="电子邮件构成"></p>
+<p><img src="/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%94%E8%AE%B0/%E7%94%B5%E5%AD%90%E9%82%AE%E4%BB%B6%E7%9A%84%E6%9C%80%E4%B8%BB%E8%A6%81%E7%9A%84%E7%BB%84%E6%88%90%E6%9E%84%E4%BB%B6.jpg" alt="电子邮件构成"></p>
 <p>简单邮件传送协议SMTP</p>
 <p>邮件读取协议POP3 &amp; IMAP</p>
 <center><font color=#F78A52>IMAP & POP3的主要功能比较</font></center>
@@ -2256,7 +1185,7 @@
 <li>私钥$SK_B$</li>
 </ul>
 <p>从运算的角度看，D运算和E运算先后顺序可以是任意的<br>$$E_{PK_B}(D_{SK_B}(X)) &#x3D; D_{SK_B}(E_{PK_B}(X)) &#x3D; X$$</p>
-<p><img src="/../images/%E5%85%AC%E9%92%A5%E5%AF%86%E7%A0%81%E4%BD%93%E5%88%B6.jpg" alt="公钥密码体制"></p>
+<p><img src="/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%94%E8%AE%B0/%E5%85%AC%E9%92%A5%E5%AF%86%E7%A0%81%E4%BD%93%E5%88%B6.jpg" alt="公钥密码体制"></p>
 <p>PS:<br>任何加密方法的安全性取决于密钥的长度，以及攻破密文所需的计算量。</p>
 <h3 id="鉴别"><a href="#鉴别" class="headerlink" title="鉴别"></a>鉴别</h3><p>鉴别内容有二：</p>
 <ul>
@@ -2349,6 +1278,1077 @@
       </categories>
       <tags>
         <tag>computer network</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>操作系统笔记</title>
+    <url>/posts/8ce3e425/</url>
+    <content><![CDATA[<mark class="label primary">声明：</mark>
+<p>以下笔记内容摘自现代操作系统原理与实现.陈海波、夏虞斌 等著</p>
+<span id="more"></span>
+
+<h2 id="操作系统概述"><a href="#操作系统概述" class="headerlink" title="操作系统概述"></a><strong>操作系统概述</strong></h2><hr>
+<p>操作系统有两个职责：对<strong>硬件</strong>进行管理和抽象，为<strong>应用</strong>提供服务并进行管理</p>
+<p><img src="/images/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AC%94%E8%AE%B0/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%AE%80%E8%A6%81%E7%BB%93%E6%9E%84.svg" alt="操作系统简要结构"></p>
+<p>操作系统简史</p>
+<ul>
+<li>GM-NAA I&#x2F;O: 第一个(批处理)操作系统</li>
+<li>OS&#x2F;360: 从专用走向通用</li>
+<li>Multics&#x2F;UNIX&#x2F;Linux: 分时与多任务</li>
+<li>macOS&#x2F;Windows: 以人为本的人机交互</li>
+</ul>
+<p>操作系统接口<br>从应用角度，操作系统提供了不同层次的接口，主要包括：</p>
+<ul>
+<li>系统调用接口</li>
+<li>POSIX接口</li>
+<li>领域应用接口</li>
+</ul>
+<p><img src="/images/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AC%94%E8%AE%B0/%E4%B8%8D%E5%90%8C%E5%B1%82%E6%AC%A1%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%8E%A5%E5%8F%A3.svg" alt="不同层次的操作系统接口"></p>
+<p>ChCore用于本书教学而开发的实验操作系统，基本结构如下所示：</p>
+<p><img src="/images/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AC%94%E8%AE%B0/ChCore%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E7%A4%BA%E6%84%8F%E5%9B%BE.svg" alt="ChCore系统架构示意图"></p>
+<h2 id="硬件结构"><a href="#硬件结构" class="headerlink" title="硬件结构"></a><strong>硬件结构</strong></h2><hr>
+<p>冯·诺伊曼结构包括三个主要部分：</p>
+<ul>
+<li>中央处理单元</li>
+<li>存储器</li>
+<li>输入输出</li>
+</ul>
+<p><img src="/images/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AC%94%E8%AE%B0/%E5%86%AF%E8%AF%BA%E4%BE%9D%E6%9B%BC%E7%BB%93%E6%9E%84%E7%A4%BA%E6%84%8F%E5%9B%BE.svg" alt="冯诺依曼结构示意图"></p>
+<p>ISA- Instruction Set Architecture - 指令集架构</p>
+<ul>
+<li>RISC(Reduced Instruction Set Computer)- 精简指令集计算机</li>
+<li>CISC(Complex Instruction Set Computer)- 复杂指令集计算机</li>
+</ul>
+<p>RISC - AArch64<br>每条指令的长度固定4字节，指令类型包括：</p>
+<ul>
+<li>数据搬移指令(mov)</li>
+<li>寄存器计算指令(add&#x2F;sub)</li>
+<li>内存读写指令(ldr&#x2F;str)</li>
+<li>跳转指令(b)</li>
+<li>过程调用指令(bl&#x2F;ret)</li>
+<li>特权指令(mrs&#x2F;msr)</li>
+</ul>
+<h2 id="操作系统结构"><a href="#操作系统结构" class="headerlink" title="操作系统结构"></a><strong>操作系统结构</strong></h2><hr>
+<p>在构建复杂系统时，必须合理考虑其内部结构，在不同的需求之间进行<strong>权衡</strong>。</p>
+<p>操作系统乃至计算机系统中控制复杂度的一个重要设计原则是：将<strong>策略</strong>与<strong>机制</strong>相分离。<br>策略表示“做什么”，机制表示“如何做”</p>
+<center><font color=#F78A52>典型的操作系统机制与策略</font></center>
+
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">策略</th>
+<th align="center">机制</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">登录</td>
+<td align="center">什么用户、以什么权限登录等</td>
+<td align="center">输入处理、策略文件管理、桌面启动加载等</td>
+</tr>
+<tr>
+<td align="center">调度</td>
+<td align="center">先到先得、时间片轮转等</td>
+<td align="center">调度队列的设计、调度实体的表示、调度的中断处理等</td>
+</tr>
+</tbody></table>
+<p>管理复杂系统的重要方法是M.A.L.H方法，即</p>
+<ul>
+<li>模块化(modularity)</li>
+<li>抽象(abstraction)</li>
+<li>分层(layering)<ul>
+<li>不同类模块之间的层级</li>
+</ul>
+</li>
+<li>层级(hierarchy)<ul>
+<li>同类模块之间的分层</li>
+</ul>
+</li>
+</ul>
+<p>操作系统内核架构：</p>
+<ul>
+<li>简要结构</li>
+<li>宏内核</li>
+<li>微内核</li>
+<li>外核</li>
+<li>多核 &amp; 混合内核</li>
+</ul>
+<p><strong>简要结构</strong><br>一些功能较为简单的操作系统，会选择将应用程序与操作系统放置在同一个地址空间中，无需底层硬件提供复杂的内存管理、特权级隔离等功能。</p>
+<p>典型示例：MS-DOS(MicrSoft Disk Operating System)<br>优点：应用程序对操作系统服务的调用无需切换地址空间和权限层级，因此更加高效。<br>缺点：任何一个应用或操作系统模块出现了问题，均有可能使整个系统崩溃。</p>
+<p><img src="/images/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AC%94%E8%AE%B0/MS-DOS%E7%9A%84%E7%B3%BB%E7%BB%9F%E7%BB%93%E6%9E%84.svg" alt="MS-DOS的系统结构"></p>
+<p><strong>宏内核架构</strong><br>又称<strong>单内核</strong>，其特征是操作系统内核的所有模块(包括进程调度、内存管理、文件系统、设备驱动等)均运行在内核态，具备直接操作硬件的能力，这类操作系统包裹UNIX&#x2F;Linux、FreeBSD等。</p>
+<p><img src="/images/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AC%94%E8%AE%B0/%E5%AE%8F%E5%86%85%E6%A0%B8%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84.svg" alt="宏内核的基本结构"></p>
+<p><strong>微内核</strong><br>将单个功能或模块(如文件系统、设备驱动等)从内核中拆分出来，作为一个独立的服务部署到独立的运行环境中；内核仅保留极少的功能，为这些服务提供通信等基础能力，使其能够互相协作以完成操作系统所必需的功能。</p>
+<p><strong>外核架构</strong><br>外核架构可以为不同应用提供定制化的高效资源管理：按照不同应用领域的要求，将对硬件资源的抽象模块化为一系列的库(即<strong>LibOS</strong>).</p>
+<p>操作系统框架结构：</p>
+<ul>
+<li>Android 系统框架</li>
+<li>ROS 系统框架</li>
+</ul>
+<p><strong>Android 系统框架</strong><br>在Linux内核之上运行的Android系统框架包括如下几个主要组件：</p>
+<ol>
+<li>硬件抽象层</li>
+<li>Android库</li>
+<li>Android运行环境</li>
+<li>Android应用框架</li>
+<li>服务化架构与BinderIPC</li>
+</ol>
+<p><img src="/images/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AC%94%E8%AE%B0/Android%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84.svg" alt="Android操作系统架构"></p>
+<h2 id="内存管理"><a href="#内存管理" class="headerlink" title="内存管理"></a><strong>内存管理</strong></h2><hr>
+<p>Q:操作系统如何让不同的应用程序能够即<em><strong>高效</strong></em> 又 <em><strong>安全</strong></em>地共同使用物理内存资源呢？<br>A:在应用程序与物理内存之间加入一个新的抽象：<font color=#F78A52>虚拟内存</font></p>
+<p>虚拟内存的设计三目标：</p>
+<ul>
+<li>高效性<ul>
+<li>不能在应用程运行的过程中造成明显的性能开销</li>
+<li>不应该占用过多的物理内存资源，明显降低物理内存的有效利用率</li>
+</ul>
+</li>
+<li>安全性<ul>
+<li>虚拟内存抽象需要使不同应用程序的内存互相隔离</li>
+</ul>
+</li>
+<li>透明性<ul>
+<li>应用开发者在编程时无须考虑虚拟内存抽象</li>
+</ul>
+</li>
+</ul>
+<p><strong>虚拟地址 &amp; 物理地址</strong></p>
+<p><img src="/images/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AC%94%E8%AE%B0/CPU%E5%9C%B0%E5%9D%80%E7%BF%BB%E8%AF%91%E7%A4%BA%E6%84%8F%E5%9B%BE.svg" alt="CPU地址翻译示意图"></p>
+<p>MMU - Memory Management Unit – 内存管理单元，负责虚拟地址到物理地址的转换</p>
+<p>TLB - Translation Lookaside Buffer – 转址旁路缓存，加速地址翻译的过程</p>
+<p>MMU将虚拟地址翻译为物理地址的主要机制有两种：</p>
+<ul>
+<li>分段机制<ul>
+<li>操作系统能够实现物理内存资源的离散分配，易造成外部碎片</li>
+</ul>
+</li>
+<li>分页机制<ul>
+<li>被现代操作系统广泛采用</li>
+</ul>
+</li>
+</ul>
+<p><img src="/images/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AC%94%E8%AE%B0/%E5%88%86%E6%AE%B5%E6%9C%BA%E5%88%B6%E4%B8%8B%E5%9C%B0%E5%9D%80%E7%BF%BB%E8%AF%91%E8%A7%84%E5%88%99%E7%A4%BA%E6%84%8F%E5%9B%BE.svg" alt="分段机制下地址翻译规则示意图"></p>
+<p><strong>基于分页的虚拟内存</strong><br>AArch64架构下的4级页表</p>
+<p><img src="/images/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AC%94%E8%AE%B0/AArch64%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E4%B8%8B%E5%9F%BA%E4%BA%8E4%E7%BA%A7%E9%A1%B5%E8%A1%A8%E7%9A%84%E5%9C%B0%E5%9D%80%E7%BF%BB%E8%AF%91.svg" alt="AArch64体系结构下基于4级页表的地址翻译"></p>
+<p>一个64位的虚拟地址在逻辑上被划分成如下几个部分：</p>
+<ul>
+<li>第63位至48位：全为0或者全为1（硬件要求）</li>
+<li>第47位至39位：这9位作为该虚拟地址在第0级页表中的索引值，对应图中的虚拟页号0</li>
+<li>第38位至30位：这9位作为该虚拟地址在第1级页表中的索引值，对应图中的虚拟页号1</li>
+<li>第29位至21位：这9位作为该虚拟地址在第2级页表中的索引值，对应图中的虚拟页号2</li>
+<li>第20位至12位：这9位作为该虚拟地址在第3级页表中的索引值，对应图中的虚拟页号3</li>
+<li>第11位至0位：由于页的大小是4KB，所以低12位代表页内偏移量</li>
+</ul>
+<p>TLB：加速地址翻译</p>
+<p><img src="/images/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AC%94%E8%AE%B0/TLB%E7%9A%84%E7%BB%93%E6%9E%84%E7%A4%BA%E6%84%8F%E5%9B%BE.svg" alt="TLB的结构示意图"></p>
+<p>TLB刷新? 切换应用主动刷新TLB<br>避免刷新带来的开销：</p>
+<ul>
+<li>AArch64体系，采用ASID(Address Space IDentifier)</li>
+<li>x86-64, 采用PCID(Process Context IDentifier)</li>
+</ul>
+<p>缺页 &amp; 换页异常</p>
+<p>页替换策略</p>
+<ul>
+<li>MIN策略&#x2F;OPT策略</li>
+<li>FIFO策略</li>
+<li>Second Chance策略</li>
+<li>LRU策略</li>
+<li>MRU策略</li>
+<li>时钟算法策略</li>
+</ul>
+<p>工作集模型：能够有效地避免颠簸现象的发生</p>
+<p><strong>虚拟内存功能</strong></p>
+<ul>
+<li>共享内存<ul>
+<li>让不同应用程序之间互相通信&#x2F;传递数据</li>
+</ul>
+</li>
+<li>写时拷贝<ul>
+<li>能够节约物理内存资源，比如不同的应用程序以写时拷贝的方式映射相同的动态链接库</li>
+<li>让父子程序以只读方式共享全部内存数据，避免内存拷贝操作带来的时间和空间开销</li>
+</ul>
+</li>
+<li>内存去重</li>
+<li>内存压缩</li>
+<li>大页<ul>
+<li>减少TLB缓存项的消耗，从而有机会提高TLB命中率</li>
+<li>减少页表级数，从而提升查询页表的效率</li>
+<li>应用程序可能未使用整个大页而造成物理内存资源浪费</li>
+<li>增加操作系统管理内存的复杂度</li>
+</ul>
+</li>
+</ul>
+<p><strong>物理内存分配与管理</strong></p>
+<ol>
+<li>物理内存分配器设计的连个重要评价维度：<ul>
+<li>内存资源利用率<ul>
+<li>内存碎片 – 无法被利用的内存，其直接导致内存资源利用率的下降<ul>
+<li>内部碎片</li>
+<li>外部碎片</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>性能<ul>
+<li>尽可能降低分配延迟和节约CPU资源</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>伙伴系统 - buddy system<ul>
+<li>在现代操作系统中被广泛地用于分配连续的物理内存页</li>
+<li>将物理内存划分成连续的块，以块作为基本单位进行分配<br><img src="/images/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AC%94%E8%AE%B0/%E4%BC%99%E4%BC%B4%E5%9D%97%E7%9A%84%E5%88%86%E8%A3%82%E4%B8%8E%E5%90%88%E5%B9%B6.svg" alt="伙伴块的分裂与合并"></li>
+</ul>
+</li>
+<li>SLAB分配器<ul>
+<li>用于分配几十个或几百个字节的小内存</li>
+<li>SLAB&#x2F;SLUB&#x2F;SLOB 统称 SLAB分配器</li>
+</ul>
+</li>
+<li>常用的空闲链表<ul>
+<li>隐式空闲链表</li>
+<li>显示空闲链表</li>
+<li>分离空闲链表</li>
+</ul>
+</li>
+<li>物理内存与CPU缓存<ul>
+<li>软件方案：染色机制</li>
+<li>硬件方案：Intel CAT</li>
+<li>硬件方案：ARMv8-A MPAM(Memory System Resource Partitioning and Monitoring)</li>
+</ul>
+</li>
+</ol>
+<p><strong>ChCore内存管理机制</strong><br>实验内核ChCore，内存管理部分三个重要数据结构：</p>
+<ul>
+<li>虚拟地址空间struct vmspace</li>
+<li>虚拟地址区域struct vmregion</li>
+<li>物理内存对象struct pmobject</li>
+</ul>
+<h2 id="进程与线程"><a href="#进程与线程" class="headerlink" title="进程与线程"></a><strong>进程与线程</strong></h2><hr>
+<p><strong>进程</strong></p>
+<ul>
+<li>每个进程都对应于一个运行中的程序</li>
+</ul>
+<p>进程的状态分为以下几种：</p>
+<ul>
+<li>新生状态<ul>
+<li>一个进程刚被创建出来，还未完成初始化，不能被调度执行</li>
+</ul>
+</li>
+<li>就绪状态<ul>
+<li>进程可以被调度执行，但还未被调度器选择</li>
+</ul>
+</li>
+<li>运行状态<ul>
+<li>进程正在CPU上运行</li>
+</ul>
+</li>
+<li>阻塞状态<ul>
+<li>进程需要等待外部事件，暂时无法被调度</li>
+</ul>
+</li>
+<li>终止状态<ul>
+<li>进程已完成执行，且不会再被调度</li>
+</ul>
+</li>
+</ul>
+<p><img src="/images/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AC%94%E8%AE%B0/%E8%BF%9B%E7%A8%8B%E5%9C%A8%E4%B8%8D%E5%90%8C%E7%8A%B6%E6%80%81%E4%B9%8B%E9%97%B4%E5%88%87%E6%8D%A2.svg" alt="进程在不同状态之间切换"></p>
+<p>进程的内存空间布局</p>
+<ul>
+<li>用户栈<ul>
+<li>保存进程需要的各种临时数据，扩展方向是自顶向下</li>
+</ul>
+</li>
+<li>代码库<ul>
+<li>进程执行需要依赖的共享代码库，如libc – 只读</li>
+</ul>
+</li>
+<li>用户堆<ul>
+<li>进程动态分配的内存，扩展方向是自底向上</li>
+</ul>
+</li>
+<li>数据与代码段<ul>
+<li>保存在进程需要执行的二进制文件中，进程执行前，由操作系统载入虚拟地址空间</li>
+<li>数据段保存全局变量</li>
+<li>代码段保存进程执行的代码</li>
+</ul>
+</li>
+<li>内核部分<ul>
+<li>进程地址空间的最顶端</li>
+<li>每个进程的虚拟地址空间里都映射了相同的内核内存</li>
+</ul>
+</li>
+</ul>
+<p><img src="/images/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AC%94%E8%AE%B0/%E5%85%B8%E5%9E%8B%E7%9A%84%E8%BF%9B%E7%A8%8B%E5%86%85%E5%AD%98%E7%A9%BA%E9%97%B4%E5%B8%83%E5%B1%80.svg" alt="典型的进程内存空间布局"></p>
+<p>进程控制块和上下文切换<br>PCB - Process Control Block – 进程控制块</p>
+<ul>
+<li>进程标识符 – PID - Process IDentifier</li>
+<li>进程状态</li>
+<li>虚拟内存状态</li>
+<li>打开的文件</li>
+<li>…</li>
+</ul>
+<p>上下文 - 进程运行时的寄存器状态，其能够用于保存和恢复一个进程在处理器上运行的状态</p>
+<p><img src="/images/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AC%94%E8%AE%B0/%E8%BF%9B%E7%A8%8B%E4%B8%8A%E4%B8%8B%E6%96%87%E5%88%87%E6%8D%A2%E7%A4%BA%E6%84%8F%E5%9B%BE.svg" alt="进程上下文切换示意图"></p>
+<p>Linux的进程操作</p>
+<ol>
+<li>进程的创建：fork<ul>
+<li>调用一次，返回两次</li>
+<li>父进程，fork返回值是子进程PID</li>
+<li>子进程，fork返回值是0</li>
+</ul>
+</li>
+<li>进程的执行：exec<ul>
+<li>fork创建进程，exec执行用户指定的二进制文件</li>
+</ul>
+</li>
+<li>进程管理<ul>
+<li>进程监控 – wait</li>
+<li>进程组<ul>
+<li>进程集合，由一个或多个进程组成</li>
+</ul>
+</li>
+<li>会话<ul>
+<li>进程组的集合，可以由一个或多个进程组构成</li>
+<li>前台进程组</li>
+<li>后台进程组</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>讨论：fork过时了吗<ul>
+<li>fork优点：<ul>
+<li>fork接口设计简洁</li>
+<li>fork强调进程之间的强联系</li>
+</ul>
+</li>
+<li>fork局限性<ul>
+<li>fork实现愈加复杂</li>
+<li>fork性能太差</li>
+<li>fork存在潜在安全漏洞</li>
+</ul>
+</li>
+<li>Linux替代方案：<ul>
+<li>合二为一：posix_spawn</li>
+<li>限定场景：vfork</li>
+<li>精密控制：rfork&#x2F;clone</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p><strong>线程</strong><br>之所以引入线程，是因为随着计算机科学技术的发展，计算机拥有了更多的CPU核心，程序的可并行度提高，进程这一抽象开始显得过于笨重：</p>
+<ul>
+<li>创建进程的开销较大，需要完成创建独立的地址空间&#x2F;载入数据和代码段&#x2F;初始化堆等步骤</li>
+<li>进程拥有独立的虚拟地址空间，在进程间共享数据和同步比较麻烦<ul>
+<li>共享内存页（粒度较粗）</li>
+<li>进程间通信（开销较高）</li>
+</ul>
+</li>
+</ul>
+<p>线程 – 拥有独立的可执行单元，共享进程的地址空间，但又各自保存运行时所需的状态（状态）</p>
+<p>多线程的地址空间布局：</p>
+<ul>
+<li>分离的内核栈与用户栈</li>
+<li>共享的其他区域</li>
+</ul>
+<p><img src="/images/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AC%94%E8%AE%B0/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E8%BF%9B%E7%A8%8B%E7%9A%84%E5%9C%B0%E5%9D%80%E7%A9%BA%E9%97%B4%E5%B8%83%E5%B1%80.svg" alt="多线程进程的地址空间布局"></p>
+<p>用户态线程与内核态线程 – 多线程模型：<br>a) 多对一模型<br>b) 一对一模型<br>c) 多对多模型</p>
+<p>TCB - Thread Control Block – 线程控制块<br>TLS - Thread Local Storage – 线程本地存储</p>
+<p>线程的基本接口：以POSIX线程库为例</p>
+<ol>
+<li>线程创建<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;pthread.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">pthread_create</span><span class="params">(<span class="type">pthread_t</span> *thread, <span class="type">const</span> <span class="type">pthread_attr_t</span> *attr,</span></span><br><span class="line"><span class="params">                    <span class="type">void</span> *(*start_routine) (<span class="type">void</span> *), <span class="type">void</span> *arg)</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Compile and link with -pthread.</span></span><br></pre></td></tr></table></figure></li>
+<li>线程退出<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;pthread.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">pthread_exit</span><span class="params">(<span class="type">void</span> *retval)</span>;</span><br></pre></td></tr></table></figure></li>
+<li>出让资源<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;pthread.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">pthread_yield</span><span class="params">(<span class="type">void</span>)</span>;</span><br></pre></td></tr></table></figure></li>
+<li>合并操作<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;pthread.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">pthread_join</span><span class="params">(<span class="type">pthread_t</span> thread, <span class="type">void</span> **retval)</span>;</span><br></pre></td></tr></table></figure></li>
+<li>挂起与唤醒<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 挂起方式1：等待固定时间</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">unsigned</span> <span class="type">int</span> <span class="title function_">sleep</span><span class="params">(<span class="type">unsigned</span> <span class="type">int</span> seconds)</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 挂起方式2：等待具体事件</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;pthread.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">pthread_cond_t</span> cond = PTHREAD_COND_INITIALIZER;</span><br><span class="line"><span class="type">int</span> <span class="title function_">pthread_cond_wait</span><span class="params">(<span class="type">pthread_cond_t</span> *cond, <span class="type">pthread_mutex_t</span> *mutex)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">pthread_cond_timedwait</span><span class="params">(<span class="type">pthread_cond_t</span> *cond, <span class="type">pthread_mutex_t</span> *mutex, <span class="type">const</span> <span class="keyword">struct</span> timespec *abstime)</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 唤醒</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">pthread_cond_signal</span><span class="params">(<span class="type">pthread_cond_t</span> *cond)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">pthread_cond_broadcast</span><span class="params">(<span class="type">pthread_cond_t</span> *cond)</span>;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>ChCore的线程上下文<br>线程上下主要是指处理器中大部分寄存器的值（AArch64架构）</p>
+<ul>
+<li>程序计数器PC – ELR_EL1</li>
+<li>通用寄存器 – X0 ~ X30</li>
+<li>特殊寄存器<ul>
+<li>SP_EL0 - 线程运行时的栈指针</li>
+<li>SPSR_EL1 - 线程执行的CPU状态</li>
+<li>TTBR0_EL1 - 线程对应的进程页表</li>
+</ul>
+</li>
+</ul>
+<p>ChCore中上下文切换实现</p>
+<ul>
+<li>进入内核态与上下文保存</li>
+<li>页表与内核栈的切换</li>
+<li>上下文恢复与返回用户态</li>
+</ul>
+<p><img src="/images/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AC%94%E8%AE%B0/ChCore%E4%B8%8A%E4%B8%8B%E6%96%87%E5%88%87%E6%8D%A2%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E6%A0%88%E5%8F%98%E5%8C%96.svg" alt="ChCore上下文切换过程中的栈变化"></p>
+<p><strong>纤程</strong><br>用户态线程 – 纤程</p>
+<ul>
+<li>更轻量，开销更小，提高可扩展性</li>
+</ul>
+<p>POSIX的纤程支持：ucontext</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;ucontext.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">getcontext</span><span class="params">(<span class="type">ucontext_t</span> *ucp)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">setcontext</span><span class="params">(<span class="type">const</span> <span class="type">ucontext_t</span> *ucp)</span>;</span><br><span class="line"><span class="type">void</span> <span class="title function_">makecontext</span><span class="params">(<span class="type">ucontext_t</span> *ucp, <span class="type">void</span> (*func)(), <span class="type">int</span> argc, ...)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">swapcontext</span><span class="params">(<span class="type">ucontext_t</span> *oucp, <span class="type">const</span> <span class="type">ucontext_t</span> *ucp)</span>;</span><br></pre></td></tr></table></figure>
+
+<p>纤程上下文切换</p>
+<ul>
+<li>合作式多任务处理 – cooperative multitasking</li>
+</ul>
+<p>为了与操作系统提供的支持相区分，一般程序语言提供的纤程支持称为协程（Lua&#x2F;Go&#x2F;Ruby&#x2F;C++等）</p>
+<h2 id="操作系统调度"><a href="#操作系统调度" class="headerlink" title="操作系统调度"></a><strong>操作系统调度</strong></h2><hr>
+<p>进程是资源隔离的单位，一个进程可以有多个线程，这些线程在不同的CPU核心上并行执行，因此线程才是调度器的调度对象。<br>一般调度器会通过维护<strong>运行队列</strong>的方式来管理任务</p>
+<p>调度指标：</p>
+<ul>
+<li>吞吐量<ul>
+<li>单位时间内处理的任务数量</li>
+</ul>
+</li>
+<li>周转时间<ul>
+<li>任务从被发起直至执行结束所需的时间</li>
+</ul>
+</li>
+<li>响应时间<ul>
+<li>任务从被发起直至第一次向用户返回输出以响应用户所需时间</li>
+</ul>
+</li>
+<li>公平性</li>
+<li>资源利用率</li>
+<li>实时性</li>
+<li>能耗</li>
+</ul>
+<p>任务类型：</p>
+<ul>
+<li>批处理任务<ul>
+<li>比如机器学习的训练&#x2F;复杂的科学计算</li>
+</ul>
+</li>
+<li>交互式任务<ul>
+<li>比如程序调试</li>
+</ul>
+</li>
+<li>实时任务<ul>
+<li>比如车载系统中的距离探测器</li>
+</ul>
+</li>
+</ul>
+<p>调度器设计的困难点：</p>
+<ul>
+<li>调度指标多样性</li>
+<li>调度可参考的信息有限</li>
+<li>任务间的复杂交互</li>
+<li>许多方面存在权衡</li>
+</ul>
+<p>调度器中存在的权衡包括但不限于以下几点：</p>
+<ul>
+<li>调度开销与调度效果</li>
+<li>优先级与公平性</li>
+<li>性能与能耗</li>
+</ul>
+<p><strong>调度机制</strong><br>长期调度：触发间隔较长，它粗粒度地决定是否应该将一个新的进程纳入调度管理，负责增加系统的可被调度的进程的数量。<br>中期调度：触发相对频繁，它辅助换页机制，负责限制系统中可被调度的进程数量。<br>短期调度：触发最为频繁，它负责细粒度地调度进程的执行，做出相应的调度决策。</p>
+<p><img src="/images/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AC%94%E8%AE%B0/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BF%9B%E7%A8%8B%E8%B0%83%E5%BA%A6%E7%A4%BA%E6%84%8F%E5%9B%BE.svg" alt="操作系统进程调度示意图"></p>
+<p><strong>单核调度策略</strong><br>经典调度：</p>
+<ul>
+<li>先到先得 – First Come First Served - FCFS (First In First out - FIFO)<ul>
+<li>特点：简单直观</li>
+<li>弊端：在长短任务混合的场景下对短任务不友好</li>
+<li>弊端：对I&#x2F;O密集型任务不友好</li>
+</ul>
+</li>
+<li>最短任务优先 – Shortest Job First - SJF<ul>
+<li>弊端：必须预知任务的运行时间</li>
+<li>弊端：其表现严重依赖于任务到达时间点</li>
+</ul>
+</li>
+<li>最短完成时间任务优先 – Shortest Time-to-Completion First - STCF<ul>
+<li>弊端：必须预知任务的运行时间</li>
+<li>弊端：长任务饥饿</li>
+</ul>
+</li>
+<li>时间片轮转 – Round Robin - RR<ul>
+<li>时间片大小该如何选取？</li>
+<li>弊端：在任务运行时间相似的场景下平均周转时间高</li>
+</ul>
+</li>
+</ul>
+<p>优先级调度：</p>
+<ul>
+<li>多级队列 – Multi-Level Queue - MLQ<ul>
+<li>低优先级任务饥饿</li>
+<li>优先级反转</li>
+</ul>
+</li>
+<li>多级反馈队列 – Multi-Level Feedback Queue - MLFQ<ul>
+<li>短任务拥有更高的优先级</li>
+<li>低优先级的任务采用更长的时间片</li>
+<li>定时地将所有任务的优先级提升至最高</li>
+</ul>
+</li>
+</ul>
+<p>公平共享调度 – fair-share scheduling ：</p>
+<ul>
+<li>彩票调度<ul>
+<li>彩票转让</li>
+<li>彩票货币</li>
+<li>彩票通胀</li>
+</ul>
+</li>
+<li>步幅调度</li>
+</ul>
+<p>实时调度：</p>
+<ul>
+<li>速率单调 – Rate-Monotonic - RM</li>
+<li>最早截止时间优先 – Earliest Deadline First - EDF</li>
+</ul>
+<p>其他调度：</p>
+<ul>
+<li>借用虚拟时间 – Borrowed Virtual Time - BVT</li>
+</ul>
+<p><strong>多核调度策略</strong></p>
+<ul>
+<li>负载分担</li>
+<li>协同调度<ul>
+<li>群组调度</li>
+</ul>
+</li>
+<li>两级调度<ul>
+<li>全局调度器 &amp; 本地调度器</li>
+</ul>
+</li>
+<li>负载追踪与负载均衡</li>
+<li>能耗感知调度 – Energy Aware Scheduling - EAS<ul>
+<li>容量</li>
+<li>功率</li>
+</ul>
+</li>
+</ul>
+<p><strong>调度进阶机制</strong><br>处理器亲和性 – processor affinity</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Linux 提供的操作CPU核心的集合掩码的宏</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> _GNU_SOURCE             <span class="comment">/* See feature_test_macros(7) */</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sched.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">CPU_ZERO</span><span class="params">(<span class="type">cpu_set_t</span> *<span class="built_in">set</span>)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">CPU_SET</span><span class="params">(<span class="type">int</span> cpu, <span class="type">cpu_set_t</span> *<span class="built_in">set</span>)</span>;</span><br><span class="line"><span class="type">void</span> <span class="title function_">CPU_CLR</span><span class="params">(<span class="type">int</span> cpu, <span class="type">cpu_set_t</span> *<span class="built_in">set</span>)</span>;</span><br><span class="line"><span class="type">int</span>  <span class="title function_">CPU_ISSET</span><span class="params">(<span class="type">int</span> cpu, <span class="type">cpu_set_t</span> *<span class="built_in">set</span>)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span>  <span class="title function_">CPU_COUNT</span><span class="params">(<span class="type">cpu_set_t</span> *<span class="built_in">set</span>)</span>;</span><br><span class="line"><span class="comment">//...</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Linux 的任务亲和性接口</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> _GNU_SOURCE             <span class="comment">/* See feature_test_macros(7) */</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sched.h&gt;</span></span></span><br><span class="line"><span class="comment">// set and get a thread&#x27;s CPU affinity mask</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">sched_setaffinity</span><span class="params">(<span class="type">pid_t</span> pid, <span class="type">size_t</span> cpusetsize,</span></span><br><span class="line"><span class="params">                      <span class="type">const</span> <span class="type">cpu_set_t</span> *mask)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">sched_getaffinity</span><span class="params">(<span class="type">pid_t</span> pid, <span class="type">size_t</span> cpusetsize,</span></span><br><span class="line"><span class="params">                      <span class="type">cpu_set_t</span> *mask)</span>;</span><br></pre></td></tr></table></figure>
+
+<p>调度策略设置<br>Linux支持多种调度策略和调度器：</p>
+<ul>
+<li>完全公平调度器 – Completely Fair Scheduler - CFS</li>
+<li>实时调度器 – Real-Time scheduler - RT</li>
+<li>截止时间调度器 – DealLine scheduler - DL</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Linux 的调度策略修改机制</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sched.h&gt;</span></span></span><br><span class="line"><span class="comment">// sched_setattr, sched_getattr - set and get scheduling policy and attributes</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">sched_setattr</span><span class="params">(<span class="type">pid_t</span> pid, <span class="keyword">struct</span> sched_attr *attr,</span></span><br><span class="line"><span class="params">                  <span class="type">unsigned</span> <span class="type">int</span> flags)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">sched_getattr</span><span class="params">(<span class="type">pid_t</span> pid, <span class="keyword">struct</span> sched_attr *attr,</span></span><br><span class="line"><span class="params">                  <span class="type">unsigned</span> <span class="type">int</span> size, <span class="type">unsigned</span> <span class="type">int</span> flags)</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">sched_attr</span> &#123;</span></span><br><span class="line">    u32 size;              <span class="comment">/* Size of this structure */</span></span><br><span class="line">    u32 sched_policy;      <span class="comment">/* Policy (SCHED_*) */</span></span><br><span class="line">    u64 sched_flags;       <span class="comment">/* Flags */</span></span><br><span class="line">    s32 sched_nice;        <span class="comment">/* Nice value (SCHED_OTHER,</span></span><br><span class="line"><span class="comment">                              SCHED_BATCH) */</span></span><br><span class="line">    u32 sched_priority;    <span class="comment">/* Static priority (SCHED_FIFO,</span></span><br><span class="line"><span class="comment">                              SCHED_RR) */</span></span><br><span class="line">    <span class="comment">/* Remaining fields are for SCHED_DEADLINE */</span></span><br><span class="line">    u64 sched_runtime;</span><br><span class="line">    u64 sched_deadline;</span><br><span class="line">    u64 sched_period;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p><strong>案例分析：现代调度器</strong><br>Linux调度器：</p>
+<ul>
+<li>Linux2.4版本以前，使用 O(n) 调度器<ul>
+<li>调度开销大</li>
+<li>多核扩展性差</li>
+</ul>
+</li>
+<li>Linux2.6.0版本中使用新的 O(1) 调度器<ul>
+<li>交互式任务的判定算法过于复杂</li>
+<li>静态时间片带来的问题</li>
+</ul>
+</li>
+<li>Linux2.6.23开始使用完全公平调度器CFS<ul>
+<li>CFS调度器的动态时间片</li>
+<li>CFS调度器使用红黑树作为运行队列</li>
+<li>CFS阻塞任务唤醒</li>
+</ul>
+</li>
+</ul>
+<p>macOS&#x2F;iOS调度器<br>GCD - Grand Central Dispatch</p>
+<ul>
+<li>采用基于优先级的实时调度策略，使用服务质量等级（Quality of Service - QoS）为任务确定优先级<ul>
+<li>UserInteractive</li>
+<li>UserInitiated</li>
+<li>Default</li>
+<li>Utility</li>
+<li>Background</li>
+</ul>
+</li>
+</ul>
+<h2 id="进程间通信"><a href="#进程间通信" class="headerlink" title="进程间通信"></a><strong>进程间通信</strong></h2><hr>
+<p>Inter-Process Communication - IPC</p>
+<p><img src="/images/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AC%94%E8%AE%B0/%E7%AE%80%E5%8D%95%E7%9A%84%E8%BF%9B%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1%E8%AE%BE%E8%AE%A1.svg" alt="简单的进程间通信设计"></p>
+<p><strong>宏内核进程间通信</strong></p>
+<ul>
+<li>管道<ul>
+<li>命名管道 &amp; 匿名管道</li>
+</ul>
+</li>
+<li>System V 消息队列</li>
+<li>System V 信号量</li>
+<li>System V 共享内存</li>
+<li>信号</li>
+<li>套接字</li>
+</ul>
+<p><img src="/images/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AC%94%E8%AE%B0/%E5%AE%8F%E5%86%85%E6%A0%B8%E8%BF%9B%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1%E6%9C%BA%E5%88%B6%E5%AF%B9%E6%AF%94.svg" alt="宏内核进程间通信机制对比"></p>
+<p><strong>微内核进程间通信</strong></p>
+<p>Mach:早期的微内核进程间通信设计</p>
+<ul>
+<li>端口设计</li>
+<li>消息设计</li>
+</ul>
+<p>L4：围绕进程间通信优化而设计的微内核系统</p>
+<ul>
+<li>L4消息传递<ul>
+<li>短消息</li>
+<li>长消息</li>
+</ul>
+</li>
+<li>L4控制流转移<ul>
+<li>惰性调度</li>
+<li>直接进程切换</li>
+</ul>
+</li>
+<li>L4通信连接</li>
+<li>L4通信控制（权限检查）<ul>
+<li>氏族和酋长（已废弃）</li>
+<li>Capability</li>
+</ul>
+</li>
+</ul>
+<p>LRPC - Lightweight Remote Procedure Call – 轻量级远程过程调用：迁移线程模型</p>
+<ul>
+<li>优化控制流切换的性能和优化数据传输的性能</li>
+</ul>
+<p>迁移线程的基本原则：</p>
+<ul>
+<li>简化控制流切换，让客户端线程执行“服务端的代码”</li>
+<li>简化数据传输，共享参数栈和寄存器</li>
+<li>简化接口，减少序列化等开销</li>
+<li>优化并发，避免共享的全局数据结构</li>
+</ul>
+<p>案例分析：Android Binder<br>Binder IPC内核设计</p>
+<ul>
+<li>Binder 的命名服务</li>
+<li>线程池模型</li>
+<li>匿名共享内存 – 基于文件描述符的共享设计</li>
+</ul>
+<p>案例分析：ChCore进程间通信机制</p>
+<ul>
+<li>消息的传递和通知基于LRPC中的迁移线程技术和L4系列微内核中的直接进程切换技术</li>
+<li>数据的传输基于灵活的用户态共享内存</li>
+</ul>
+<h2 id="同步原语"><a href="#同步原语" class="headerlink" title="同步原语"></a><strong>同步原语</strong></h2><hr>
+<p><strong>互斥锁</strong><br>竞争冒险 – race hazard：程序的正确性依赖于特定执行顺序的情况<br>互斥访问 – mutual exclusion：任意时刻只允许至多一个线程访问的方式<br>临界区 – critical section：保证互斥访问共享资源的代码区域<br>临界区问题：通过设计协议来保证互斥访问临界区的问题</p>
+<p>保证程序正确的算法需满足以下三个条件：</p>
+<ul>
+<li>互斥访问</li>
+<li>有限等待</li>
+<li>空闲让进</li>
+</ul>
+<p>解决临界区问题的算法：</p>
+<ul>
+<li>硬件实现：关闭中断<ul>
+<li>多核环境，关闭中断方法不适用</li>
+</ul>
+</li>
+<li>软件实现：皮特森算法<ul>
+<li>只能应对两个线程的情况</li>
+</ul>
+</li>
+<li>软硬件协同：使用原子操作实现互斥锁<ul>
+<li>原子操作 – atomic operation<ul>
+<li>比较与置换 – Compare-And-Swap - CAS</li>
+<li>拿取并累加 – Fetch-And-Add - FAA</li>
+</ul>
+</li>
+<li>互斥锁抽象 - 互斥锁<ul>
+<li>自旋锁 – spin lock</li>
+<li>排号自旋锁 – ticket lock</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>条件变量</strong><br>在生产者与消费者模型中，当剩余空位为0时，生产者会陷入循环等待，也称循环忙等，从而浪费CPU资源，增加系统能耗，人们希望使用一种挂起&#x2F;唤醒机制来解决这个问题，即条件变量。</p>
+<p>cond_wait</p>
+<ul>
+<li>挂起当前线程</li>
+<li>调用cond_wait前需要获取搭配的互斥锁</li>
+<li>cond_wait在挂起当前线程的同时，互斥锁会被原子地释放</li>
+<li>cond_wait返回之前会重新获取互斥锁</li>
+</ul>
+<p>cond_signal</p>
+<ul>
+<li>唤醒等待在该条件变量上的线程</li>
+</ul>
+<p><strong>信号量</strong></p>
+<p><strong>读写锁</strong></p>
+<ul>
+<li>读共享数据的线程相互之间不会干扰</li>
+<li>写共享数据的线程与读共享数据的线程不能同时执行</li>
+</ul>
+<p>读写锁的实现：</p>
+<ul>
+<li>偏向读者的读写锁<ul>
+<li>提高读者之间的并行度</li>
+<li>可能面临很高的写延迟</li>
+</ul>
+</li>
+<li>偏向写者的读写锁<ul>
+<li>降低读者之间的并行度</li>
+<li>写者可以在读者离开临界区立刻进入临界区</li>
+</ul>
+</li>
+</ul>
+<p><strong>RCU</strong><br>RCU – Read-Copy Update</p>
+<ul>
+<li>订阅&#x2F;发布机制</li>
+<li>宽期限</li>
+</ul>
+<p><strong>管程</strong></p>
+<ul>
+<li>共享的数据</li>
+<li>操作共享数据的函数</li>
+</ul>
+<p>管程是一种高层级的抽象，其利用其他同步原语实现了一套干净的接口。</p>
+<p><strong>同步带来的问题</strong></p>
+<ol>
+<li>死锁</li>
+<li>活锁</li>
+</ol>
+<p>死锁产生的原因：</p>
+<ul>
+<li>互斥访问</li>
+<li>持有并等待</li>
+<li>资源非抢占</li>
+<li>循环等待</li>
+</ul>
+<p>死锁检测与恢复</p>
+<ul>
+<li>检测是否有循环等待，并打破循环等待</li>
+</ul>
+<p>死锁预防</p>
+<ul>
+<li>避免互斥访问</li>
+<li>不允许持有并等待</li>
+<li>允许资源被抢占</li>
+<li>避免循环等待</li>
+</ul>
+<p>死锁避免</p>
+<ul>
+<li>银行家算法<ul>
+<li>检查是否处于安全状态</li>
+</ul>
+</li>
+</ul>
+<p>优先级反转</p>
+<ul>
+<li>由于同步导致线程执行顺序违反预设优先级的问题</li>
+</ul>
+<p>处理办法：</p>
+<ul>
+<li>不可抢占临界区协议 – Non-preemptive Critical section Protocol - NCP</li>
+<li>优先级继承协议 – Priority Inheritance Protocol - PIP</li>
+<li>优先级置顶协议 – Priority Ceiling Protocol - PCP<ul>
+<li>即时优先级置顶协议 – Immediate Priority Ceiling Protocol - IPCP</li>
+<li>原生优先级置顶协议 – Origin Priority Ceiling Protocol - OPCP</li>
+</ul>
+</li>
+</ul>
+<p><strong>案例分析：Linux中的futex</strong></p>
+<ul>
+<li>futex机制实现的互斥锁能在竞争程度较低时，直接使用原子操作完成枷锁。</li>
+<li>在竞争程度较高时，应用程序能够通过系统调用挂起并等待被后续锁持有者唤醒。</li>
+</ul>
+<h2 id="文件系统"><a href="#文件系统" class="headerlink" title="文件系统"></a><strong>文件系统</strong></h2><hr>
+<p>文件 – 有名字的字符序列<br>文件元数据<br>文件系统 – 实现文件接口并负责管理文件数据和元数据的系统</p>
+<p>虚拟文件系统 – Virtual File System - VFS</p>
+<ul>
+<li>页缓存</li>
+<li>inode缓存</li>
+<li>目录项缓存</li>
+</ul>
+<p><strong>基于inode的文件系统</strong><br>inode与文件</p>
+<p><img src="/images/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AC%94%E8%AE%B0/%E5%B8%B8%E8%A7%84%E6%96%87%E4%BB%B6%E6%95%B0%E6%8D%AE%E7%B4%A2%E5%BC%95.svg" alt="常规文件数据索引"></p>
+<center><font color='orange'>POSIX中定义的部分文件元数据</font></center>
+
+<table>
+<thead>
+<tr>
+<th>文件元数据</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>mode</td>
+<td>文件模式，其中包括文件类型和文件权限</td>
+</tr>
+<tr>
+<td>nlink</td>
+<td>指向此文件的链接个数</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>文件所属用户的ID</td>
+</tr>
+<tr>
+<td>gid</td>
+<td>文件所属用户组ID</td>
+</tr>
+<tr>
+<td>size</td>
+<td>文件的大小</td>
+</tr>
+<tr>
+<td>atime</td>
+<td>文件数据最近访问时间</td>
+</tr>
+<tr>
+<td>ctime</td>
+<td>文件元数据最近修改时间</td>
+</tr>
+<tr>
+<td>mtime</td>
+<td>文件数据最近修改时间</td>
+</tr>
+</tbody></table>
+<center><font color='orange'>Linux中支持的文件类型</font></center>
+
+<table>
+<thead>
+<tr>
+<th>文件类型</th>
+<th>文件用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>常规文件</td>
+<td>保存数据</td>
+</tr>
+<tr>
+<td>目录文件</td>
+<td>表示和组织一组文件</td>
+</tr>
+<tr>
+<td>符号链接文件</td>
+<td>保存符号链接（指向目标文件的路径）</td>
+</tr>
+<tr>
+<td>FIFO文件</td>
+<td>以队列形式传递数据，比FIFO文件更加灵活</td>
+</tr>
+<tr>
+<td>套接字文件</td>
+<td>用于传递数据，比FIFO文件更加灵活</td>
+</tr>
+<tr>
+<td>字符设备文件</td>
+<td>表示和访问字符设备</td>
+</tr>
+<tr>
+<td>块设备文件</td>
+<td>表示和访问块设备</td>
+</tr>
+</tbody></table>
+<p>文件名与目录</p>
+<p><img src="/images/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AC%94%E8%AE%B0/%E7%9B%AE%E5%BD%95%E9%A1%B9.svg" alt="目录项"></p>
+<p>硬链接与符号链接</p>
+<p>存储布局</p>
+<ul>
+<li>超级块<ul>
+<li>魔法数字</li>
+</ul>
+</li>
+<li>块分配信息</li>
+<li>inode分配信息</li>
+<li>inode表</li>
+<li>文件数据块</li>
+</ul>
+<p><img src="/images/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AC%94%E8%AE%B0/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AD%98%E5%82%A8%E5%B8%83%E5%B1%80.svg" alt="文件系统的存储布局"></p>
+<p><strong>虚拟文件系统</strong></p>
+<ul>
+<li>VFS中的超级块</li>
+<li>VFS中的inode</li>
+<li>VFS中的文件数据管理</li>
+<li>VFS中的目录项</li>
+</ul>
+<p>伪文件系统</p>
+<ul>
+<li>Linu实现了一些不用于保存文件数据的文件系统</li>
+</ul>
+<center><font color='orange'>Linux中的一些伪文件系统</font></center>
+
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">常用挂载点</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">procfs</td>
+<td align="center">&#x2F;proc</td>
+<td align="center">查看和操作进程相关的信息和配置</td>
+</tr>
+<tr>
+<td align="center">sysfs</td>
+<td align="center">&#x2F;sys</td>
+<td align="center">查看和操作与进程无关的系统配置</td>
+</tr>
+<tr>
+<td align="center">debugfs</td>
+<td align="center"></td>
+<td align="center">用于内核状态的调试</td>
+</tr>
+<tr>
+<td align="center">cgroupfs</td>
+<td align="center"></td>
+<td align="center">用于管理系统中的cgroup</td>
+</tr>
+<tr>
+<td align="center">configfs</td>
+<td align="center">&#x2F;sys&#x2F;kernel&#x2F;config</td>
+<td align="center">创建&#x2F;管理和删除内核对象</td>
+</tr>
+<tr>
+<td align="center">hugetlbfs</td>
+<td align="center"></td>
+<td align="center">查看和管理系统中的大页信息</td>
+</tr>
+</tbody></table>
+<p><strong>其他文件系统</strong></p>
+<ul>
+<li>FAT文件系统<ul>
+<li>文件分配表 – File Allocation Table - FAT</li>
+</ul>
+</li>
+<li>NTFS - New Technology File System</li>
+<li>FUSE与用户态文件系统</li>
+</ul>
+<h2 id="设备管理"><a href="#设备管理" class="headerlink" title="设备管理"></a><strong>设备管理</strong></h2><hr>
+<p>总线：</p>
+<ul>
+<li>AMBA总线</li>
+<li>PCI总线</li>
+</ul>
+<p>可编程I&#x2F;O：</p>
+<ul>
+<li>控制寄存器</li>
+<li>状态寄存器</li>
+<li>输入&#x2F;输出寄存器</li>
+</ul>
+<p>高效数据传输：DMA - Direct Memory Access – 直接内存访问</p>
+<p>设备地址翻译：IOMMU - Input-Output Memory Management Unit – 输入输出内存管理单元</p>
+<p>设备识别：</p>
+<ul>
+<li>设备树</li>
+<li>ACPI - Advanced Configuration and Power Interface – 高级配置与电源接口</li>
+</ul>
+<p>中断控制器：</p>
+<ul>
+<li>ICOLL - Interrupt Collector</li>
+<li>GIC - Generic Interrupt Controller – 通用中断控制器</li>
+</ul>
+<p>中断类型：</p>
+<ul>
+<li>软件生成中断</li>
+<li>私有设备中断</li>
+<li>共享设备中断</li>
+</ul>
+<p>中断优先级 - 中断号</p>
+<p>中断状态：</p>
+<ul>
+<li>Inactive</li>
+<li>Pending</li>
+<li>Active</li>
+<li>Active &amp; Pending</li>
+</ul>
+<p>中断处理：</p>
+<ul>
+<li>上半部<ul>
+<li>硬中断</li>
+</ul>
+</li>
+<li>下半部<ul>
+<li>软中断</li>
+<li>tasklet</li>
+<li>工作队列</li>
+</ul>
+</li>
+</ul>
+<p>设备驱动 - 操作系统中负责控制设备的定制化程序</p>
+<p>Linux设别驱动模型</p>
+<p>Linux系统三种基本设备抽象：</p>
+<ul>
+<li>字符设备</li>
+<li>块设备</li>
+<li>网络设备</li>
+</ul>
+<h2 id="系统虚拟化"><a href="#系统虚拟化" class="headerlink" title="系统虚拟化"></a><strong>系统虚拟化</strong></h2><hr>
+<p>系统虚拟化技术：</p>
+<ul>
+<li>CPU虚拟化</li>
+<li>内存虚拟化</li>
+<li>I&#x2F;O虚拟化</li>
+</ul>
+<p><strong>CPU虚拟化：</strong></p>
+<table>
+    <tr>
+        <th>软件技术</th>
+        <th>硬件虚拟化技术</th>
+    </tr >
+  <tr >
+      <td>解释执行</td>
+        <td rowspan="4">新的硬件特权级所有敏感指令可下陷 </td>
+    </tr>
+  <tr>
+        <td>动态二进制翻译</td>
+    </tr>
+    <tr>
+        <td>扫描和翻译</td>
+    </tr>
+    <tr>
+        <td>半虚拟化技术</td>
+    </tr>
+</table>
+
+
+<p><strong>内存虚拟化：</strong></p>
+<table>
+  <caption style="color:orange">内存虚拟化技术总结</caption>
+    <tr>
+        <th>软件技术</th>
+        <th>硬件虚拟化技术</th>
+    </tr >
+  <tr >
+      <td>解释执行</td>
+        <td rowspan="2">第二阶段地址翻译</td>
+    </tr>
+  <tr>
+        <td>直接页表映射</td>
+    </tr>
+</table>
+
+
+<p><strong>I&#x2F;O虚拟化：</strong></p>
+<table>
+  <caption style="color:orange">I/O虚拟化技术总结</caption>
+    <tr>
+        <th>软件技术</th>
+        <th>硬件虚拟化技术</th>
+    </tr >
+  <tr >
+      <td>软件模拟方法</td>
+        <td rowspan="2">设备直通（IOMMU 和 SR-IOV）</td>
+    </tr>
+  <tr>
+        <td>半虚拟化方法</td>
+    </tr>
+</table>
+
+<p>中断虚拟化</p>
+]]></content>
+      <categories>
+        <category>四大件</category>
+      </categories>
+      <tags>
+        <tag>operator system</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>多终端同步博客</title>
+    <url>/posts/a7e41fa1/</url>
+    <content><![CDATA[<p>参考资料：<br><a href="https://segmentfault.com/a/1190000019459014">Hexo博客多端同步问题</a></p>
+]]></content>
+      <tags>
+        <tag>hexo tutorial</tag>
       </tags>
   </entry>
 </search>
