@@ -122,7 +122,7 @@ menu:
   categories: /categories/ || fa fa-th
   archives: /archives/ || fa fa-archive
   # book: /reading/ || fa fa-book-open
-  Book:
+  book:
     default: /reading/ || fa fa-book-open
     
     # Random Thoughts:
@@ -789,7 +789,7 @@ note:
   #  - modern    bs-callout new (v2-v3) alert style.
   #  - flat      flat callout style with background, like on Mozilla or StackOverflow.
   #  - disabled  disable all CSS styles import of note tag.
-  style: modern
+  style: simple
   icons: true
   # Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6).
   # Offset also applied to label tag variables. This option can work with disabled note tag.
