@@ -1,283 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>JavaScript Note</title>
-    <url>/posts/fbbf86b6/</url>
-    <content><![CDATA[<h2 id="词法结构"><a href="#词法结构" class="headerlink" title="词法结构"></a><strong>词法结构</strong></h2><hr>
-<p>标识符必须以字母&#x2F;下划线&#x2F;美元符号开头</p>
-<span id="more"></span>
-
-<h2 id="类型-x2F-值-x2F-变量"><a href="#类型-x2F-值-x2F-变量" class="headerlink" title="类型&#x2F;值&#x2F;变量"></a><strong>类型&#x2F;值&#x2F;变量</strong></h2><hr>
-<ul>
-<li>原始类型：数值&#x2F;文本字符串&#x2F;布尔真值&#x2F;符号&#x2F;null&#x2F;undefined</li>
-<li>对象类型</li>
-</ul>
-<p>javascript可以自由地转换不同类型的值<br>javascript预定义了全局常量Infinity和NaN以应对正无穷和非数值<br>var声明的一个最不同寻常的特性是作用域提升</p>
-<h2 id="表达式与操作符"><a href="#表达式与操作符" class="headerlink" title="表达式与操作符"></a><strong>表达式与操作符</strong></h2><hr>
-<p>[] &#x2F;&#x2F; 空数组</p>
-<p>条件式属性访问</p>
-<ul>
-<li>expression ?. identifier</li>
-<li>expression ?.[ expression ]</li>
-</ul>
-<p>如果expression非真，问号后面的表达式不会执行，即短路操作<br>+偏向字符串，即只要有一个操作数是字符串，它就会执行拼接操作；比较操作符偏向数值，只有两个操作数均为字符串时才按字符串处理，如果有一个操作数是NaN，则4个比较操作符都返回false<br>in操作数期待左侧操作数是字符串&#x2F;符号&#x2F;可以转换为字符串的值，期待右侧操作数是对象。<br>instanceof的右侧操作数应该是一个函数<br>??先定义：第一个操作数求值为null或undefined时才会求值第二个操作数</p>
-<h2 id="语句"><a href="#语句" class="headerlink" title="语句"></a><strong>语句</strong></h2><hr>
-<p>for&#x2F;of循环专门用于可迭代对象，包括数组&#x2F;字符串&#x2F;集合&#x2F;映射。</p>
-<p>for&#x2F;in循环in后面可以是任意对象</p>
-<ul>
-<li>不会枚举对象的所有属性，比如名字为符号的属性</li>
-<li>名字为字符串的属性，只会遍历可枚举属性</li>
-<li>javascript核心定义的各种内部方法是不可枚举的</li>
-<li>继承的可枚举属性也可被for&#x2F;in循环枚举</li>
-</ul>
-<p>语句标签<br>identifier：statement</p>
-<ul>
-<li>break [labelname];</li>
-<li>continue [labelname];<ul>
-<li>labelname 属于可选参数</li>
-</ul>
-</li>
-</ul>
-<h2 id="对象"><a href="#对象" class="headerlink" title="对象"></a><strong>对象</strong></h2><hr>
-<p>创建对象三种方式：</p>
-<ol>
-<li>对象字面量</li>
-<li>使用new创建对象</li>
-<li>Object.create()–防止对象被某个第三方库函数意外修改</li>
-</ol>
-<p><strong>几乎所有对象都有原型，但大多数对象没有<em>prototype</em>属性</strong></p>
-<p>in可以区分不存在的属性和存在但被设置为undefined的属性</p>
-<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a><strong>数组</strong></h2><hr>
-<p>扩展操作符(…)在一个数组字面量中包含另一个数组的元素</p>
-<p><strong>实际上并不是操作符，因为只能在数组字面量和本书后面介绍的函数调用中使用它们</strong></p>
-<p>Array()构造函数传入一个数组参数，指定长度：<br>let a &#x3D; new Array(10);  &#x2F;&#x2F; 创建长度为10的空数组<br>Array.of()可以创建只包含一个元素的数组：<br>Array.of(10)    &#x2F;&#x2F; &#x3D;&gt; [10];可以创建只有一个数值元素的数组</p>
-<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a><strong>函数</strong></h2><hr>
-<p>函数声明语句会被“提升”到包含脚本&#x2F;函数&#x2F;代码块的顶部，因此调用以这种方式定义的函数时，调用代码可以出现在函数定义代码之前</p>
-<p>箭头函数</p>
-<ul>
-<li>从定义自己的环境继承this关键字的值</li>
-</ul>
-<p>嵌套函数</p>
-<ul>
-<li>内层函数可以访问包含自己的函数（或更外层函数）的参数和变量</li>
-</ul>
-<p>调用函数的五种方式：</p>
-<ol>
-<li>作为函数<ul>
-<li>通过调用表达式被作为函数或方法调用</li>
-</ul>
-</li>
-<li>作为方法<ul>
-<li>即函数，只不过它保存为对象的属性而已</li>
-</ul>
-</li>
-<li>作为构造函数<ul>
-<li>使用new关键字调用的函数</li>
-</ul>
-</li>
-<li>透过call() 或 apply() 方法间接调用</li>
-<li>通过JavaScript 语言特性隐形调用</li>
-</ol>
-<p><strong>JavaScript函数定义不指定函数形参类型，函数调用不对传入实参进行类型&#x2F;个数检查</strong></p>
-<p>函数可以有属性<br>闭包：能捕获自身定义所在函数的局部变量（及参数）绑定</p>
-<h2 id="类"><a href="#类" class="headerlink" title="类"></a><strong>类</strong></h2><hr>
-<p><strong>只有函数对象才有prototype属性</strong>，这意味着使用同一个构造函数创建的所有对象都继承同一个对象，因而是同一个类的成员</p>
-<ul>
-<li>类名（按照惯例）应以大写字母开头</li>
-<li>普通函数和方法的名字则以小写字母开头</li>
-</ul>
-<p><strong>新对象是在调用构造函数之前自动创建的</strong></p>
-<p>与函数声明不同，类声明不会“提升”<br>原型对象是类标识的基本：当且仅当两个对象继承同一个原型对象时，他们才是同一个类的实例<br>每个普通 JavaScript 函数自动拥有一个 prototype 属性，这个属性的值是一个对象，有一个不可枚举的constructor 属性，而这个属性的值就是该函数的对象</p>
-<p>eg:</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> F = <span class="keyword">function</span>(<span class="params"></span>) &#123;&#125;;  <span class="comment">// 这是一个函数对象</span></span><br><span class="line"><span class="keyword">let</span> p = F.<span class="property"><span class="keyword">prototype</span></span>;    <span class="comment">// 这是一个与F关联的原型对象</span></span><br><span class="line"><span class="keyword">let</span> c = p.<span class="property">constructor</span>;  <span class="comment">// 这是与原型关联的函数</span></span><br><span class="line">c === F                 <span class="comment">// =&gt; true: 对任何F，F.prototype.constructor === F</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/JavaScript-Note/%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E5%8F%8A%E5%85%B6%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%AE%9E%E4%BE%8B.svg" alt="构造函数及其原型和实例"></p>
-<p>ES6新增了class 关键字，让定义类更方便。但在底层，仍然是构造函数和原型机制在起作用<br>子类在类声明中通过extends关键字定义<br>子类可以通过super 关键字调用父类构造函数或父类中被覆盖的方法</p>
-<h2 id="模块"><a href="#模块" class="headerlink" title="模块"></a><strong>模块</strong></h2><hr>
-<p>模块化的目标是让程序员隐藏自己代码的实现细节，从而让不同来源的代码块可以组装成一个大型程序，又不必担心某个代码块会重写其他代码块的函数或变量。本章解释了三种不同的JavaScript模块系统：</p>
-<ul>
-<li><p>在JavaScript早期，模块化只能通过巧妙地使用立即调用的函数表达式来实现</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">BitSet</span> = (<span class="keyword">function</span>(<span class="params"></span>) &#123;  <span class="comment">// 将 BitSet 设置为这个函数的返回值</span></span><br><span class="line">  ... <span class="comment">// 省略实现</span></span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">class</span> <span class="title class_">BitSet</span> <span class="keyword">extends</span> <span class="title class_ inherited__">AbstractWritableSet</span> &#123;</span><br><span class="line">    ... <span class="comment">// 省略实现</span></span><br><span class="line">  &#125;;</span><br><span class="line">&#125;());</span><br><span class="line"></span><br><span class="line"><span class="comment">// 示例2：</span></span><br><span class="line"><span class="keyword">const</span> stats = (<span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">  ...</span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">mean</span>(<span class="params">data</span>) &#123; ... &#125;;</span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">stddev</span>(<span class="params">data</span>) &#123; ... &#125;;</span><br><span class="line">  <span class="comment">// 将公有函数作为一个对象的属性导出出来</span></span><br><span class="line">  <span class="keyword">return</span> &#123; mean, stddev &#125;;</span><br><span class="line">&#125;());</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Node 在 JavaScript 语言之上加入了自己的模块系统。Node 模块通过require() 导入，并通过设置 Exports 对象的属性或直接设置 module.exports 属性来定义导出</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Node 导出</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">mean</span> = data =&gt; &#123; ... &#125;;</span><br><span class="line"><span class="keyword">const</span> <span class="title function_">stddev</span> = data =&gt; &#123; ... &#125;;</span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123; mean, stddev &#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Node 导入</span></span><br><span class="line"><span class="comment">// 内置模块</span></span><br><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">&quot;fs&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 自定义</span></span><br><span class="line"><span class="keyword">const</span> stats = <span class="built_in">require</span>(<span class="string">&#x27;./stats.js&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 解构赋值导入特定属性</span></span><br><span class="line"><span class="keyword">const</span> &#123; stddev &#125; = <span class="built_in">require</span>(<span class="string">&#x27;./stats.js&#x27;</span>);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在ES6 中，Javascript 终于有了自己依托import 和 export关键字的模块系统，ES2020 又通过 import() 增加了对动态导入的支持</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// ES6 导出</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> <span class="variable constant_">PI</span> = <span class="title class_">Math</span>.<span class="property">PI</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// ES6 导入</span></span><br><span class="line"><span class="keyword">import</span> &#123; mean, stddev &#125; <span class="keyword">from</span> <span class="string">&#x27;./stats.js&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> stats <span class="keyword">from</span> <span class="string">&#x27;./stats.js&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// import() 动态导入</span></span><br><span class="line"><span class="title function_">import</span>(<span class="string">&quot;./stats.js&quot;</span>).<span class="title function_">then</span>(<span class="function"><span class="params">stats</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> average = stats.<span class="title function_">mean</span>(data);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h2 id="JavaScript-标准库"><a href="#JavaScript-标准库" class="headerlink" title="JavaScript 标准库"></a><strong>JavaScript 标准库</strong></h2><hr>
-<p>主要包括以下内容：</p>
-<ol>
-<li>重要的数据结构，如Set&#x2F;Map和定型数组</li>
-<li>用于操作日期和URL的Date与URL类</li>
-<li>JavaScript的正则表达式语法及处理文本模式匹配的RegExp类</li>
-<li>JavaScript的国际化库，可以格式化日期&#x2F;时间&#x2F;数值&#x2F;以及排序字符串</li>
-<li>序列化和反序列化简单数据结构的JSON对象，以及用于打印消息的console对象</li>
-</ol>
-<h2 id="迭代器与生成器"><a href="#迭代器与生成器" class="headerlink" title="迭代器与生成器"></a><strong>迭代器与生成器</strong></h2><hr>
-<p><strong>可迭代对象</strong>：任何具有专用迭代器方法，且该方法返回迭代器对象的对象<br><strong>迭代器对象</strong>：任何具有next()方法，且该方法返回迭代结果对象的对象<br><strong>迭代结果对象</strong>：具有value和done的对象</p>
-<div class="note danger"><p><em><strong>内置可迭代数据类型的迭代器对象本身也是可迭代的</strong></em>（即，有一个名为Symbol.iterator的方法，返回他们自己）</p>
-</div>
-
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// words函数是一个可迭代对象，返回一个迭代器对象</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">words</span>(<span class="params">s</span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> r = <span class="regexp">/\s+|$/g</span>;</span><br><span class="line">    r.<span class="property">lastIndex</span> = s.<span class="title function_">match</span>(<span class="regexp">/[^ ]/</span>).<span class="property">index</span>;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        [<span class="title class_">Symbol</span>.<span class="property">iterator</span>]() &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="variable language_">this</span></span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="title function_">next</span>(<span class="params"></span>) &#123;</span><br><span class="line">            <span class="keyword">let</span> start = r.<span class="property">lastIndex</span>;</span><br><span class="line">            <span class="keyword">if</span> (start &lt; s.<span class="property">length</span>) &#123;</span><br><span class="line">                <span class="keyword">let</span> match = r.<span class="title function_">exec</span>(s);</span><br><span class="line">                <span class="keyword">if</span> (match) &#123;</span><br><span class="line">                    <span class="keyword">return</span> &#123;<span class="attr">value</span>: s.<span class="title function_">substring</span>(start, match.<span class="property">index</span>)&#125;;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> &#123;<span class="attr">done</span>: <span class="literal">true</span>&#125;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>([...<span class="title function_">words</span>(<span class="string">&quot; abc def ghi! &quot;</span>)]); <span class="comment">// =&gt; [ &#x27;abc&#x27;, &#x27;def&#x27;, &#x27;ghi!&#x27; ]</span></span><br></pre></td></tr></table></figure>
-
-<p>生成器函数：使用function*</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span>* <span class="title function_">fib</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> x = <span class="number">0</span>, y = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(;;) &#123;</span><br><span class="line">        <span class="keyword">yield</span> y;</span><br><span class="line">        [x, y] = [y, x + y] <span class="comment">// 解构赋值</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>yield*: 与yield类似，但它不是只回送一个值，而是迭代可迭代对象并返回送得的每个值</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// use yield</span></span><br><span class="line"><span class="keyword">function</span>* <span class="title function_">sequence</span>(<span class="params">...iterables</span>) &#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> iterable <span class="keyword">of</span> iterables) &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> item <span class="keyword">of</span> iterable) &#123;</span><br><span class="line">            <span class="keyword">yield</span> item;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>([...<span class="title function_">sequence</span>(<span class="string">&quot;abc&quot;</span>, <span class="string">&quot;efg&quot;</span>)]); <span class="comment">// =&gt; [ &#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;, &#x27;e&#x27;, &#x27;f&#x27;, &#x27;g&#x27; ]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// use yield*</span></span><br><span class="line"><span class="keyword">function</span>* <span class="title function_">sequence</span>(<span class="params">...iterables</span>) &#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> iterable <span class="keyword">of</span> iterables) &#123;</span><br><span class="line">        <span class="keyword">yield</span>* iterable;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>([...<span class="title function_">sequence</span>(<span class="string">&quot;abc&quot;</span>, <span class="string">&quot;efg&quot;</span>)]); <span class="comment">// =&gt; [ &#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;, &#x27;e&#x27;, &#x27;f&#x27;, &#x27;g&#x27; ]</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="异步JavaScript"><a href="#异步JavaScript" class="headerlink" title="异步JavaScript"></a><strong>异步JavaScript</strong></h2><hr>
-<p>传统异步操作采用事件和回调函数的方式执行</p>
-<mark class="label primary">回调</mark> vs <mark class="label success">期约(promise)</mark> 
-
-<table>
-<thead>
-<tr>
-<th>回调</th>
-<th>期约(promise)</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>回调常会引发多层嵌套代码，照成缩进过多以致难以阅读和维护</td>
-<td>期约可以以一种更线性的期约链形式表现，更易读和推断</td>
-</tr>
-<tr>
-<td>回调难以处理错误，异常没有办法传播到异常操作的发起者</td>
-<td>期约标准化了异步错误处理，使用期约链提供了一种让错误正确传播的途径</td>
-</tr>
-</tbody></table>
-<p><strong>期约链</strong></p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="title function_">fetch</span>(documentURL)                      <span class="comment">// 发送 http 请求</span></span><br><span class="line">    .<span class="title function_">then</span>(<span class="function"><span class="params">response</span> =&gt;</span> response.<span class="title function_">json</span>())  <span class="comment">// 获取 JSON 格式的响应体</span></span><br><span class="line">    .<span class="title function_">then</span>(<span class="function"><span class="params">document</span> =&gt;</span> &#123;                 <span class="comment">// 在取得解析后的JSON时把文档显示给用户</span></span><br><span class="line">        <span class="keyword">return</span> <span class="title function_">render</span>(<span class="variable language_">document</span>);</span><br><span class="line">    &#125;) </span><br><span class="line">    .<span class="title function_">then</span>(<span class="function"><span class="params">rendered</span> =&gt;</span> &#123;                 <span class="comment">// 在取得渲染的文档后缓存在本地数据库中</span></span><br><span class="line">        <span class="title function_">cacheInDatebase</span>(rendered);</span><br><span class="line">    &#125;)</span><br><span class="line">    .<span class="title function_">catch</span>(<span class="function"><span class="params">error</span> =&gt;</span> <span class="title function_">handle</span>(error));     <span class="comment">// 处理发生的错误</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 并行期约</span></span><br><span class="line"><span class="keyword">const</span> urls = [ <span class="comment">/* 零或多个URL */</span> ];</span><br><span class="line">promises = urls.<span class="title function_">map</span>(<span class="function"><span class="params">url</span> =&gt;</span> <span class="title function_">fetch</span>(url).<span class="title function_">then</span>(<span class="function"><span class="params">r</span> =&gt;</span> r.<span class="title function_">text</span>()));</span><br><span class="line"><span class="title class_">Promise</span>.<span class="title function_">all</span>(promises)</span><br><span class="line">    .<span class="title function_">then</span>(<span class="function"><span class="params">bodies</span> =&gt;</span> &#123; <span class="comment">/* 处理得到的字符串数组 */</span> &#125;)</span><br><span class="line">    .<span class="title function_">catch</span>(<span class="function"><span class="params">e</span> =&gt;</span> <span class="variable language_">console</span>.<span class="title function_">error</span>(e))</span><br><span class="line"></span><br><span class="line"><span class="comment">// 串行期约</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">promiseSequence</span>(<span class="params">inputs, promiseMaker</span>) &#123;</span><br><span class="line">    inputs = [...inputs];</span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">handleNextInput</span>(<span class="params">outputs</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (inputs.<span class="property">length</span> === <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> outputs;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">let</span> nextInput = inputs.<span class="title function_">shift</span>();</span><br><span class="line">            <span class="keyword">return</span> <span class="title function_">promiseMaker</span>()</span><br><span class="line">                    .<span class="title function_">then</span>(<span class="function"><span class="params">output</span> =&gt;</span> outputs.<span class="title function_">concat</span>(output))</span><br><span class="line">                    .<span class="title function_">then</span>(handleNextInput);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="title class_">Promise</span>.<span class="title function_">resolve</span>([]).<span class="title function_">then</span>(handleNextInput);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">fetchBody</span>(<span class="params">url</span>) &#123; <span class="keyword">return</span> <span class="title function_">fetch</span>(url).<span class="title function_">then</span>(<span class="function"><span class="params">r</span> =&gt;</span> r.<span class="title function_">text</span>()); &#125;</span><br><span class="line"><span class="title function_">promiseSequence</span>(urls, fetchBody)</span><br><span class="line">    .<span class="title function_">then</span>(<span class="function"><span class="params">bodies</span> =&gt;</span> &#123; <span class="comment">/* 处理字符串数组 */</span> &#125;)</span><br><span class="line">    .<span class="title function_">catch</span>(<span class="variable language_">console</span>.<span class="property">error</span>);</span><br></pre></td></tr></table></figure>
-
-<p><strong>async &amp; await</strong></p>
-<blockquote>
-<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/await">await</a><br>await  操作符用于等待一个Promise 对象<br>[返回值] &#x3D; await 表达式;</p>
-</blockquote>
-<ul>
-<li>表达式<br>一个 Promise 对象或者任何要等待的值。</li>
-</ul>
-<p><strong>返回值</strong><br>返回 Promise 对象的处理结果。如果等待的不是 Promise 对象，则返回该值本身。</p>
-<blockquote>
-<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function">async</a><br>async函数是使用async关键字声明的函数。 async函数是AsyncFunction构造函数的实例， 并且其中允许使用await关键字。<br>async function name([param[, param[, … param]]]) {<br>    statements<br>}</p>
-</blockquote>
-<ul>
-<li>name<br>函数名称。</li>
-<li>param<br>要传递给函数的参数的名称。</li>
-<li>statements</li>
-</ul>
-<p>包含函数主体的表达式。可以使用await机制。<br><strong>返回值</strong><br>一个Promise，这个promise要么会通过一个由async函数返回的值被解决，要么会通过一个从async函数中抛出的（或其中没有被捕获到的）异常被拒绝。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">resolveAfter2Seconds</span>(<span class="params">x</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function"><span class="params">resolve</span> =&gt;</span> &#123;</span><br><span class="line">                <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">                        <span class="title function_">resolve</span>(x);</span><br><span class="line">                &#125;, <span class="number">2000</span>);</span><br><span class="line">        &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">f1</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">var</span> x = <span class="keyword">await</span> <span class="title function_">resolveAfter2Seconds</span>(<span class="number">10</span>);</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(x); <span class="comment">// 10</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">f1</span>();</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;hello&quot;</span>);</span><br></pre></td></tr></table></figure>
-<figure class="highlight gauss"><table><tr><td class="code"><pre><span class="line"><span class="keyword">output</span>：</span><br><span class="line">hello</span><br><span class="line"><span class="number">10</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>for&#x2F;await 循环</strong><br>异步迭代器会产生一个期约，for&#x2F;await 循环会等待该期约兑现，将兑现值赋给循环变量，然后再运行循环体</p>
-<p>异步迭代器(Symbol.asyncIterator)</p>
-<p>异步生成器(async function *)<br>设置[Symbol.asyncIterator]属性来自定义异步可迭代对象。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> myAsyncIterable = <span class="keyword">new</span> <span class="title class_">Object</span>();</span><br><span class="line">myAsyncIterable[<span class="title class_">Symbol</span>.<span class="property">asyncIterator</span>] = <span class="keyword">async</span> <span class="keyword">function</span>*() &#123;</span><br><span class="line">    <span class="keyword">yield</span> <span class="string">&quot;hello&quot;</span>;</span><br><span class="line">    <span class="keyword">yield</span> <span class="string">&quot;async&quot;</span>;</span><br><span class="line">    <span class="keyword">yield</span> <span class="string">&quot;iteration!&quot;</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">(<span class="keyword">async</span> () =&gt; &#123;</span><br><span class="line">    <span class="keyword">for</span> <span class="keyword">await</span> (<span class="keyword">const</span> x <span class="keyword">of</span> myAsyncIterable) &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(x);</span><br><span class="line">        <span class="comment">// expected output:</span></span><br><span class="line">        <span class="comment">//    &quot;hello&quot;</span></span><br><span class="line">        <span class="comment">//    &quot;async&quot;</span></span><br><span class="line">        <span class="comment">//    &quot;iteration!&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
-
-<h2 id="元编程"><a href="#元编程" class="headerlink" title="元编程"></a><strong>元编程</strong></h2><hr>
-<p><strong>属性特性</strong></p>
-<ul>
-<li>可写：修改属性的值</li>
-<li>可枚举：for&#x2F;in循环和 Object.keys() 方法枚举属性</li>
-<li>可配置：可以删除属性&#x2F;修改属性</li>
-</ul>
-<p>模板标签：位于反引号之间的字符串被称为“模板字面量”</p>
-<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Meta_programming">反射API &amp; 代理对象</a></p>
-<blockquote>
-<p>允许你拦截并定义基本语言操作的自定义行为（例如，属性查找，赋值，枚举，函数调用等）</p>
-</blockquote>
-<h2 id="浏览器中的JavaScript"><a href="#浏览器中的JavaScript" class="headerlink" title="浏览器中的JavaScript"></a><strong>浏览器中的JavaScript</strong></h2><hr>
-<ul>
-<li>JavaScript异步&#x2F;事件驱动的编程模型</li>
-<li>DOM API是所有客户端JavaScript编程的核心</li>
-<li>CSS样式</li>
-<li>svg &amp; <code>&lt;canvas&gt;</code> 生成动态图像</li>
-<li>audio &amp; video</li>
-<li>location &amp; history</li>
-<li>http &amp; websocket 协议与web服务器交换数据</li>
-<li>local cache<ul>
-<li>web storage</li>
-<li>cookie</li>
-<li>indexedDB</li>
-</ul>
-</li>
-<li>worker thread</li>
-</ul>
-<h2 id="Node服务器端JavaScript"><a href="#Node服务器端JavaScript" class="headerlink" title="Node服务器端JavaScript"></a><strong><a href="https://nodejs.org/en/">Node</a>服务器端JavaScript</strong></h2><hr>
-<h2 id="JavaScript工具和扩展"><a href="#JavaScript工具和扩展" class="headerlink" title="JavaScript工具和扩展"></a><strong>JavaScript工具和扩展</strong></h2><hr>
-<p>工具和语言扩展：</p>
-<ul>
-<li><a href="http://eslint.cn/">ESLint</a>(辅助发现代码中潜藏的缺陷和风格问题)</li>
-<li><a href="https://www.prettier.cn/">Prettier</a>(格式化js代码)</li>
-<li>Jest(js单元测试的一站式解决方案)</li>
-<li>npm</li>
-<li>webpack &amp; Rollup &amp; Parcel</li>
-<li>Babel(转义工具)</li>
-<li>JSX(语言扩展，使用类似HTML标记的js表达式描述用户界面)</li>
-<li>Flow(添加类型注解，通过类型检查保证类型安全)</li>
-</ul>
-]]></content>
-      <categories>
-        <category>编程语言</category>
-      </categories>
-      <tags>
-        <tag>javascript</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Linux-shell 命令行</title>
+    <title>Linux常用命令行汇总</title>
     <url>/posts/96574460/</url>
-    <content><![CDATA[<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><hr>
-<blockquote><p>Shell 是一个用C编写的应用程序，它是供用户使用Linux的桥梁。</p>
-<footer><strong>菜鸟教程</strong><cite><a href="https://www.runoob.com/linux/linux-shell.html">Shell 教程</a></cite></footer></blockquote>
-
+    <content><![CDATA[<p>Linux命令一般为位于&#x2F;usr&#x2F;bin目录下，以下汇总工作中接触比较多的命令。</p>
 <span id="more"></span>
 
-<p>Shell 既是一种命令语言，又是一种程序设计语言。Shell脚本是一种使用shell语言编写的脚本程序。Unix&#x2F;Linux上常见的Shell脚本解释器有bash、sh、csh、ksh等，习惯上把它们称作一种Shell。我们常说有多少种Shell，其实说的是Shell脚本解释器。</p>
-<h3 id="目录-amp-文件"><a href="#目录-amp-文件" class="headerlink" title="目录 &amp; 文件"></a>目录 &amp; 文件</h3><hr>
-
+<h2 id="基础命令"><a href="#基础命令" class="headerlink" title="基础命令"></a>基础命令</h2><hr>
+<h3 id="查看文件和目录"><a href="#查看文件和目录" class="headerlink" title="查看文件和目录"></a>查看文件和目录</h3>
 <div class="markmap-container" style="height:400px">
-  <svg data="{&quot;t&quot;:&quot;root&quot;,&quot;d&quot;:0,&quot;v&quot;:&quot;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[0,1]},&quot;v&quot;:&quot;&lt;a href=\&quot;#ls\&quot;&gt;ls&lt;/a&gt;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[1,2]},&quot;v&quot;:&quot;List directory contents.&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[2,3]},&quot;v&quot;:&quot;&lt;a href=\&quot;#pwd\&quot;&gt;pwd&lt;/a&gt;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[3,4]},&quot;v&quot;:&quot;Print name of current/working directory.&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[4,5]},&quot;v&quot;:&quot;&lt;a href=\&quot;#cd\&quot;&gt;cd&lt;/a&gt;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[5,6]},&quot;v&quot;:&quot;Change the current working directory.&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[6,7]},&quot;v&quot;:&quot;&lt;a href=\&quot;#file\&quot;&gt;file&lt;/a&gt;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[7,8]},&quot;v&quot;:&quot;Determine file type.&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[8,9]},&quot;v&quot;:&quot;&lt;a href=\&quot;#less\&quot;&gt;less&lt;/a&gt;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[9,10]},&quot;v&quot;:&quot;Open a file for interactive reading, allowing scrolling and search.&quot;}]}],&quot;p&quot;:{}}"></svg>
+  <svg data="{&quot;t&quot;:&quot;root&quot;,&quot;d&quot;:0,&quot;v&quot;:&quot;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[0,1]},&quot;v&quot;:&quot;&lt;a href=\&quot;#ls\&quot;&gt;ls&lt;/a&gt;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[1,2]},&quot;v&quot;:&quot;List directory contents.&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[2,3]},&quot;v&quot;:&quot;&lt;a href=\&quot;#cat\&quot;&gt;cat&lt;/a&gt;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[3,4]},&quot;v&quot;:&quot;Print and concatenate files.&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[4,5]},&quot;v&quot;:&quot;&lt;a href=\&quot;#less\&quot;&gt;less&lt;/a&gt;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[5,6]},&quot;v&quot;:&quot;Open a file for interactive reading, allowing scrolling and search.&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[6,7]},&quot;v&quot;:&quot;&lt;a href=\&quot;#more\&quot;&gt;more&lt;/a&gt;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[7,8]},&quot;v&quot;:&quot;Open a file for interactive reading, allowing scrolling and search.&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[8,9]},&quot;v&quot;:&quot;&lt;a href=\&quot;#head\&quot;&gt;head&lt;/a&gt;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[9,10]},&quot;v&quot;:&quot;Output the first part of files.&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[10,11]},&quot;v&quot;:&quot;&lt;a href=\&quot;#tail\&quot;&gt;tail&lt;/a&gt;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[11,12]},&quot;v&quot;:&quot;Display the last part of a file.&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[12,13]},&quot;v&quot;:&quot;&lt;a href=\&quot;#file\&quot;&gt;file&lt;/a&gt;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[13,14]},&quot;v&quot;:&quot;Determine file type.&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[14,15]},&quot;v&quot;:&quot;&lt;a href=\&quot;#find\&quot;&gt;find&lt;/a&gt;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[15,16]},&quot;v&quot;:&quot;Find files or directories under the given directory tree, recursively.&quot;}]}],&quot;p&quot;:{}}"></svg>
 </div>
 
 
-
-<div class="note primary no-icon"><h4 id="ls"><a href="#ls" class="headerlink" title="ls"></a>ls</h4><ul>
-<li>list directory contents</li>
-</ul>
+<h3 id="操作文件和目录"><a href="#操作文件和目录" class="headerlink" title="操作文件和目录"></a>操作文件和目录</h3>
+<div class="markmap-container" style="height:400px">
+  <svg data="{&quot;t&quot;:&quot;root&quot;,&quot;d&quot;:0,&quot;v&quot;:&quot;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[0,1]},&quot;v&quot;:&quot;&lt;a href=\&quot;#touch\&quot;&gt;touch&lt;/a&gt;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[1,2]},&quot;v&quot;:&quot;Change a file access and modification times (atime, mtime).&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[2,3]},&quot;v&quot;:&quot;&lt;a href=\&quot;#mkdir\&quot;&gt;mkdir&lt;/a&gt;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[3,4]},&quot;v&quot;:&quot;Creates a directory.&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[4,5]},&quot;v&quot;:&quot;&lt;a href=\&quot;#cp\&quot;&gt;cp&lt;/a&gt;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[5,6]},&quot;v&quot;:&quot;Copy files and directories.&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[6,7]},&quot;v&quot;:&quot;&lt;a href=\&quot;#ln\&quot;&gt;ln&lt;/a&gt;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[7,8]},&quot;v&quot;:&quot;Creates links to files and directories.&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[8,9]},&quot;v&quot;:&quot;&lt;a href=\&quot;#mv\&quot;&gt;mv&lt;/a&gt;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[9,10]},&quot;v&quot;:&quot;Move or rename files and directories.&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[10,11]},&quot;v&quot;:&quot;&lt;a href=\&quot;#rm\&quot;&gt;rm&lt;/a&gt;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[11,12]},&quot;v&quot;:&quot;Remove files or directories.&quot;}]}],&quot;p&quot;:{}}"></svg>
 </div>
-<figure class="highlight bash"><figcaption><span>ls 用法</span><a href="https://www.gnu.org/software/coreutils/ls">官方链接</a></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment"># List files one per line:</span></span><br><span class="line">  <span class="built_in">ls</span> -1</span><br><span class="line"><span class="comment"># List all files, including hidden files:</span></span><br><span class="line">  <span class="built_in">ls</span> -a</span><br><span class="line"><span class="comment"># List all files, with trailing `/` added to directory names:</span></span><br><span class="line">  <span class="built_in">ls</span> -F</span><br><span class="line"><span class="comment"># Long format list (permissions, ownership, size, and modification date) of all files:</span></span><br><span class="line">  <span class="built_in">ls</span> -la</span><br><span class="line"><span class="comment"># Long format list with size displayed using human-readable units (KiB, MiB, GiB):</span></span><br><span class="line">  <span class="built_in">ls</span> -lh</span><br><span class="line"><span class="comment"># Long format list sorted by size (descending):</span></span><br><span class="line">  <span class="built_in">ls</span> -lS</span><br><span class="line"><span class="comment"># Long format list of all files, sorted by modification date (oldest first):</span></span><br><span class="line">  <span class="built_in">ls</span> -ltr</span><br><span class="line"><span class="comment"># Only list directories:</span></span><br><span class="line">  <span class="built_in">ls</span> -d */</span><br></pre></td></tr></table></figure>
 
 
-<div class="note success no-icon"><h4 id="pwd"><a href="#pwd" class="headerlink" title="pwd"></a>pwd</h4><ul>
-<li>Print name of current&#x2F;working directory.</li>
-</ul>
+<h3 id="管理文件或目录权限"><a href="#管理文件或目录权限" class="headerlink" title="管理文件或目录权限"></a>管理文件或目录权限</h3>
+<div class="markmap-container" style="height:400px">
+  <svg data="{&quot;t&quot;:&quot;root&quot;,&quot;d&quot;:0,&quot;v&quot;:&quot;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[0,1]},&quot;v&quot;:&quot;&lt;a href=\&quot;#chmod\&quot;&gt;chmod&lt;/a&gt;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[1,2]},&quot;v&quot;:&quot;Change the access permissions of a file or directory.&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[2,3]},&quot;v&quot;:&quot;&lt;a href=\&quot;#chown\&quot;&gt;chown&lt;/a&gt;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[3,4]},&quot;v&quot;:&quot;Change user and group ownership of files and directories.&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[4,5]},&quot;v&quot;:&quot;&lt;a href=\&quot;#chgrp\&quot;&gt;chgrp&lt;/a&gt;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[5,6]},&quot;v&quot;:&quot;Change group ownership of files and directories.&quot;}]}],&quot;p&quot;:{}}"></svg>
 </div>
-<figure class="highlight bash"><figcaption><span>pwd 用法</span><a href="https://www.gnu.org/software/coreutils/pwd">官方链接</a></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment"># Print the current directory:</span></span><br><span class="line">  <span class="built_in">pwd</span></span><br><span class="line"><span class="comment"># Print the current directory, and resolve all symlinks (i.e. show the &quot;physical&quot; path):</span></span><br><span class="line">  <span class="built_in">pwd</span> --physical</span><br><span class="line"><span class="comment"># Print the current logical directory:</span></span><br><span class="line">  <span class="built_in">pwd</span> --logical</span><br></pre></td></tr></table></figure>
 
 
-<div class="note info no-icon"><h4 id="cd"><a href="#cd" class="headerlink" title="cd"></a>cd</h4><ul>
-<li>Change the current working directory.</li>
-</ul>
+<h3 id="文本处理"><a href="#文本处理" class="headerlink" title="文本处理"></a>文本处理</h3>
+<div class="markmap-container" style="height:400px">
+  <svg data="{&quot;t&quot;:&quot;root&quot;,&quot;d&quot;:0,&quot;v&quot;:&quot;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[0,1]},&quot;v&quot;:&quot;&lt;a href=\&quot;#sort\&quot;&gt;sort&lt;/a&gt;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[1,2]},&quot;v&quot;:&quot;Sort lines of text files.&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[2,3]},&quot;v&quot;:&quot;&lt;a href=\&quot;#uniq\&quot;&gt;uniq&lt;/a&gt;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[3,4]},&quot;v&quot;:&quot;Output the unique lines from the given input or file.&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[4,5]},&quot;v&quot;:&quot;&lt;a href=\&quot;#tr\&quot;&gt;tr&lt;/a&gt;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[5,6]},&quot;v&quot;:&quot;Translate characters: run replacements based on single characters and character sets.&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[6,7]},&quot;v&quot;:&quot;&lt;a href=\&quot;#grep\&quot;&gt;grep&lt;/a&gt;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[7,8]},&quot;v&quot;:&quot;Find patterns in files using regular expressions.&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[8,9]},&quot;v&quot;:&quot;&lt;a href=\&quot;#diff\&quot;&gt;diff&lt;/a&gt;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[9,10]},&quot;v&quot;:&quot;Compare files and directories.&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[10,11]},&quot;v&quot;:&quot;&lt;a href=\&quot;#wc\&quot;&gt;wc&lt;/a&gt;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[11,12]},&quot;v&quot;:&quot;Count lines, words, and bytes.&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[12,13]},&quot;v&quot;:&quot;&lt;a href=\&quot;#awk\&quot;&gt;awk&lt;/a&gt;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[13,14]},&quot;v&quot;:&quot;A versatile programming language for working on files.&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[14,15]},&quot;v&quot;:&quot;&lt;a href=\&quot;#sed\&quot;&gt;sed&lt;/a&gt;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[15,16]},&quot;v&quot;:&quot;Edit text in a scriptable manner.&quot;}]}],&quot;p&quot;:{}}"></svg>
 </div>
-<figure class="highlight bash"><figcaption><span>cd 用法</span><a href="https://manned.org/cd">官方链接</a></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment"># Go to the specified directory:</span></span><br><span class="line">  <span class="built_in">cd</span> [path/to/directory]</span><br><span class="line"><span class="comment"># Go up to the parent of the current directory:</span></span><br><span class="line">  <span class="built_in">cd</span> ..</span><br><span class="line"><span class="comment"># Go to the home directory of the current user:</span></span><br><span class="line">  <span class="built_in">cd</span></span><br><span class="line"><span class="comment"># Go to the home directory of the specified user:</span></span><br><span class="line">  <span class="built_in">cd</span> ~[username]</span><br><span class="line"><span class="comment"># Go to the previously chosen directory:</span></span><br><span class="line">  <span class="built_in">cd</span> -</span><br></pre></td></tr></table></figure>
 
 
-<div class="note warning no-icon"><h4 id="file"><a href="#file" class="headerlink" title="file"></a>file</h4><ul>
-<li>Determine file type.</li>
-</ul>
+<h3 id="其他常用命令"><a href="#其他常用命令" class="headerlink" title="其他常用命令"></a>其他常用命令</h3>
+<div class="markmap-container" style="height:400px">
+  <svg data="{&quot;t&quot;:&quot;root&quot;,&quot;d&quot;:0,&quot;v&quot;:&quot;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[0,1]},&quot;v&quot;:&quot;&lt;a href=\&quot;#hostname\&quot;&gt;hostname&lt;/a&gt;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[1,2]},&quot;v&quot;:&quot;Show or set the system&#39;s host name.&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[2,3]},&quot;v&quot;:&quot;&lt;a href=\&quot;#who\&quot;&gt;who&lt;/a&gt;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[3,4]},&quot;v&quot;:&quot;Display who is logged in and related data (processes, boot time).&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[4,5]},&quot;v&quot;:&quot;&lt;a href=\&quot;#uptime\&quot;&gt;uptime&lt;/a&gt;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[5,6]},&quot;v&quot;:&quot;Tell how long the system has been running and other information.&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[6,7]},&quot;v&quot;:&quot;&lt;a href=\&quot;#uname\&quot;&gt;uname&lt;/a&gt;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[7,8]},&quot;v&quot;:&quot;Print details about the current machine and the operating system running on it.&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[8,9]},&quot;v&quot;:&quot;&lt;a href=\&quot;#date\&quot;&gt;date&lt;/a&gt;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[9,10]},&quot;v&quot;:&quot;Set or display the system date.&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[10,11]},&quot;v&quot;:&quot;&lt;a href=\&quot;#id\&quot;&gt;id&lt;/a&gt;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[11,12]},&quot;v&quot;:&quot;Display current user and group identity.&quot;}]}],&quot;p&quot;:{}}"></svg>
 </div>
-<figure class="highlight bash"><figcaption><span>file 用法</span><a href="https://manned.org/file">官方链接</a></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment"># Give a description of the type of the specified file. Works fine for files with no file extension:</span></span><br><span class="line">  file [filename]</span><br><span class="line"><span class="comment"># Look inside a zipped file and determine the file type(s) inside:</span></span><br><span class="line">  file -z [foo.zip]</span><br><span class="line"><span class="comment"># Allow file to work with special or device files:</span></span><br><span class="line">  file -s [filename]</span><br><span class="line"><span class="comment"># Don&#x27;t stop at first file type match; keep going until the end of the file:</span></span><br><span class="line">  file -k [filename]</span><br><span class="line"><span class="comment"># Determine the mime encoding type of a file:</span></span><br><span class="line">  file -i [filename]</span><br></pre></td></tr></table></figure>
 
 
-<div class="note danger no-icon"><h4 id="less"><a href="#less" class="headerlink" title="less"></a>less</h4><ul>
-<li>Open a file for interactive reading, allowing scrolling and search.</li>
-</ul>
+<h2 id="进阶命令"><a href="#进阶命令" class="headerlink" title="进阶命令"></a>进阶命令</h2><hr>
+<h3 id="文件处理和归档"><a href="#文件处理和归档" class="headerlink" title="文件处理和归档"></a>文件处理和归档</h3>
+<div class="markmap-container" style="height:400px">
+  <svg data="{&quot;t&quot;:&quot;root&quot;,&quot;d&quot;:0,&quot;v&quot;:&quot;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[0,1]},&quot;v&quot;:&quot;&lt;a href=\&quot;#paste\&quot;&gt;paste&lt;/a&gt;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[1,2]},&quot;v&quot;:&quot;Merge lines of files.&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[2,3]},&quot;v&quot;:&quot;&lt;a href=\&quot;#dd\&quot;&gt;dd&lt;/a&gt;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[3,4]},&quot;v&quot;:&quot;Convert and copy a file.&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[4,5]},&quot;v&quot;:&quot;&lt;a href=\&quot;#gzip\&quot;&gt;gzip&lt;/a&gt;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[5,6]},&quot;v&quot;:&quot;Compress/uncompress files with gzip compression (LZ77).&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[6,7]},&quot;v&quot;:&quot;&lt;a href=\&quot;#bzip2\&quot;&gt;bzip2&lt;/a&gt;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[7,8]},&quot;v&quot;:&quot;A block-sorting file compressor.&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[8,9]},&quot;v&quot;:&quot;&lt;a href=\&quot;#gunzip\&quot;&gt;gunzip&lt;/a&gt;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[9,10]},&quot;v&quot;:&quot;Extract file(s) from a gzip (.gz) archive.&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[10,11]},&quot;v&quot;:&quot;&lt;a href=\&quot;#tar\&quot;&gt;tar&lt;/a&gt;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[11,12]},&quot;v&quot;:&quot;Archiving utility.&quot;}]}],&quot;p&quot;:{}}"></svg>
 </div>
-<figure class="highlight bash"><figcaption><span>less 用法</span><a href="https://greenwoodsoftware.com/less/">官方链接</a></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment"># Open a file:</span></span><br><span class="line">  less [source_file]</span><br><span class="line"><span class="comment"># Page down / up:</span></span><br><span class="line">  [Space] (down), b (up)</span><br><span class="line"><span class="comment"># Go to end / start of file:</span></span><br><span class="line">  G (end), g (start)</span><br><span class="line"><span class="comment"># Forward search for a string (press `n`/`N` to go to next/previous match):</span></span><br><span class="line">  /[something]</span><br><span class="line"><span class="comment"># Backward search for a string (press `n`/`N` to go to next/previous match):</span></span><br><span class="line">  ?[something]</span><br><span class="line"><span class="comment"># Follow the output of the currently opened file:</span></span><br><span class="line">  F</span><br><span class="line"><span class="comment"># Open the current file in an editor:</span></span><br><span class="line">  v</span><br><span class="line"><span class="comment"># Exit:</span></span><br><span class="line">  q</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="检测和管理磁盘"><a href="#检测和管理磁盘" class="headerlink" title="检测和管理磁盘"></a>检测和管理磁盘</h3>
+<div class="markmap-container" style="height:400px">
+  <svg data="{&quot;t&quot;:&quot;root&quot;,&quot;d&quot;:0,&quot;v&quot;:&quot;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[0,1]},&quot;v&quot;:&quot;&lt;a href=\&quot;#mount\&quot;&gt;mount&lt;/a&gt;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[1,2]},&quot;v&quot;:&quot;Provides access to an entire filesystem in one directory.&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[2,3]},&quot;v&quot;:&quot;&lt;a href=\&quot;#umount\&quot;&gt;umount&lt;/a&gt;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[3,4]},&quot;v&quot;:&quot;Unlink a filesystem from its mount point, making it no longer accessible.&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[4,5]},&quot;v&quot;:&quot;&lt;a href=\&quot;#df\&quot;&gt;df&lt;/a&gt;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[5,6]},&quot;v&quot;:&quot;Gives an overview of the filesystem disk space usage.&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[6,7]},&quot;v&quot;:&quot;&lt;a href=\&quot;#du\&quot;&gt;du&lt;/a&gt;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[7,8]},&quot;v&quot;:&quot;Disk usage: estimate and summarize file and directory space usage.&quot;}]}],&quot;p&quot;:{}}"></svg>
+</div>
+
+
+<h3 id="后台执行命令"><a href="#后台执行命令" class="headerlink" title="后台执行命令"></a>后台执行命令</h3>
+<div class="markmap-container" style="height:400px">
+  <svg data="{&quot;t&quot;:&quot;root&quot;,&quot;d&quot;:0,&quot;v&quot;:&quot;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[0,1]},&quot;v&quot;:&quot;&lt;a href=\&quot;#crontab\&quot;&gt;crontab&lt;/a&gt;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[1,2]},&quot;v&quot;:&quot;Schedule cron jobs to run on a time interval for the current user.&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[2,3]},&quot;v&quot;:&quot;&lt;a href=\&quot;#at\&quot;&gt;at&lt;/a&gt;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[3,4]},&quot;v&quot;:&quot;Executes commands at a specified time.&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[4,5]},&quot;v&quot;:&quot;&lt;a href=\&quot;#nohup\&quot;&gt;nohup&lt;/a&gt;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[5,6]},&quot;v&quot;:&quot;Allows for a process to live when the terminal gets killed.&quot;}]}],&quot;p&quot;:{}}"></svg>
+</div>
+
+
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p>【1】tldr工具简略查询命令。链接：<a href="https://pypi.org/project/tldr/">tldr</a><br>【2】人性化命令查询网址：<a href="https://linux.cmsblogs.cn/">https://linux.cmsblogs.cn/</a><br>【3】manned官网：<a href="https://manned.org/">https://manned.org/</a></p>
 ]]></content>
       <categories>
         <category>工具</category>
@@ -883,6 +662,242 @@
       </tags>
   </entry>
   <entry>
+    <title>JavaScript Note</title>
+    <url>/posts/fbbf86b6/</url>
+    <content><![CDATA[<h2 id="词法结构"><a href="#词法结构" class="headerlink" title="词法结构"></a><strong>词法结构</strong></h2><hr>
+<p>标识符必须以字母&#x2F;下划线&#x2F;美元符号开头</p>
+<span id="more"></span>
+
+<h2 id="类型-x2F-值-x2F-变量"><a href="#类型-x2F-值-x2F-变量" class="headerlink" title="类型&#x2F;值&#x2F;变量"></a><strong>类型&#x2F;值&#x2F;变量</strong></h2><hr>
+<ul>
+<li>原始类型：数值&#x2F;文本字符串&#x2F;布尔真值&#x2F;符号&#x2F;null&#x2F;undefined</li>
+<li>对象类型</li>
+</ul>
+<p>javascript可以自由地转换不同类型的值<br>javascript预定义了全局常量Infinity和NaN以应对正无穷和非数值<br>var声明的一个最不同寻常的特性是作用域提升</p>
+<h2 id="表达式与操作符"><a href="#表达式与操作符" class="headerlink" title="表达式与操作符"></a><strong>表达式与操作符</strong></h2><hr>
+<p>[] &#x2F;&#x2F; 空数组</p>
+<p>条件式属性访问</p>
+<ul>
+<li>expression ?. identifier</li>
+<li>expression ?.[ expression ]</li>
+</ul>
+<p>如果expression非真，问号后面的表达式不会执行，即短路操作<br>+偏向字符串，即只要有一个操作数是字符串，它就会执行拼接操作；比较操作符偏向数值，只有两个操作数均为字符串时才按字符串处理，如果有一个操作数是NaN，则4个比较操作符都返回false<br>in操作数期待左侧操作数是字符串&#x2F;符号&#x2F;可以转换为字符串的值，期待右侧操作数是对象。<br>instanceof的右侧操作数应该是一个函数<br>??先定义：第一个操作数求值为null或undefined时才会求值第二个操作数</p>
+<h2 id="语句"><a href="#语句" class="headerlink" title="语句"></a><strong>语句</strong></h2><hr>
+<p>for&#x2F;of循环专门用于可迭代对象，包括数组&#x2F;字符串&#x2F;集合&#x2F;映射。</p>
+<p>for&#x2F;in循环in后面可以是任意对象</p>
+<ul>
+<li>不会枚举对象的所有属性，比如名字为符号的属性</li>
+<li>名字为字符串的属性，只会遍历可枚举属性</li>
+<li>javascript核心定义的各种内部方法是不可枚举的</li>
+<li>继承的可枚举属性也可被for&#x2F;in循环枚举</li>
+</ul>
+<p>语句标签<br>identifier：statement</p>
+<ul>
+<li>break [labelname];</li>
+<li>continue [labelname];<ul>
+<li>labelname 属于可选参数</li>
+</ul>
+</li>
+</ul>
+<h2 id="对象"><a href="#对象" class="headerlink" title="对象"></a><strong>对象</strong></h2><hr>
+<p>创建对象三种方式：</p>
+<ol>
+<li>对象字面量</li>
+<li>使用new创建对象</li>
+<li>Object.create()–防止对象被某个第三方库函数意外修改</li>
+</ol>
+<p><strong>几乎所有对象都有原型，但大多数对象没有<em>prototype</em>属性</strong></p>
+<p>in可以区分不存在的属性和存在但被设置为undefined的属性</p>
+<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a><strong>数组</strong></h2><hr>
+<p>扩展操作符(…)在一个数组字面量中包含另一个数组的元素</p>
+<p><strong>实际上并不是操作符，因为只能在数组字面量和本书后面介绍的函数调用中使用它们</strong></p>
+<p>Array()构造函数传入一个数组参数，指定长度：<br>let a &#x3D; new Array(10);  &#x2F;&#x2F; 创建长度为10的空数组<br>Array.of()可以创建只包含一个元素的数组：<br>Array.of(10)    &#x2F;&#x2F; &#x3D;&gt; [10];可以创建只有一个数值元素的数组</p>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a><strong>函数</strong></h2><hr>
+<p>函数声明语句会被“提升”到包含脚本&#x2F;函数&#x2F;代码块的顶部，因此调用以这种方式定义的函数时，调用代码可以出现在函数定义代码之前</p>
+<p>箭头函数</p>
+<ul>
+<li>从定义自己的环境继承this关键字的值</li>
+</ul>
+<p>嵌套函数</p>
+<ul>
+<li>内层函数可以访问包含自己的函数（或更外层函数）的参数和变量</li>
+</ul>
+<p>调用函数的五种方式：</p>
+<ol>
+<li>作为函数<ul>
+<li>通过调用表达式被作为函数或方法调用</li>
+</ul>
+</li>
+<li>作为方法<ul>
+<li>即函数，只不过它保存为对象的属性而已</li>
+</ul>
+</li>
+<li>作为构造函数<ul>
+<li>使用new关键字调用的函数</li>
+</ul>
+</li>
+<li>透过call() 或 apply() 方法间接调用</li>
+<li>通过JavaScript 语言特性隐形调用</li>
+</ol>
+<p><strong>JavaScript函数定义不指定函数形参类型，函数调用不对传入实参进行类型&#x2F;个数检查</strong></p>
+<p>函数可以有属性<br>闭包：能捕获自身定义所在函数的局部变量（及参数）绑定</p>
+<h2 id="类"><a href="#类" class="headerlink" title="类"></a><strong>类</strong></h2><hr>
+<p><strong>只有函数对象才有prototype属性</strong>，这意味着使用同一个构造函数创建的所有对象都继承同一个对象，因而是同一个类的成员</p>
+<ul>
+<li>类名（按照惯例）应以大写字母开头</li>
+<li>普通函数和方法的名字则以小写字母开头</li>
+</ul>
+<p><strong>新对象是在调用构造函数之前自动创建的</strong></p>
+<p>与函数声明不同，类声明不会“提升”<br>原型对象是类标识的基本：当且仅当两个对象继承同一个原型对象时，他们才是同一个类的实例<br>每个普通 JavaScript 函数自动拥有一个 prototype 属性，这个属性的值是一个对象，有一个不可枚举的constructor 属性，而这个属性的值就是该函数的对象</p>
+<p>eg:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> F = <span class="keyword">function</span>(<span class="params"></span>) &#123;&#125;;  <span class="comment">// 这是一个函数对象</span></span><br><span class="line"><span class="keyword">let</span> p = F.<span class="property"><span class="keyword">prototype</span></span>;    <span class="comment">// 这是一个与F关联的原型对象</span></span><br><span class="line"><span class="keyword">let</span> c = p.<span class="property">constructor</span>;  <span class="comment">// 这是与原型关联的函数</span></span><br><span class="line">c === F                 <span class="comment">// =&gt; true: 对任何F，F.prototype.constructor === F</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/JavaScript-Note/%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E5%8F%8A%E5%85%B6%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%AE%9E%E4%BE%8B.svg" alt="构造函数及其原型和实例"></p>
+<p>ES6新增了class 关键字，让定义类更方便。但在底层，仍然是构造函数和原型机制在起作用<br>子类在类声明中通过extends关键字定义<br>子类可以通过super 关键字调用父类构造函数或父类中被覆盖的方法</p>
+<h2 id="模块"><a href="#模块" class="headerlink" title="模块"></a><strong>模块</strong></h2><hr>
+<p>模块化的目标是让程序员隐藏自己代码的实现细节，从而让不同来源的代码块可以组装成一个大型程序，又不必担心某个代码块会重写其他代码块的函数或变量。本章解释了三种不同的JavaScript模块系统：</p>
+<ul>
+<li><p>在JavaScript早期，模块化只能通过巧妙地使用立即调用的函数表达式来实现</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">BitSet</span> = (<span class="keyword">function</span>(<span class="params"></span>) &#123;  <span class="comment">// 将 BitSet 设置为这个函数的返回值</span></span><br><span class="line">  ... <span class="comment">// 省略实现</span></span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">class</span> <span class="title class_">BitSet</span> <span class="keyword">extends</span> <span class="title class_ inherited__">AbstractWritableSet</span> &#123;</span><br><span class="line">    ... <span class="comment">// 省略实现</span></span><br><span class="line">  &#125;;</span><br><span class="line">&#125;());</span><br><span class="line"></span><br><span class="line"><span class="comment">// 示例2：</span></span><br><span class="line"><span class="keyword">const</span> stats = (<span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">  ...</span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">mean</span>(<span class="params">data</span>) &#123; ... &#125;;</span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">stddev</span>(<span class="params">data</span>) &#123; ... &#125;;</span><br><span class="line">  <span class="comment">// 将公有函数作为一个对象的属性导出出来</span></span><br><span class="line">  <span class="keyword">return</span> &#123; mean, stddev &#125;;</span><br><span class="line">&#125;());</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Node 在 JavaScript 语言之上加入了自己的模块系统。Node 模块通过require() 导入，并通过设置 Exports 对象的属性或直接设置 module.exports 属性来定义导出</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Node 导出</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">mean</span> = data =&gt; &#123; ... &#125;;</span><br><span class="line"><span class="keyword">const</span> <span class="title function_">stddev</span> = data =&gt; &#123; ... &#125;;</span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123; mean, stddev &#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Node 导入</span></span><br><span class="line"><span class="comment">// 内置模块</span></span><br><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">&quot;fs&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 自定义</span></span><br><span class="line"><span class="keyword">const</span> stats = <span class="built_in">require</span>(<span class="string">&#x27;./stats.js&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 解构赋值导入特定属性</span></span><br><span class="line"><span class="keyword">const</span> &#123; stddev &#125; = <span class="built_in">require</span>(<span class="string">&#x27;./stats.js&#x27;</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在ES6 中，Javascript 终于有了自己依托import 和 export关键字的模块系统，ES2020 又通过 import() 增加了对动态导入的支持</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// ES6 导出</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> <span class="variable constant_">PI</span> = <span class="title class_">Math</span>.<span class="property">PI</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// ES6 导入</span></span><br><span class="line"><span class="keyword">import</span> &#123; mean, stddev &#125; <span class="keyword">from</span> <span class="string">&#x27;./stats.js&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> stats <span class="keyword">from</span> <span class="string">&#x27;./stats.js&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// import() 动态导入</span></span><br><span class="line"><span class="title function_">import</span>(<span class="string">&quot;./stats.js&quot;</span>).<span class="title function_">then</span>(<span class="function"><span class="params">stats</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> average = stats.<span class="title function_">mean</span>(data);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="JavaScript-标准库"><a href="#JavaScript-标准库" class="headerlink" title="JavaScript 标准库"></a><strong>JavaScript 标准库</strong></h2><hr>
+<p>主要包括以下内容：</p>
+<ol>
+<li>重要的数据结构，如Set&#x2F;Map和定型数组</li>
+<li>用于操作日期和URL的Date与URL类</li>
+<li>JavaScript的正则表达式语法及处理文本模式匹配的RegExp类</li>
+<li>JavaScript的国际化库，可以格式化日期&#x2F;时间&#x2F;数值&#x2F;以及排序字符串</li>
+<li>序列化和反序列化简单数据结构的JSON对象，以及用于打印消息的console对象</li>
+</ol>
+<h2 id="迭代器与生成器"><a href="#迭代器与生成器" class="headerlink" title="迭代器与生成器"></a><strong>迭代器与生成器</strong></h2><hr>
+<p><strong>可迭代对象</strong>：任何具有专用迭代器方法，且该方法返回迭代器对象的对象<br><strong>迭代器对象</strong>：任何具有next()方法，且该方法返回迭代结果对象的对象<br><strong>迭代结果对象</strong>：具有value和done的对象</p>
+<div class="note danger"><p><em><strong>内置可迭代数据类型的迭代器对象本身也是可迭代的</strong></em>（即，有一个名为Symbol.iterator的方法，返回他们自己）</p>
+</div>
+
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// words函数是一个可迭代对象，返回一个迭代器对象</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">words</span>(<span class="params">s</span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> r = <span class="regexp">/\s+|$/g</span>;</span><br><span class="line">    r.<span class="property">lastIndex</span> = s.<span class="title function_">match</span>(<span class="regexp">/[^ ]/</span>).<span class="property">index</span>;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        [<span class="title class_">Symbol</span>.<span class="property">iterator</span>]() &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="variable language_">this</span></span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="title function_">next</span>(<span class="params"></span>) &#123;</span><br><span class="line">            <span class="keyword">let</span> start = r.<span class="property">lastIndex</span>;</span><br><span class="line">            <span class="keyword">if</span> (start &lt; s.<span class="property">length</span>) &#123;</span><br><span class="line">                <span class="keyword">let</span> match = r.<span class="title function_">exec</span>(s);</span><br><span class="line">                <span class="keyword">if</span> (match) &#123;</span><br><span class="line">                    <span class="keyword">return</span> &#123;<span class="attr">value</span>: s.<span class="title function_">substring</span>(start, match.<span class="property">index</span>)&#125;;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> &#123;<span class="attr">done</span>: <span class="literal">true</span>&#125;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>([...<span class="title function_">words</span>(<span class="string">&quot; abc def ghi! &quot;</span>)]); <span class="comment">// =&gt; [ &#x27;abc&#x27;, &#x27;def&#x27;, &#x27;ghi!&#x27; ]</span></span><br></pre></td></tr></table></figure>
+
+<p>生成器函数：使用function*</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span>* <span class="title function_">fib</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> x = <span class="number">0</span>, y = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(;;) &#123;</span><br><span class="line">        <span class="keyword">yield</span> y;</span><br><span class="line">        [x, y] = [y, x + y] <span class="comment">// 解构赋值</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>yield*: 与yield类似，但它不是只回送一个值，而是迭代可迭代对象并返回送得的每个值</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// use yield</span></span><br><span class="line"><span class="keyword">function</span>* <span class="title function_">sequence</span>(<span class="params">...iterables</span>) &#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> iterable <span class="keyword">of</span> iterables) &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> item <span class="keyword">of</span> iterable) &#123;</span><br><span class="line">            <span class="keyword">yield</span> item;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>([...<span class="title function_">sequence</span>(<span class="string">&quot;abc&quot;</span>, <span class="string">&quot;efg&quot;</span>)]); <span class="comment">// =&gt; [ &#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;, &#x27;e&#x27;, &#x27;f&#x27;, &#x27;g&#x27; ]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// use yield*</span></span><br><span class="line"><span class="keyword">function</span>* <span class="title function_">sequence</span>(<span class="params">...iterables</span>) &#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> iterable <span class="keyword">of</span> iterables) &#123;</span><br><span class="line">        <span class="keyword">yield</span>* iterable;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>([...<span class="title function_">sequence</span>(<span class="string">&quot;abc&quot;</span>, <span class="string">&quot;efg&quot;</span>)]); <span class="comment">// =&gt; [ &#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;, &#x27;e&#x27;, &#x27;f&#x27;, &#x27;g&#x27; ]</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="异步JavaScript"><a href="#异步JavaScript" class="headerlink" title="异步JavaScript"></a><strong>异步JavaScript</strong></h2><hr>
+<p>传统异步操作采用事件和回调函数的方式执行</p>
+<mark class="label primary">回调</mark> vs <mark class="label success">期约(promise)</mark> 
+
+<table>
+<thead>
+<tr>
+<th>回调</th>
+<th>期约(promise)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>回调常会引发多层嵌套代码，照成缩进过多以致难以阅读和维护</td>
+<td>期约可以以一种更线性的期约链形式表现，更易读和推断</td>
+</tr>
+<tr>
+<td>回调难以处理错误，异常没有办法传播到异常操作的发起者</td>
+<td>期约标准化了异步错误处理，使用期约链提供了一种让错误正确传播的途径</td>
+</tr>
+</tbody></table>
+<p><strong>期约链</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="title function_">fetch</span>(documentURL)                      <span class="comment">// 发送 http 请求</span></span><br><span class="line">    .<span class="title function_">then</span>(<span class="function"><span class="params">response</span> =&gt;</span> response.<span class="title function_">json</span>())  <span class="comment">// 获取 JSON 格式的响应体</span></span><br><span class="line">    .<span class="title function_">then</span>(<span class="function"><span class="params">document</span> =&gt;</span> &#123;                 <span class="comment">// 在取得解析后的JSON时把文档显示给用户</span></span><br><span class="line">        <span class="keyword">return</span> <span class="title function_">render</span>(<span class="variable language_">document</span>);</span><br><span class="line">    &#125;) </span><br><span class="line">    .<span class="title function_">then</span>(<span class="function"><span class="params">rendered</span> =&gt;</span> &#123;                 <span class="comment">// 在取得渲染的文档后缓存在本地数据库中</span></span><br><span class="line">        <span class="title function_">cacheInDatebase</span>(rendered);</span><br><span class="line">    &#125;)</span><br><span class="line">    .<span class="title function_">catch</span>(<span class="function"><span class="params">error</span> =&gt;</span> <span class="title function_">handle</span>(error));     <span class="comment">// 处理发生的错误</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 并行期约</span></span><br><span class="line"><span class="keyword">const</span> urls = [ <span class="comment">/* 零或多个URL */</span> ];</span><br><span class="line">promises = urls.<span class="title function_">map</span>(<span class="function"><span class="params">url</span> =&gt;</span> <span class="title function_">fetch</span>(url).<span class="title function_">then</span>(<span class="function"><span class="params">r</span> =&gt;</span> r.<span class="title function_">text</span>()));</span><br><span class="line"><span class="title class_">Promise</span>.<span class="title function_">all</span>(promises)</span><br><span class="line">    .<span class="title function_">then</span>(<span class="function"><span class="params">bodies</span> =&gt;</span> &#123; <span class="comment">/* 处理得到的字符串数组 */</span> &#125;)</span><br><span class="line">    .<span class="title function_">catch</span>(<span class="function"><span class="params">e</span> =&gt;</span> <span class="variable language_">console</span>.<span class="title function_">error</span>(e))</span><br><span class="line"></span><br><span class="line"><span class="comment">// 串行期约</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">promiseSequence</span>(<span class="params">inputs, promiseMaker</span>) &#123;</span><br><span class="line">    inputs = [...inputs];</span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">handleNextInput</span>(<span class="params">outputs</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (inputs.<span class="property">length</span> === <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> outputs;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">let</span> nextInput = inputs.<span class="title function_">shift</span>();</span><br><span class="line">            <span class="keyword">return</span> <span class="title function_">promiseMaker</span>()</span><br><span class="line">                    .<span class="title function_">then</span>(<span class="function"><span class="params">output</span> =&gt;</span> outputs.<span class="title function_">concat</span>(output))</span><br><span class="line">                    .<span class="title function_">then</span>(handleNextInput);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="title class_">Promise</span>.<span class="title function_">resolve</span>([]).<span class="title function_">then</span>(handleNextInput);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">fetchBody</span>(<span class="params">url</span>) &#123; <span class="keyword">return</span> <span class="title function_">fetch</span>(url).<span class="title function_">then</span>(<span class="function"><span class="params">r</span> =&gt;</span> r.<span class="title function_">text</span>()); &#125;</span><br><span class="line"><span class="title function_">promiseSequence</span>(urls, fetchBody)</span><br><span class="line">    .<span class="title function_">then</span>(<span class="function"><span class="params">bodies</span> =&gt;</span> &#123; <span class="comment">/* 处理字符串数组 */</span> &#125;)</span><br><span class="line">    .<span class="title function_">catch</span>(<span class="variable language_">console</span>.<span class="property">error</span>);</span><br></pre></td></tr></table></figure>
+
+<p><strong>async &amp; await</strong></p>
+<blockquote>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/await">await</a><br>await  操作符用于等待一个Promise 对象<br>[返回值] &#x3D; await 表达式;</p>
+</blockquote>
+<ul>
+<li>表达式<br>一个 Promise 对象或者任何要等待的值。</li>
+</ul>
+<p><strong>返回值</strong><br>返回 Promise 对象的处理结果。如果等待的不是 Promise 对象，则返回该值本身。</p>
+<blockquote>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function">async</a><br>async函数是使用async关键字声明的函数。 async函数是AsyncFunction构造函数的实例， 并且其中允许使用await关键字。<br>async function name([param[, param[, … param]]]) {<br>    statements<br>}</p>
+</blockquote>
+<ul>
+<li>name<br>函数名称。</li>
+<li>param<br>要传递给函数的参数的名称。</li>
+<li>statements</li>
+</ul>
+<p>包含函数主体的表达式。可以使用await机制。<br><strong>返回值</strong><br>一个Promise，这个promise要么会通过一个由async函数返回的值被解决，要么会通过一个从async函数中抛出的（或其中没有被捕获到的）异常被拒绝。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">resolveAfter2Seconds</span>(<span class="params">x</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function"><span class="params">resolve</span> =&gt;</span> &#123;</span><br><span class="line">                <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">                        <span class="title function_">resolve</span>(x);</span><br><span class="line">                &#125;, <span class="number">2000</span>);</span><br><span class="line">        &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">f1</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">var</span> x = <span class="keyword">await</span> <span class="title function_">resolveAfter2Seconds</span>(<span class="number">10</span>);</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(x); <span class="comment">// 10</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">f1</span>();</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;hello&quot;</span>);</span><br></pre></td></tr></table></figure>
+<figure class="highlight gauss"><table><tr><td class="code"><pre><span class="line"><span class="keyword">output</span>：</span><br><span class="line">hello</span><br><span class="line"><span class="number">10</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>for&#x2F;await 循环</strong><br>异步迭代器会产生一个期约，for&#x2F;await 循环会等待该期约兑现，将兑现值赋给循环变量，然后再运行循环体</p>
+<p>异步迭代器(Symbol.asyncIterator)</p>
+<p>异步生成器(async function *)<br>设置[Symbol.asyncIterator]属性来自定义异步可迭代对象。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> myAsyncIterable = <span class="keyword">new</span> <span class="title class_">Object</span>();</span><br><span class="line">myAsyncIterable[<span class="title class_">Symbol</span>.<span class="property">asyncIterator</span>] = <span class="keyword">async</span> <span class="keyword">function</span>*() &#123;</span><br><span class="line">    <span class="keyword">yield</span> <span class="string">&quot;hello&quot;</span>;</span><br><span class="line">    <span class="keyword">yield</span> <span class="string">&quot;async&quot;</span>;</span><br><span class="line">    <span class="keyword">yield</span> <span class="string">&quot;iteration!&quot;</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">(<span class="keyword">async</span> () =&gt; &#123;</span><br><span class="line">    <span class="keyword">for</span> <span class="keyword">await</span> (<span class="keyword">const</span> x <span class="keyword">of</span> myAsyncIterable) &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(x);</span><br><span class="line">        <span class="comment">// expected output:</span></span><br><span class="line">        <span class="comment">//    &quot;hello&quot;</span></span><br><span class="line">        <span class="comment">//    &quot;async&quot;</span></span><br><span class="line">        <span class="comment">//    &quot;iteration!&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+
+<h2 id="元编程"><a href="#元编程" class="headerlink" title="元编程"></a><strong>元编程</strong></h2><hr>
+<p><strong>属性特性</strong></p>
+<ul>
+<li>可写：修改属性的值</li>
+<li>可枚举：for&#x2F;in循环和 Object.keys() 方法枚举属性</li>
+<li>可配置：可以删除属性&#x2F;修改属性</li>
+</ul>
+<p>模板标签：位于反引号之间的字符串被称为“模板字面量”</p>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Meta_programming">反射API &amp; 代理对象</a></p>
+<blockquote>
+<p>允许你拦截并定义基本语言操作的自定义行为（例如，属性查找，赋值，枚举，函数调用等）</p>
+</blockquote>
+<h2 id="浏览器中的JavaScript"><a href="#浏览器中的JavaScript" class="headerlink" title="浏览器中的JavaScript"></a><strong>浏览器中的JavaScript</strong></h2><hr>
+<ul>
+<li>JavaScript异步&#x2F;事件驱动的编程模型</li>
+<li>DOM API是所有客户端JavaScript编程的核心</li>
+<li>CSS样式</li>
+<li>svg &amp; <code>&lt;canvas&gt;</code> 生成动态图像</li>
+<li>audio &amp; video</li>
+<li>location &amp; history</li>
+<li>http &amp; websocket 协议与web服务器交换数据</li>
+<li>local cache<ul>
+<li>web storage</li>
+<li>cookie</li>
+<li>indexedDB</li>
+</ul>
+</li>
+<li>worker thread</li>
+</ul>
+<h2 id="Node服务器端JavaScript"><a href="#Node服务器端JavaScript" class="headerlink" title="Node服务器端JavaScript"></a><strong><a href="https://nodejs.org/en/">Node</a>服务器端JavaScript</strong></h2><hr>
+<h2 id="JavaScript工具和扩展"><a href="#JavaScript工具和扩展" class="headerlink" title="JavaScript工具和扩展"></a><strong>JavaScript工具和扩展</strong></h2><hr>
+<p>工具和语言扩展：</p>
+<ul>
+<li><a href="http://eslint.cn/">ESLint</a>(辅助发现代码中潜藏的缺陷和风格问题)</li>
+<li><a href="https://www.prettier.cn/">Prettier</a>(格式化js代码)</li>
+<li>Jest(js单元测试的一站式解决方案)</li>
+<li>npm</li>
+<li>webpack &amp; Rollup &amp; Parcel</li>
+<li>Babel(转义工具)</li>
+<li>JSX(语言扩展，使用类似HTML标记的js表达式描述用户界面)</li>
+<li>Flow(添加类型注解，通过类型检查保证类型安全)</li>
+</ul>
+]]></content>
+      <categories>
+        <category>编程语言</category>
+      </categories>
+      <tags>
+        <tag>javascript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>多终端同步博客</title>
+    <url>/posts/a7e41fa1/</url>
+    <content><![CDATA[<p>参考资料：<br><a href="https://segmentfault.com/a/1190000019459014">Hexo博客多端同步问题</a></p>
+]]></content>
+      <tags>
+        <tag>hexo tutorial</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>会议纪要</title>
     <url>/posts/2c109fcd/</url>
     <content><![CDATA[<p>工作中难免会需要书写会议纪要等内容，一个好的格式能够体现作为一个职业人的专业素养，下面笔者便摘记工作中使用过的模板。</p>
@@ -904,15 +919,6 @@
       </categories>
       <tags>
         <tag>meeting</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>多终端同步博客</title>
-    <url>/posts/a7e41fa1/</url>
-    <content><![CDATA[<p>参考资料：<br><a href="https://segmentfault.com/a/1190000019459014">Hexo博客多端同步问题</a></p>
-]]></content>
-      <tags>
-        <tag>hexo tutorial</tag>
       </tags>
   </entry>
   <entry>
